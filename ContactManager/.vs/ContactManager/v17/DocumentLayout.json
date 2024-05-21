@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\caner\\OneDrive\\Desktop\\ZbW\\PRF2\\Project_ContactManager\\ContactManager_ZBW\\ContactManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAA77A6-CDD1-415E-959F-7ADBB60690EC}|ContactManager\\ContactManager.csproj|c:\\users\\caner\\onedrive\\desktop\\zbw\\prf2\\project_contactmanager\\contactmanager_zbw\\contactmanager\\contactmanager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAA77A6-CDD1-415E-959F-7ADBB60690EC}|ContactManager\\ContactManager.csproj|solutionrelative:contactmanager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\caner\\OneDrive\\Desktop\\ZbW\\PRF2\\Project_ContactManager\\ContactManager_ZBW\\ContactManager\\ContactManager\\Form1.cs",
+              "RelativeDocumentMoniker": "ContactManager\\Form1.cs",
+              "ToolTip": "C:\\Users\\caner\\OneDrive\\Desktop\\ZbW\\PRF2\\Project_ContactManager\\ContactManager_ZBW\\ContactManager\\ContactManager\\Form1.cs [Design]",
+              "RelativeToolTip": "ContactManager\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:10:13.31Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
