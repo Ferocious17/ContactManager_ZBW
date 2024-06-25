@@ -11,22 +11,21 @@ namespace ContactManager.Forms
         {
             UserRegistration userRegistration = new UserRegistration();
 
-            userRegistration.Show();
+            userRegistration.ShowDialog();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Search search = new Search();
 
-            search.Show();
-
+            search.ShowDialog();
         }
 
         private void btnClientRegistration_Click(object sender, EventArgs e)
         {
             ClientRegistration clientRegistration = new ClientRegistration();
 
-            clientRegistration.Show();
+            clientRegistration.ShowDialog();
         }
 
         private void StartWindow_Load(object sender, EventArgs e)
