@@ -36,9 +36,10 @@
             // 
             // btnUserRegistration
             // 
-            btnUserRegistration.Location = new Point(111, 247);
+            btnUserRegistration.Location = new Point(52, 120);
+            btnUserRegistration.Margin = new Padding(1, 1, 1, 1);
             btnUserRegistration.Name = "btnUserRegistration";
-            btnUserRegistration.Size = new Size(342, 112);
+            btnUserRegistration.Size = new Size(161, 55);
             btnUserRegistration.TabIndex = 0;
             btnUserRegistration.Text = "Mitarbeiter Erfassung";
             btnUserRegistration.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(819, 249);
+            btnSearch.Location = new Point(385, 121);
+            btnSearch.Margin = new Padding(1, 1, 1, 1);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(211, 110);
+            btnSearch.Size = new Size(99, 54);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Suche";
             btnSearch.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // btnClientRegistration
             // 
-            btnClientRegistration.Location = new Point(499, 247);
+            btnClientRegistration.Location = new Point(235, 120);
+            btnClientRegistration.Margin = new Padding(1, 1, 1, 1);
             btnClientRegistration.Name = "btnClientRegistration";
-            btnClientRegistration.Size = new Size(264, 112);
+            btnClientRegistration.Size = new Size(124, 55);
             btnClientRegistration.TabIndex = 2;
             btnClientRegistration.Text = "Kuden Erfassung";
             btnClientRegistration.UseVisualStyleBackColor = true;
@@ -67,25 +70,27 @@
             // txtBoxTitel
             // 
             txtBoxTitel.Font = new Font("Segoe UI", 15F);
-            txtBoxTitel.Location = new Point(124, 69);
+            txtBoxTitel.Location = new Point(58, 34);
+            txtBoxTitel.Margin = new Padding(1, 1, 1, 1);
             txtBoxTitel.Multiline = true;
             txtBoxTitel.Name = "txtBoxTitel";
-            txtBoxTitel.Size = new Size(533, 79);
+            txtBoxTitel.Size = new Size(253, 41);
             txtBoxTitel.TabIndex = 3;
             txtBoxTitel.Text = "CONTACT MANAGER";
             txtBoxTitel.TextChanged += txtBoxTitel_TextChanged;
             // 
             // StartWindow
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1278, 519);
+            ClientSize = new Size(601, 253);
             Controls.Add(txtBoxTitel);
             Controls.Add(btnClientRegistration);
             Controls.Add(btnSearch);
             Controls.Add(btnUserRegistration);
+            Margin = new Padding(1, 1, 1, 1);
             Name = "StartWindow";
-            Text = "Form1";
+            Text = "Contact Manager";
             Load += StartWindow_Load;
             ResumeLayout(false);
             PerformLayout();
