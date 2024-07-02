@@ -36,18 +36,18 @@
         // 
         // txtBoxSearchBar
         // 
-        txtBoxSearchBar.Location = new Point(71, 101);
-        txtBoxSearchBar.Margin = new Padding(1);
+        txtBoxSearchBar.Location = new Point(151, 207);
+        txtBoxSearchBar.Margin = new Padding(2, 2, 2, 2);
         txtBoxSearchBar.Name = "txtBoxSearchBar";
-        txtBoxSearchBar.Size = new Size(276, 27);
+        txtBoxSearchBar.Size = new Size(582, 47);
         txtBoxSearchBar.TabIndex = 0;
         // 
         // btnSearch
         // 
-        btnSearch.Location = new Point(361, 96);
-        btnSearch.Margin = new Padding(1);
+        btnSearch.Location = new Point(766, 202);
+        btnSearch.Margin = new Padding(2, 2, 2, 2);
         btnSearch.Name = "btnSearch";
-        btnSearch.Size = new Size(88, 28);
+        btnSearch.Size = new Size(187, 57);
         btnSearch.TabIndex = 1;
         btnSearch.Text = "Suche";
         btnSearch.UseVisualStyleBackColor = true;
@@ -56,11 +56,11 @@
         // txtBoxTitelSearch
         // 
         txtBoxTitelSearch.Font = new Font("Segoe UI", 15F);
-        txtBoxTitelSearch.Location = new Point(71, 43);
-        txtBoxTitelSearch.Margin = new Padding(1);
+        txtBoxTitelSearch.Location = new Point(151, 88);
+        txtBoxTitelSearch.Margin = new Padding(2, 2, 2, 2);
         txtBoxTitelSearch.Multiline = true;
         txtBoxTitelSearch.Name = "txtBoxTitelSearch";
-        txtBoxTitelSearch.Size = new Size(120, 37);
+        txtBoxTitelSearch.Size = new Size(258, 72);
         txtBoxTitelSearch.TabIndex = 3;
         txtBoxTitelSearch.Text = "SUCHE";
         txtBoxTitelSearch.TextChanged += txtBoxTitelSearch_TextChanged;
@@ -68,22 +68,23 @@
         // dataGridView1
         // 
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Location = new Point(76, 174);
+        dataGridView1.Location = new Point(151, 357);
+        dataGridView1.Margin = new Padding(6, 6, 6, 6);
         dataGridView1.Name = "dataGridView1";
         dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new Size(300, 188);
+        dataGridView1.Size = new Size(649, 650);
         dataGridView1.TabIndex = 4;
         // 
         // Search
         // 
-        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleDimensions = new SizeF(17F, 41F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(736, 515);
+        ClientSize = new Size(1218, 1062);
         Controls.Add(dataGridView1);
         Controls.Add(txtBoxTitelSearch);
         Controls.Add(btnSearch);
         Controls.Add(txtBoxSearchBar);
-        Margin = new Padding(1);
+        Margin = new Padding(2, 2, 2, 2);
         Name = "Search";
         Text = "Suche";
         Load += Search_Load;
