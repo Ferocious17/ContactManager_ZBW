@@ -56,7 +56,24 @@ namespace ContactManager.Forms
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSearch.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSearch.Width, btnSearch.Height, 5, 5)); // Create rounded rectangle region
+
+
+            btnImportAll.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
+            btnImportAll.ForeColor = Color.White;
+            btnImportAll.FlatStyle = FlatStyle.Flat;
+            btnImportAll.FlatAppearance.BorderSize = 0; // Set button border size to 0
+            btnImportAll.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnUserRegistration.Width, btnUserRegistration.Height, 5, 5)); // Create rounded rectangle region
+
+            btnExportAll.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
+            btnExportAll.ForeColor = Color.White;
+            btnExportAll.FlatStyle = FlatStyle.Flat;
+            btnExportAll.FlatAppearance.BorderSize = 0; // Set button border size to 0
+            btnExportAll.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnUserRegistration.Width, btnUserRegistration.Height, 5, 5)); // Create rounded rectangle region
+
         }
+
+
+
 
         private void txtBoxTitel_TextChanged(object sender, EventArgs e)
         {
