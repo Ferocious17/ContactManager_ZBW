@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS ContactManager;
+
 USE ContactManager;
 
 CREATE TABLE person (
