@@ -29,14 +29,15 @@
     {
         txtBoxSearchBar = new TextBox();
         btnSearch = new Button();
-        txtBoxOutGrid = new TextBox();
         txtBoxTitelSearch = new TextBox();
+        dataGridView1 = new DataGridView();
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
         // txtBoxSearchBar
         // 
         txtBoxSearchBar.Location = new Point(71, 101);
-        txtBoxSearchBar.Margin = new Padding(1, 1, 1, 1);
+        txtBoxSearchBar.Margin = new Padding(1);
         txtBoxSearchBar.Name = "txtBoxSearchBar";
         txtBoxSearchBar.Size = new Size(276, 27);
         txtBoxSearchBar.TabIndex = 0;
@@ -44,7 +45,7 @@
         // btnSearch
         // 
         btnSearch.Location = new Point(361, 96);
-        btnSearch.Margin = new Padding(1, 1, 1, 1);
+        btnSearch.Margin = new Padding(1);
         btnSearch.Name = "btnSearch";
         btnSearch.Size = new Size(88, 28);
         btnSearch.TabIndex = 1;
@@ -52,20 +53,11 @@
         btnSearch.UseVisualStyleBackColor = true;
         btnSearch.Click += btnSearch_Click;
         // 
-        // txtBoxOutGrid
-        // 
-        txtBoxOutGrid.Location = new Point(71, 170);
-        txtBoxOutGrid.Margin = new Padding(1, 1, 1, 1);
-        txtBoxOutGrid.Multiline = true;
-        txtBoxOutGrid.Name = "txtBoxOutGrid";
-        txtBoxOutGrid.Size = new Size(372, 421);
-        txtBoxOutGrid.TabIndex = 2;
-        // 
         // txtBoxTitelSearch
         // 
         txtBoxTitelSearch.Font = new Font("Segoe UI", 15F);
         txtBoxTitelSearch.Location = new Point(71, 43);
-        txtBoxTitelSearch.Margin = new Padding(1, 1, 1, 1);
+        txtBoxTitelSearch.Margin = new Padding(1);
         txtBoxTitelSearch.Multiline = true;
         txtBoxTitelSearch.Name = "txtBoxTitelSearch";
         txtBoxTitelSearch.Size = new Size(120, 37);
@@ -73,19 +65,29 @@
         txtBoxTitelSearch.Text = "SUCHE";
         txtBoxTitelSearch.TextChanged += txtBoxTitelSearch_TextChanged;
         // 
+        // dataGridView1
+        // 
+        dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridView1.Location = new Point(76, 174);
+        dataGridView1.Name = "dataGridView1";
+        dataGridView1.RowHeadersWidth = 51;
+        dataGridView1.Size = new Size(300, 188);
+        dataGridView1.TabIndex = 4;
+        // 
         // Search
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(736, 515);
+        Controls.Add(dataGridView1);
         Controls.Add(txtBoxTitelSearch);
-        Controls.Add(txtBoxOutGrid);
         Controls.Add(btnSearch);
         Controls.Add(txtBoxSearchBar);
-        Margin = new Padding(1, 1, 1, 1);
+        Margin = new Padding(1);
         Name = "Search";
         Text = "Suche";
         Load += Search_Load;
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -94,6 +96,6 @@
 
     private TextBox txtBoxSearchBar;
         private Button btnSearch;
-        private TextBox txtBoxOutGrid;
         private TextBox txtBoxTitelSearch;
-    }
+    private DataGridView dataGridView1;
+}
