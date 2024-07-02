@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext -Connection "Server=localhost;Port=3306;Database=ContactManager;User=root;" Mysql.EntityFrameworkCore -OutputDir "C:\Users\caner\Downloads\Models"
