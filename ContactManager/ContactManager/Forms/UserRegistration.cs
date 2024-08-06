@@ -29,7 +29,7 @@
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -38,5 +38,9 @@
 
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

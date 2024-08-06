@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             checkBoxTrainee = new CheckBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
+            lblBoxPreNameEmp = new Label();
+            lblBoxSurNameEmp = new Label();
+            lblBoxAdressEmp = new Label();
+            lblBoxHouseNumberEmp = new Label();
+            lblBoxPLZEmp = new Label();
+            lblBoxPlaceEmp = new Label();
+            lblBoxSexEmp = new Label();
+            lbltxtBoxPhoneNumberEmp = new Label();
+            lblBoxMobileNumberEmp = new Label();
+            lblBoxEmailAdressEmp = new Label();
             txtBoxPreNameEmp = new MaskedTextBox();
             txtBoxSurNameEmp = new MaskedTextBox();
             txtBoxAdressEmp = new MaskedTextBox();
@@ -68,125 +68,126 @@
             checkBoxTrainee.UseVisualStyleBackColor = true;
             checkBoxTrainee.CheckedChanged += checkBoxTrainee_CheckedChanged;
             // 
-            // label2
+            // lblBoxPreNameEmp
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Location = new Point(2, 74);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(243, 74);
-            label2.TabIndex = 2;
-            label2.Text = "Vorname";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxPreNameEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxPreNameEmp.AutoSize = true;
+            lblBoxPreNameEmp.Location = new Point(2, 74);
+            lblBoxPreNameEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPreNameEmp.Name = "lblBoxPreNameEmp";
+            lblBoxPreNameEmp.Size = new Size(243, 74);
+            lblBoxPreNameEmp.TabIndex = 2;
+            lblBoxPreNameEmp.Text = "Vorname";
+            lblBoxPreNameEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblBoxSurNameEmp
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Location = new Point(2, 148);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(243, 74);
-            label3.TabIndex = 3;
-            label3.Text = "Nachname";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxSurNameEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxSurNameEmp.AutoSize = true;
+            lblBoxSurNameEmp.Location = new Point(2, 148);
+            lblBoxSurNameEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxSurNameEmp.Name = "lblBoxSurNameEmp";
+            lblBoxSurNameEmp.Size = new Size(243, 74);
+            lblBoxSurNameEmp.TabIndex = 3;
+            lblBoxSurNameEmp.Text = "Nachname";
+            lblBoxSurNameEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // lblBoxAdressEmp
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Location = new Point(2, 222);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(243, 74);
-            label4.TabIndex = 4;
-            label4.Text = "Adresse";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxAdressEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxAdressEmp.AutoSize = true;
+            lblBoxAdressEmp.Location = new Point(2, 222);
+            lblBoxAdressEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxAdressEmp.Name = "lblBoxAdressEmp";
+            lblBoxAdressEmp.Size = new Size(243, 74);
+            lblBoxAdressEmp.TabIndex = 4;
+            lblBoxAdressEmp.Text = "Adresse";
+            lblBoxAdressEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // lblBoxHouseNumberEmp
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Location = new Point(2, 296);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(243, 74);
-            label5.TabIndex = 5;
-            label5.Text = "Hausnummer";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxHouseNumberEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxHouseNumberEmp.AutoSize = true;
+            lblBoxHouseNumberEmp.Location = new Point(2, 296);
+            lblBoxHouseNumberEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxHouseNumberEmp.Name = "lblBoxHouseNumberEmp";
+            lblBoxHouseNumberEmp.Size = new Size(243, 74);
+            lblBoxHouseNumberEmp.TabIndex = 5;
+            lblBoxHouseNumberEmp.Text = "Hausnummer";
+            lblBoxHouseNumberEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // lblBoxPLZEmp
             // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Location = new Point(2, 370);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(243, 74);
-            label6.TabIndex = 6;
-            label6.Text = "PLZ";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxPLZEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxPLZEmp.AutoSize = true;
+            lblBoxPLZEmp.Location = new Point(2, 370);
+            lblBoxPLZEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPLZEmp.Name = "lblBoxPLZEmp";
+            lblBoxPLZEmp.Size = new Size(243, 74);
+            lblBoxPLZEmp.TabIndex = 6;
+            lblBoxPLZEmp.Text = "PLZ";
+            lblBoxPLZEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lblBoxPlaceEmp
             // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Location = new Point(2, 444);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(243, 74);
-            label7.TabIndex = 7;
-            label7.Text = "Ort";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxPlaceEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxPlaceEmp.AutoSize = true;
+            lblBoxPlaceEmp.Location = new Point(2, 444);
+            lblBoxPlaceEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPlaceEmp.Name = "lblBoxPlaceEmp";
+            lblBoxPlaceEmp.Size = new Size(243, 74);
+            lblBoxPlaceEmp.TabIndex = 7;
+            lblBoxPlaceEmp.Text = "Ort";
+            lblBoxPlaceEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // lblBoxSexEmp
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label8.AutoSize = true;
-            label8.Location = new Point(2, 518);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(243, 74);
-            label8.TabIndex = 8;
-            label8.Text = "Geschlecht";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxSexEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxSexEmp.AutoSize = true;
+            lblBoxSexEmp.Location = new Point(2, 518);
+            lblBoxSexEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxSexEmp.Name = "lblBoxSexEmp";
+            lblBoxSexEmp.Size = new Size(243, 74);
+            lblBoxSexEmp.TabIndex = 8;
+            lblBoxSexEmp.Text = "Geschlecht";
+            lblBoxSexEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label9
+            // lbltxtBoxPhoneNumberEmp
             // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Location = new Point(2, 592);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(243, 74);
-            label9.TabIndex = 9;
-            label9.Text = "Telefonummer";
-            label9.TextAlign = ContentAlignment.MiddleLeft;
+            lbltxtBoxPhoneNumberEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lbltxtBoxPhoneNumberEmp.AutoSize = true;
+            lbltxtBoxPhoneNumberEmp.Location = new Point(2, 592);
+            lbltxtBoxPhoneNumberEmp.Margin = new Padding(2, 0, 2, 0);
+            lbltxtBoxPhoneNumberEmp.Name = "lbltxtBoxPhoneNumberEmp";
+            lbltxtBoxPhoneNumberEmp.Size = new Size(243, 74);
+            lbltxtBoxPhoneNumberEmp.TabIndex = 9;
+            lbltxtBoxPhoneNumberEmp.Text = "Telefonummer";
+            lbltxtBoxPhoneNumberEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label10
+            // lblBoxMobileNumberEmp
             // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Location = new Point(2, 666);
-            label10.Margin = new Padding(2, 0, 2, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(243, 74);
-            label10.TabIndex = 10;
-            label10.Text = "Mobilnummer";
-            label10.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxMobileNumberEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxMobileNumberEmp.AutoSize = true;
+            lblBoxMobileNumberEmp.Location = new Point(2, 666);
+            lblBoxMobileNumberEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxMobileNumberEmp.Name = "lblBoxMobileNumberEmp";
+            lblBoxMobileNumberEmp.Size = new Size(243, 74);
+            lblBoxMobileNumberEmp.TabIndex = 10;
+            lblBoxMobileNumberEmp.Text = "Mobilnummer";
+            lblBoxMobileNumberEmp.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label11
+            // lblBoxEmailAdressEmp
             // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Location = new Point(2, 740);
-            label11.Margin = new Padding(2, 0, 2, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(243, 77);
-            label11.TabIndex = 11;
-            label11.Text = "Email-Adresse";
-            label11.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxEmailAdressEmp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBoxEmailAdressEmp.AutoSize = true;
+            lblBoxEmailAdressEmp.Location = new Point(2, 740);
+            lblBoxEmailAdressEmp.Margin = new Padding(2, 0, 2, 0);
+            lblBoxEmailAdressEmp.Name = "lblBoxEmailAdressEmp";
+            lblBoxEmailAdressEmp.Size = new Size(243, 77);
+            lblBoxEmailAdressEmp.TabIndex = 11;
+            lblBoxEmailAdressEmp.Text = "Email-Adresse";
+            lblBoxEmailAdressEmp.TextAlign = ContentAlignment.MiddleLeft;
+            lblBoxEmailAdressEmp.Click += label11_Click;
             // 
             // txtBoxPreNameEmp
             // 
@@ -295,27 +296,27 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.6442947F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.3557053F));
-            tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Controls.Add(label3, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblBoxPreNameEmp, 0, 1);
+            tableLayoutPanel1.Controls.Add(lblBoxSurNameEmp, 0, 2);
             tableLayoutPanel1.Controls.Add(checkBoxTrainee, 0, 0);
             tableLayoutPanel1.Controls.Add(txtBoxEmailAdressEmp, 1, 10);
-            tableLayoutPanel1.Controls.Add(label4, 0, 3);
+            tableLayoutPanel1.Controls.Add(lblBoxAdressEmp, 0, 3);
             tableLayoutPanel1.Controls.Add(txtBoxMobileNumberEmp, 1, 9);
-            tableLayoutPanel1.Controls.Add(label5, 0, 4);
+            tableLayoutPanel1.Controls.Add(lblBoxHouseNumberEmp, 0, 4);
             tableLayoutPanel1.Controls.Add(txtBoxPhoneNumberEmp, 1, 8);
-            tableLayoutPanel1.Controls.Add(label6, 0, 5);
+            tableLayoutPanel1.Controls.Add(lblBoxPLZEmp, 0, 5);
             tableLayoutPanel1.Controls.Add(txtBoxSexEmp, 1, 7);
-            tableLayoutPanel1.Controls.Add(label7, 0, 6);
+            tableLayoutPanel1.Controls.Add(lblBoxPlaceEmp, 0, 6);
             tableLayoutPanel1.Controls.Add(txtBoxPlaceEmp, 1, 6);
-            tableLayoutPanel1.Controls.Add(label8, 0, 7);
+            tableLayoutPanel1.Controls.Add(lblBoxSexEmp, 0, 7);
             tableLayoutPanel1.Controls.Add(txtBoxPLZEmp, 1, 5);
-            tableLayoutPanel1.Controls.Add(label9, 0, 8);
+            tableLayoutPanel1.Controls.Add(lbltxtBoxPhoneNumberEmp, 0, 8);
             tableLayoutPanel1.Controls.Add(txtBoxHouseNumberEmp, 1, 4);
-            tableLayoutPanel1.Controls.Add(label10, 0, 9);
+            tableLayoutPanel1.Controls.Add(lblBoxMobileNumberEmp, 0, 9);
             tableLayoutPanel1.Controls.Add(txtBoxAdressEmp, 1, 3);
             tableLayoutPanel1.Controls.Add(txtBoxSurNameEmp, 1, 2);
             tableLayoutPanel1.Controls.Add(txtBoxPreNameEmp, 1, 1);
-            tableLayoutPanel1.Controls.Add(label11, 0, 10);
+            tableLayoutPanel1.Controls.Add(lblBoxEmailAdressEmp, 0, 10);
             tableLayoutPanel1.Location = new Point(58, 199);
             tableLayoutPanel1.Margin = new Padding(6);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -365,16 +366,16 @@
         #endregion
 
         private CheckBox checkBoxTrainee;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
+        private Label lblBoxPreNameEmp;
+        private Label lblBoxSurNameEmp;
+        private Label lblBoxAdressEmp;
+        private Label lblBoxHouseNumberEmp;
+        private Label lblBoxPLZEmp;
+        private Label lblBoxPlaceEmp;
+        private Label lblBoxSexEmp;
+        private Label lbltxtBoxPhoneNumberEmp;
+        private Label lblBoxMobileNumberEmp;
+        private Label lblBoxEmailAdressEmp;
         private MaskedTextBox txtBoxPreNameEmp;
         private MaskedTextBox txtBoxSurNameEmp;
         private MaskedTextBox txtBoxAdressEmp;

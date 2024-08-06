@@ -44,5 +44,10 @@ namespace ContactManager.Forms
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
