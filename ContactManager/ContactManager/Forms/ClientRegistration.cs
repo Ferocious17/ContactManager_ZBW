@@ -21,17 +21,17 @@ namespace ContactManager.Forms
         {
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            txtBoxKundenErfassungTitel.Font = new Font(txtBoxKundenErfassungTitel.Font, FontStyle.Bold);
-            txtBoxKundenErfassungTitel.ForeColor = Color.Black;
-            txtBoxKundenErfassungTitel.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            txtBoxKundenErfassungTitel.BorderStyle = BorderStyle.None;
+            LblCostumerTitle.Font = new Font(LblCostumerTitle.Font, FontStyle.Bold);
+            LblCostumerTitle.ForeColor = Color.Black;
+            LblCostumerTitle.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
+            LblCostumerTitle.BorderStyle = BorderStyle.None;
 
             //Buttons Design
-            btnSaveClientRegistration.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
-            btnSaveClientRegistration.ForeColor = Color.White;
-            btnSaveClientRegistration.FlatStyle = FlatStyle.Flat;
-            btnSaveClientRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
-            btnSaveClientRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveClientRegistration.Width, btnSaveClientRegistration.Height, 5, 5)); // Create rounded rectangle region
+            CmdCostumerSave.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
+            CmdCostumerSave.ForeColor = Color.White;
+            CmdCostumerSave.FlatStyle = FlatStyle.Flat;
+            CmdCostumerSave.FlatAppearance.BorderSize = 0; // Set button border size to 0
+            CmdCostumerSave.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdCostumerSave.Width, CmdCostumerSave.Height, 5, 5)); // Create rounded rectangle region
 
         }
 

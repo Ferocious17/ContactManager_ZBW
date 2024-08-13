@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnSearch = new Button();
-            btnClientRegistration = new Button();
-            txtBoxTitel = new TextBox();
-            btnUserRegistration = new Button();
+            LblStartSearch = new Button();
+            LblStartCostumerRegistration = new Button();
+            LblStartTitle = new TextBox();
+            LblStartEmployeeRegistration = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -40,61 +40,61 @@
             button3 = new Button();
             button4 = new Button();
             tableLayoutPanel4 = new TableLayoutPanel();
-            btnImportAll = new Button();
-            btnExportAll = new Button();
+            CmdStartExport = new Button();
+            CmdStartImport = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
-            // btnSearch
+            // LblStartSearch
             // 
-            btnSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnSearch.Location = new Point(916, 73);
-            btnSearch.Margin = new Padding(2);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(453, 111);
-            btnSearch.TabIndex = 1;
-            btnSearch.Text = "Suche";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            LblStartSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            LblStartSearch.Location = new Point(377, 26);
+            LblStartSearch.Margin = new Padding(1);
+            LblStartSearch.Name = "LblStartSearch";
+            LblStartSearch.Size = new Size(187, 41);
+            LblStartSearch.TabIndex = 1;
+            LblStartSearch.Text = "Suche";
+            LblStartSearch.UseVisualStyleBackColor = true;
+            LblStartSearch.Click += btnSearch_Click;
             // 
-            // btnClientRegistration
+            // LblStartCostumerRegistration
             // 
-            btnClientRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnClientRegistration.Location = new Point(459, 72);
-            btnClientRegistration.Margin = new Padding(2);
-            btnClientRegistration.Name = "btnClientRegistration";
-            btnClientRegistration.Size = new Size(453, 113);
-            btnClientRegistration.TabIndex = 2;
-            btnClientRegistration.Text = "Kunden Erfassung";
-            btnClientRegistration.UseVisualStyleBackColor = true;
-            btnClientRegistration.Click += btnClientRegistration_Click;
+            LblStartCostumerRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            LblStartCostumerRegistration.Location = new Point(189, 26);
+            LblStartCostumerRegistration.Margin = new Padding(1);
+            LblStartCostumerRegistration.Name = "LblStartCostumerRegistration";
+            LblStartCostumerRegistration.Size = new Size(186, 41);
+            LblStartCostumerRegistration.TabIndex = 2;
+            LblStartCostumerRegistration.Text = "Kunden Erfassung";
+            LblStartCostumerRegistration.UseVisualStyleBackColor = true;
+            LblStartCostumerRegistration.Click += btnClientRegistration_Click;
             // 
-            // txtBoxTitel
+            // LblStartTitle
             // 
-            txtBoxTitel.Font = new Font("Segoe UI", 15F);
-            txtBoxTitel.Location = new Point(83, 88);
-            txtBoxTitel.Margin = new Padding(2);
-            txtBoxTitel.Name = "txtBoxTitel";
-            txtBoxTitel.Size = new Size(563, 74);
-            txtBoxTitel.TabIndex = 0;
-            txtBoxTitel.TabStop = false;
-            txtBoxTitel.Text = "CONTACT MANAGER";
-            txtBoxTitel.TextChanged += txtBoxTitel_TextChanged;
+            LblStartTitle.Font = new Font("Segoe UI", 15F);
+            LblStartTitle.Location = new Point(34, 32);
+            LblStartTitle.Margin = new Padding(1);
+            LblStartTitle.Name = "LblStartTitle";
+            LblStartTitle.Size = new Size(234, 34);
+            LblStartTitle.TabIndex = 0;
+            LblStartTitle.TabStop = false;
+            LblStartTitle.Text = "CONTACT MANAGER";
+            LblStartTitle.TextChanged += txtBoxTitel_TextChanged;
             // 
-            // btnUserRegistration
+            // LblStartEmployeeRegistration
             // 
-            btnUserRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnUserRegistration.Location = new Point(2, 72);
-            btnUserRegistration.Margin = new Padding(2);
-            btnUserRegistration.Name = "btnUserRegistration";
-            btnUserRegistration.Size = new Size(453, 113);
-            btnUserRegistration.TabIndex = 0;
-            btnUserRegistration.Text = "Mitarbeiter Erfassung";
-            btnUserRegistration.UseVisualStyleBackColor = true;
-            btnUserRegistration.Click += btnUserRegistration_Click;
+            LblStartEmployeeRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            LblStartEmployeeRegistration.Location = new Point(1, 26);
+            LblStartEmployeeRegistration.Margin = new Padding(1);
+            LblStartEmployeeRegistration.Name = "LblStartEmployeeRegistration";
+            LblStartEmployeeRegistration.Size = new Size(186, 41);
+            LblStartEmployeeRegistration.TabIndex = 0;
+            LblStartEmployeeRegistration.Text = "Mitarbeiter Erfassung";
+            LblStartEmployeeRegistration.UseVisualStyleBackColor = true;
+            LblStartEmployeeRegistration.Click += btnUserRegistration_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -103,16 +103,16 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Controls.Add(btnUserRegistration, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnClientRegistration, 1, 0);
-            tableLayoutPanel1.Controls.Add(btnSearch, 2, 0);
-            tableLayoutPanel1.Location = new Point(83, 246);
-            tableLayoutPanel1.Margin = new Padding(6);
+            tableLayoutPanel1.Controls.Add(LblStartEmployeeRegistration, 0, 0);
+            tableLayoutPanel1.Controls.Add(LblStartCostumerRegistration, 1, 0);
+            tableLayoutPanel1.Controls.Add(LblStartSearch, 2, 0);
+            tableLayoutPanel1.Location = new Point(34, 90);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1371, 258);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 94F));
+            tableLayoutPanel1.Size = new Size(565, 94);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -194,44 +194,47 @@
             tableLayoutPanel4.ColumnCount = 2;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Controls.Add(btnExportAll, 1, 0);
-            tableLayoutPanel4.Controls.Add(btnImportAll, 0, 0);
-            tableLayoutPanel4.Location = new Point(813, 66);
+            tableLayoutPanel4.Controls.Add(CmdStartExport, 1, 0);
+            tableLayoutPanel4.Controls.Add(CmdStartImport, 0, 0);
+            tableLayoutPanel4.Location = new Point(335, 24);
+            tableLayoutPanel4.Margin = new Padding(1);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(594, 58);
+            tableLayoutPanel4.Size = new Size(245, 25);
             tableLayoutPanel4.TabIndex = 5;
             // 
-            // btnImportAll
+            // CmdStartExport
             // 
-            btnImportAll.Location = new Point(3, 3);
-            btnImportAll.Name = "btnImportAll";
-            btnImportAll.Size = new Size(291, 52);
-            btnImportAll.TabIndex = 6;
-            btnImportAll.Text = "Importieren";
-            btnImportAll.UseVisualStyleBackColor = true;
+            CmdStartExport.Location = new Point(123, 1);
+            CmdStartExport.Margin = new Padding(1);
+            CmdStartExport.Name = "CmdStartExport";
+            CmdStartExport.Size = new Size(120, 23);
+            CmdStartExport.TabIndex = 7;
+            CmdStartExport.Text = "Exportieren";
+            CmdStartExport.UseVisualStyleBackColor = true;
             // 
-            // btnExportAll
+            // CmdStartImport
             // 
-            btnExportAll.Location = new Point(300, 3);
-            btnExportAll.Name = "btnExportAll";
-            btnExportAll.Size = new Size(291, 52);
-            btnExportAll.TabIndex = 7;
-            btnExportAll.Text = "Exportieren";
-            btnExportAll.UseVisualStyleBackColor = true;
+            CmdStartImport.Location = new Point(1, 1);
+            CmdStartImport.Margin = new Padding(1);
+            CmdStartImport.Name = "CmdStartImport";
+            CmdStartImport.Size = new Size(120, 23);
+            CmdStartImport.TabIndex = 6;
+            CmdStartImport.Text = "Importieren";
+            CmdStartImport.UseVisualStyleBackColor = true;
             // 
             // StartWindow
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CausesValidation = false;
-            ClientSize = new Size(1543, 660);
+            ClientSize = new Size(635, 241);
             Controls.Add(tableLayoutPanel4);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(txtBoxTitel);
+            Controls.Add(LblStartTitle);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2);
+            Margin = new Padding(1);
             MaximizeBox = false;
             Name = "StartWindow";
             Text = "Contact Manager";
@@ -245,10 +248,10 @@
         }
 
         #endregion
-        private Button btnSearch;
-        private Button btnClientRegistration;
-        private TextBox txtBoxTitel;
-        private Button btnUserRegistration;
+        private Button LblStartSearch;
+        private Button LblStartCostumerRegistration;
+        private TextBox LblStartTitle;
+        private Button LblStartEmployeeRegistration;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Button button1;
@@ -257,7 +260,7 @@
         private Button button3;
         private Button button4;
         private TableLayoutPanel tableLayoutPanel4;
-        private Button btnExportAll;
-        private Button btnImportAll;
+        private Button CmdStartExport;
+        private Button CmdStartImport;
     }
 }
