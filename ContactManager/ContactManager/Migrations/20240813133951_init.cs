@@ -33,7 +33,8 @@ namespace ContactManager.Migrations
                 name: "Person",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Gender = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     Title = table.Column<string>(type: "longtext", nullable: false),
                     FirstName = table.Column<string>(type: "longtext", nullable: false),
@@ -82,7 +83,8 @@ namespace ContactManager.Migrations
                 name: "Employee",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     EmployeeNumber = table.Column<Guid>(type: "char(36)", nullable: false),
                     DepartmentId = table.Column<int>(type: "int", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),

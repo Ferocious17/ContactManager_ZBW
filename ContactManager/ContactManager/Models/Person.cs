@@ -22,7 +22,7 @@ public class Person
     protected Person() { }
 
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public bool Gender { get; set; }
     public string Title { get; set; }

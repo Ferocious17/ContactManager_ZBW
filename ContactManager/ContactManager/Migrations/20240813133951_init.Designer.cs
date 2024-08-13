@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContactManager.Migrations
 {
     [DbContext(typeof(ContactManagerContext))]
-    [Migration("20240813130748_init")]
+    [Migration("20240813133951_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -34,12 +34,13 @@ namespace ContactManager.Migrations
 
                     b.HasKey("DepartmentId");
 
-                    b.ToTable("Department");
+                    b.ToTable("Department", (string)null);
                 });
 
             modelBuilder.Entity("ContactManager.Models.Person", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateOfBirth")
