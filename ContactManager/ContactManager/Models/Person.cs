@@ -1,15 +1,37 @@
-﻿namespace ContactManager.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Person(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommuncationInfo communicationInfo, Address address, bool status, string nationality)
+namespace ContactManager.Models;
+
+public class Person
 {
-    public bool Gender { get; set; } = gender;
-    public string Title { get; set; } = title;
-    public string FirstName { get; set; } = firstName;
-    public string LastName { get; set; } = lastName;
-    public DateTime DateOfBirth { get; set; } = dateOfBirth;
-    public string SocialSecurityNumber { get; set; } = socialSecurityNumber;
-    public CommuncationInfo CommunicationInfo { get; set; } = communicationInfo;
-    public Address Address { get; set; } = address;
-    public bool Status { get; set; } = status;
-    public string Nationality { get; set; } = nationality;
+    public Person(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommuncationInfo communicationInfo, Address address, bool status, string nationality)
+    {
+        Gender = gender;
+        Title = title;
+        FirstName = firstName;
+        LastName = lastName;
+        DateOfBirth = dateOfBirth;
+        SocialSecurityNumber = socialSecurityNumber;
+        CommunicationInfo = communicationInfo;
+        Address = address;
+        Status = status;
+        Nationality = nationality;
+    }
+
+    protected Person() { }
+
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    public int Id { get; set; }
+    public bool Gender { get; set; }
+    public string Title { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string SocialSecurityNumber { get; set; }
+    public CommuncationInfo CommunicationInfo { get; set; }
+    public Address Address { get; set; }
+    public bool Status { get; set; }
+    public string Nationality { get; set; }
 }

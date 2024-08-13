@@ -1,9 +1,19 @@
 ﻿namespace ContactManager.Models;
 
-public class CommuncationInfo(string phoneNumberPrivate, string phoneNumberMobile, string phoneNumberBusiness, string email)
+public class CommuncationInfo
 {
-    public string PhoneNumberPrivate { get; set; } = phoneNumberPrivate;
-    public string PhoneNumberMobile { get; set; } = phoneNumberMobile;
-    public string PhoneNumberBusiness { get; set; } = phoneNumberBusiness;
-    public string Email { get; set; } = email;
+    public CommuncationInfo(string phoneNumberPrivate, string phoneNumberMobile, string phoneNumberBusiness, string email)
+    {
+        PhoneNumberPrivate = phoneNumberPrivate;
+        PhoneNumberMobile = phoneNumberMobile;
+        PhoneNumberBusiness = phoneNumberBusiness;
+        Email = email;
+    }
+
+    private CommuncationInfo() { }
+
+    public string PhoneNumberPrivate { get; set; }
+    public string PhoneNumberMobile { get; set; }
+    public string PhoneNumberBusiness { get; set; }
+    public string Email { get; set; }
 }

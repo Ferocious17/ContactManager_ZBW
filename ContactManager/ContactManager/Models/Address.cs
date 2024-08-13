@@ -1,9 +1,19 @@
 ﻿namespace ContactManager.Models;
 
-public class Address(string street, string streetNumber, int zipCode, string city)
+public class Address
 {
-    public string Street { get; set; } = street;
-    public string StreetNumber { get; set; } = streetNumber;
-    public int ZipCode { get; set; } = zipCode;
-    public string City { get; set; } = city;
+    public Address(string street, string streetNumber, int zipCode, string city)
+    {
+        Street = street;
+        StreetNumber = streetNumber;
+        ZipCode = zipCode;
+        City = city;
+    }
+
+    private Address() { }
+
+    public string Street { get; set; }
+    public string StreetNumber { get; set; }
+    public int ZipCode { get; set; }
+    public string City { get; set; }
 }
