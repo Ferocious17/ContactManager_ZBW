@@ -27,76 +27,76 @@
     /// </summary>
     private void InitializeComponent()
     {
-        txtBoxSearchBar = new TextBox();
-        btnSearch = new Button();
-        txtBoxTitelSearch = new TextBox();
-        txtOutgrid = new DataGridView();
-        ((System.ComponentModel.ISupportInitialize)txtOutgrid).BeginInit();
+        TxtSearchbar = new TextBox();
+        CmdSearch = new Button();
+        LblSearchTitle = new TextBox();
+        TxtOutgrid = new DataGridView();
+        ((System.ComponentModel.ISupportInitialize)TxtOutgrid).BeginInit();
         SuspendLayout();
         // 
-        // txtBoxSearchBar
+        // TxtSearchbar
         // 
-        txtBoxSearchBar.Location = new Point(151, 207);
-        txtBoxSearchBar.Margin = new Padding(2);
-        txtBoxSearchBar.Name = "txtBoxSearchBar";
-        txtBoxSearchBar.Size = new Size(582, 47);
-        txtBoxSearchBar.TabIndex = 0;
+        TxtSearchbar.Location = new Point(62, 76);
+        TxtSearchbar.Margin = new Padding(1, 1, 1, 1);
+        TxtSearchbar.Name = "TxtSearchbar";
+        TxtSearchbar.Size = new Size(242, 23);
+        TxtSearchbar.TabIndex = 0;
         // 
-        // btnSearch
+        // CmdSearch
         // 
-        btnSearch.Location = new Point(766, 202);
-        btnSearch.Margin = new Padding(2);
-        btnSearch.Name = "btnSearch";
-        btnSearch.Size = new Size(187, 57);
-        btnSearch.TabIndex = 1;
-        btnSearch.Text = "Suche";
-        btnSearch.UseVisualStyleBackColor = true;
-        btnSearch.Click += btnSearch_Click;
+        CmdSearch.Location = new Point(315, 74);
+        CmdSearch.Margin = new Padding(1, 1, 1, 1);
+        CmdSearch.Name = "CmdSearch";
+        CmdSearch.Size = new Size(77, 21);
+        CmdSearch.TabIndex = 1;
+        CmdSearch.Text = "Suche";
+        CmdSearch.UseVisualStyleBackColor = true;
+        CmdSearch.Click += btnSearch_Click;
         // 
-        // txtBoxTitelSearch
+        // LblSearchTitle
         // 
-        txtBoxTitelSearch.Font = new Font("Segoe UI", 15F);
-        txtBoxTitelSearch.Location = new Point(151, 88);
-        txtBoxTitelSearch.Margin = new Padding(2);
-        txtBoxTitelSearch.Multiline = true;
-        txtBoxTitelSearch.Name = "txtBoxTitelSearch";
-        txtBoxTitelSearch.Size = new Size(258, 72);
-        txtBoxTitelSearch.TabIndex = 3;
-        txtBoxTitelSearch.Text = "SUCHE";
-        txtBoxTitelSearch.TextChanged += txtBoxTitelSearch_TextChanged;
+        LblSearchTitle.Font = new Font("Segoe UI", 15F);
+        LblSearchTitle.Location = new Point(62, 32);
+        LblSearchTitle.Margin = new Padding(1, 1, 1, 1);
+        LblSearchTitle.Multiline = true;
+        LblSearchTitle.Name = "LblSearchTitle";
+        LblSearchTitle.Size = new Size(109, 29);
+        LblSearchTitle.TabIndex = 3;
+        LblSearchTitle.Text = "SUCHE";
+        LblSearchTitle.TextChanged += txtBoxTitelSearch_TextChanged;
         // 
-        // txtOutgrid
+        // TxtOutgrid
         // 
-        txtOutgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        txtOutgrid.Location = new Point(151, 357);
-        txtOutgrid.Margin = new Padding(6);
-        txtOutgrid.Name = "txtOutgrid";
-        txtOutgrid.RowHeadersWidth = 51;
-        txtOutgrid.Size = new Size(649, 650);
-        txtOutgrid.TabIndex = 4;
+        TxtOutgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        TxtOutgrid.Location = new Point(62, 131);
+        TxtOutgrid.Margin = new Padding(2, 2, 2, 2);
+        TxtOutgrid.Name = "TxtOutgrid";
+        TxtOutgrid.RowHeadersWidth = 51;
+        TxtOutgrid.Size = new Size(267, 238);
+        TxtOutgrid.TabIndex = 4;
         // 
         // Search
         // 
-        AutoScaleDimensions = new SizeF(17F, 41F);
+        AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1218, 1062);
-        Controls.Add(txtOutgrid);
-        Controls.Add(txtBoxTitelSearch);
-        Controls.Add(btnSearch);
-        Controls.Add(txtBoxSearchBar);
-        Margin = new Padding(2);
+        ClientSize = new Size(502, 388);
+        Controls.Add(TxtOutgrid);
+        Controls.Add(LblSearchTitle);
+        Controls.Add(CmdSearch);
+        Controls.Add(TxtSearchbar);
+        Margin = new Padding(1, 1, 1, 1);
         Name = "Search";
         Text = "Suche";
         Load += Search_Load;
-        ((System.ComponentModel.ISupportInitialize)txtOutgrid).EndInit();
+        ((System.ComponentModel.ISupportInitialize)TxtOutgrid).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
 
     #endregion
 
-    private TextBox txtBoxSearchBar;
-        private Button btnSearch;
-        private TextBox txtBoxTitelSearch;
-    private DataGridView txtOutgrid;
+    private TextBox TxtSearchbar;
+        private Button CmdSearch;
+        private TextBox LblSearchTitle;
+    private DataGridView TxtOutgrid;
 }
