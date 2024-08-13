@@ -12,10 +12,10 @@
 
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            txtBoxErfassungTitel.Font = new Font(txtBoxErfassungTitel.Font, FontStyle.Bold);
-            txtBoxErfassungTitel.ForeColor = Color.Black;
-            txtBoxErfassungTitel.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            txtBoxErfassungTitel.BorderStyle = BorderStyle.None;
+            TxtTitleEmployeeRegistration.Font = new Font(TxtTitleEmployeeRegistration.Font, FontStyle.Bold);
+            TxtTitleEmployeeRegistration.ForeColor = Color.Black;
+            TxtTitleEmployeeRegistration.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
+            TxtTitleEmployeeRegistration.BorderStyle = BorderStyle.None;
 
             //Buttons Design
 
@@ -39,6 +39,16 @@
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void s_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void lblBoxAdressEmp_Click(object sender, EventArgs e)
         {
 
         }
