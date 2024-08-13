@@ -40,8 +40,8 @@
             button3 = new Button();
             button4 = new Button();
             tableLayoutPanel4 = new TableLayoutPanel();
-            btnImportAll = new Button();
             btnExportAll = new Button();
+            btnImportAll = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -51,10 +51,10 @@
             // btnSearch
             // 
             btnSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnSearch.Location = new Point(916, 73);
-            btnSearch.Margin = new Padding(2);
+            btnSearch.Location = new Point(377, 26);
+            btnSearch.Margin = new Padding(1, 1, 1, 1);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(453, 111);
+            btnSearch.Size = new Size(187, 41);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Suche";
             btnSearch.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // btnClientRegistration
             // 
             btnClientRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnClientRegistration.Location = new Point(459, 72);
-            btnClientRegistration.Margin = new Padding(2);
+            btnClientRegistration.Location = new Point(189, 26);
+            btnClientRegistration.Margin = new Padding(1, 1, 1, 1);
             btnClientRegistration.Name = "btnClientRegistration";
-            btnClientRegistration.Size = new Size(453, 113);
+            btnClientRegistration.Size = new Size(186, 41);
             btnClientRegistration.TabIndex = 2;
             btnClientRegistration.Text = "Kunden Erfassung";
             btnClientRegistration.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
             // txtBoxTitel
             // 
             txtBoxTitel.Font = new Font("Segoe UI", 15F);
-            txtBoxTitel.Location = new Point(83, 88);
-            txtBoxTitel.Margin = new Padding(2);
+            txtBoxTitel.Location = new Point(34, 32);
+            txtBoxTitel.Margin = new Padding(1, 1, 1, 1);
             txtBoxTitel.Name = "txtBoxTitel";
-            txtBoxTitel.Size = new Size(563, 74);
+            txtBoxTitel.Size = new Size(234, 34);
             txtBoxTitel.TabIndex = 0;
             txtBoxTitel.TabStop = false;
             txtBoxTitel.Text = "CONTACT MANAGER";
@@ -87,10 +87,10 @@
             // btnUserRegistration
             // 
             btnUserRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnUserRegistration.Location = new Point(2, 72);
-            btnUserRegistration.Margin = new Padding(2);
+            btnUserRegistration.Location = new Point(1, 26);
+            btnUserRegistration.Margin = new Padding(1, 1, 1, 1);
             btnUserRegistration.Name = "btnUserRegistration";
-            btnUserRegistration.Size = new Size(453, 113);
+            btnUserRegistration.Size = new Size(186, 41);
             btnUserRegistration.TabIndex = 0;
             btnUserRegistration.Text = "Mitarbeiter Erfassung";
             btnUserRegistration.UseVisualStyleBackColor = true;
@@ -106,13 +106,13 @@
             tableLayoutPanel1.Controls.Add(btnUserRegistration, 0, 0);
             tableLayoutPanel1.Controls.Add(btnClientRegistration, 1, 0);
             tableLayoutPanel1.Controls.Add(btnSearch, 2, 0);
-            tableLayoutPanel1.Location = new Point(83, 246);
-            tableLayoutPanel1.Margin = new Padding(6);
+            tableLayoutPanel1.Location = new Point(34, 90);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1371, 258);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 94F));
+            tableLayoutPanel1.Size = new Size(565, 94);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -196,42 +196,45 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Controls.Add(btnExportAll, 1, 0);
             tableLayoutPanel4.Controls.Add(btnImportAll, 0, 0);
-            tableLayoutPanel4.Location = new Point(813, 66);
+            tableLayoutPanel4.Location = new Point(335, 24);
+            tableLayoutPanel4.Margin = new Padding(1, 1, 1, 1);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(594, 58);
+            tableLayoutPanel4.Size = new Size(245, 25);
             tableLayoutPanel4.TabIndex = 5;
-            // 
-            // btnImportAll
-            // 
-            btnImportAll.Location = new Point(3, 3);
-            btnImportAll.Name = "btnImportAll";
-            btnImportAll.Size = new Size(291, 52);
-            btnImportAll.TabIndex = 6;
-            btnImportAll.Text = "Importieren";
-            btnImportAll.UseVisualStyleBackColor = true;
             // 
             // btnExportAll
             // 
-            btnExportAll.Location = new Point(300, 3);
+            btnExportAll.Location = new Point(123, 1);
+            btnExportAll.Margin = new Padding(1, 1, 1, 1);
             btnExportAll.Name = "btnExportAll";
-            btnExportAll.Size = new Size(291, 52);
+            btnExportAll.Size = new Size(120, 23);
             btnExportAll.TabIndex = 7;
             btnExportAll.Text = "Exportieren";
             btnExportAll.UseVisualStyleBackColor = true;
             // 
+            // btnImportAll
+            // 
+            btnImportAll.Location = new Point(1, 1);
+            btnImportAll.Margin = new Padding(1, 1, 1, 1);
+            btnImportAll.Name = "btnImportAll";
+            btnImportAll.Size = new Size(120, 23);
+            btnImportAll.TabIndex = 6;
+            btnImportAll.Text = "Importieren";
+            btnImportAll.UseVisualStyleBackColor = true;
+            // 
             // StartWindow
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CausesValidation = false;
-            ClientSize = new Size(1543, 660);
+            ClientSize = new Size(635, 241);
             Controls.Add(tableLayoutPanel4);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(txtBoxTitel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2);
+            Margin = new Padding(1, 1, 1, 1);
             MaximizeBox = false;
             Name = "StartWindow";
             Text = "Contact Manager";

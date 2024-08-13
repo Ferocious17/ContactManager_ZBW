@@ -37,7 +37,7 @@
             txtBoxHouseNumber = new MaskedTextBox();
             txtBoxAdress = new MaskedTextBox();
             txtBoxSurName = new MaskedTextBox();
-            txtBoxPreName = new MaskedTextBox();
+            TxtCostumerFirstname = new MaskedTextBox();
             lbltxtBoxEmailAdress = new Label();
             lblBoxMobileNumber = new Label();
             lblBoxPhoneNumber = new Label();
@@ -57,101 +57,101 @@
             // txtBoxEmailAdress
             // 
             txtBoxEmailAdress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxEmailAdress.Location = new Point(272, 749);
-            txtBoxEmailAdress.Margin = new Padding(2);
+            txtBoxEmailAdress.Location = new Point(112, 268);
+            txtBoxEmailAdress.Margin = new Padding(1);
             txtBoxEmailAdress.Name = "txtBoxEmailAdress";
-            txtBoxEmailAdress.Size = new Size(401, 47);
+            txtBoxEmailAdress.Size = new Size(165, 23);
             txtBoxEmailAdress.TabIndex = 41;
             // 
             // txtBoxMobileNumber
             // 
             txtBoxMobileNumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxMobileNumber.Location = new Point(272, 665);
-            txtBoxMobileNumber.Margin = new Padding(2);
+            txtBoxMobileNumber.Location = new Point(112, 235);
+            txtBoxMobileNumber.Margin = new Padding(1);
             txtBoxMobileNumber.Name = "txtBoxMobileNumber";
-            txtBoxMobileNumber.Size = new Size(401, 47);
+            txtBoxMobileNumber.Size = new Size(165, 23);
             txtBoxMobileNumber.TabIndex = 40;
             // 
             // txtBoxPhoneNumber
             // 
             txtBoxPhoneNumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPhoneNumber.Location = new Point(272, 584);
-            txtBoxPhoneNumber.Margin = new Padding(2);
+            txtBoxPhoneNumber.Location = new Point(112, 206);
+            txtBoxPhoneNumber.Margin = new Padding(1);
             txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
-            txtBoxPhoneNumber.Size = new Size(401, 47);
+            txtBoxPhoneNumber.Size = new Size(165, 23);
             txtBoxPhoneNumber.TabIndex = 39;
             // 
             // txtBoxSex
             // 
             txtBoxSex.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxSex.Location = new Point(272, 503);
-            txtBoxSex.Margin = new Padding(2);
+            txtBoxSex.Location = new Point(112, 177);
+            txtBoxSex.Margin = new Padding(1);
             txtBoxSex.Name = "txtBoxSex";
-            txtBoxSex.Size = new Size(401, 47);
+            txtBoxSex.Size = new Size(165, 23);
             txtBoxSex.TabIndex = 38;
             // 
             // txtBoxOrt
             // 
             txtBoxOrt.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxOrt.Location = new Point(272, 422);
-            txtBoxOrt.Margin = new Padding(2);
+            txtBoxOrt.Location = new Point(112, 148);
+            txtBoxOrt.Margin = new Padding(1);
             txtBoxOrt.Name = "txtBoxOrt";
-            txtBoxOrt.Size = new Size(401, 47);
+            txtBoxOrt.Size = new Size(165, 23);
             txtBoxOrt.TabIndex = 37;
             // 
             // txtBoxPLZ
             // 
             txtBoxPLZ.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPLZ.Location = new Point(272, 341);
-            txtBoxPLZ.Margin = new Padding(2);
+            txtBoxPLZ.Location = new Point(112, 119);
+            txtBoxPLZ.Margin = new Padding(1);
             txtBoxPLZ.Name = "txtBoxPLZ";
-            txtBoxPLZ.Size = new Size(401, 47);
+            txtBoxPLZ.Size = new Size(165, 23);
             txtBoxPLZ.TabIndex = 36;
             // 
             // txtBoxHouseNumber
             // 
             txtBoxHouseNumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxHouseNumber.Location = new Point(272, 260);
-            txtBoxHouseNumber.Margin = new Padding(2);
+            txtBoxHouseNumber.Location = new Point(112, 90);
+            txtBoxHouseNumber.Margin = new Padding(1);
             txtBoxHouseNumber.Name = "txtBoxHouseNumber";
-            txtBoxHouseNumber.Size = new Size(401, 47);
+            txtBoxHouseNumber.Size = new Size(165, 23);
             txtBoxHouseNumber.TabIndex = 35;
             // 
             // txtBoxAdress
             // 
             txtBoxAdress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxAdress.Location = new Point(272, 179);
-            txtBoxAdress.Margin = new Padding(2);
+            txtBoxAdress.Location = new Point(112, 61);
+            txtBoxAdress.Margin = new Padding(1);
             txtBoxAdress.Name = "txtBoxAdress";
-            txtBoxAdress.Size = new Size(401, 47);
+            txtBoxAdress.Size = new Size(165, 23);
             txtBoxAdress.TabIndex = 34;
             // 
             // txtBoxSurName
             // 
             txtBoxSurName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxSurName.Location = new Point(272, 98);
-            txtBoxSurName.Margin = new Padding(2);
+            txtBoxSurName.Location = new Point(112, 32);
+            txtBoxSurName.Margin = new Padding(1);
             txtBoxSurName.Name = "txtBoxSurName";
-            txtBoxSurName.Size = new Size(401, 47);
+            txtBoxSurName.Size = new Size(165, 23);
             txtBoxSurName.TabIndex = 33;
             // 
-            // txtBoxPreName
+            // TxtCostumerFirstname
             // 
-            txtBoxPreName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPreName.Location = new Point(272, 17);
-            txtBoxPreName.Margin = new Padding(2);
-            txtBoxPreName.Name = "txtBoxPreName";
-            txtBoxPreName.Size = new Size(401, 47);
-            txtBoxPreName.TabIndex = 32;
+            TxtCostumerFirstname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtCostumerFirstname.Location = new Point(112, 3);
+            TxtCostumerFirstname.Margin = new Padding(1);
+            TxtCostumerFirstname.Name = "TxtCostumerFirstname";
+            TxtCostumerFirstname.Size = new Size(165, 23);
+            TxtCostumerFirstname.TabIndex = 32;
             // 
             // lbltxtBoxEmailAdress
             // 
             lbltxtBoxEmailAdress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lbltxtBoxEmailAdress.AutoSize = true;
-            lbltxtBoxEmailAdress.Location = new Point(2, 729);
-            lbltxtBoxEmailAdress.Margin = new Padding(2, 0, 2, 0);
+            lbltxtBoxEmailAdress.Location = new Point(1, 261);
+            lbltxtBoxEmailAdress.Margin = new Padding(1, 0, 1, 0);
             lbltxtBoxEmailAdress.Name = "lbltxtBoxEmailAdress";
-            lbltxtBoxEmailAdress.Size = new Size(266, 87);
+            lbltxtBoxEmailAdress.Size = new Size(109, 38);
             lbltxtBoxEmailAdress.TabIndex = 31;
             lbltxtBoxEmailAdress.Text = "Email-Adresse";
             lbltxtBoxEmailAdress.TextAlign = ContentAlignment.MiddleLeft;
@@ -160,10 +160,10 @@
             // 
             lblBoxMobileNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxMobileNumber.AutoSize = true;
-            lblBoxMobileNumber.Location = new Point(2, 648);
-            lblBoxMobileNumber.Margin = new Padding(2, 0, 2, 0);
+            lblBoxMobileNumber.Location = new Point(1, 232);
+            lblBoxMobileNumber.Margin = new Padding(1, 0, 1, 0);
             lblBoxMobileNumber.Name = "lblBoxMobileNumber";
-            lblBoxMobileNumber.Size = new Size(266, 81);
+            lblBoxMobileNumber.Size = new Size(109, 29);
             lblBoxMobileNumber.TabIndex = 30;
             lblBoxMobileNumber.Text = "Mobilnummer";
             lblBoxMobileNumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -173,10 +173,10 @@
             // 
             lblBoxPhoneNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxPhoneNumber.AutoSize = true;
-            lblBoxPhoneNumber.Location = new Point(2, 567);
-            lblBoxPhoneNumber.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPhoneNumber.Location = new Point(1, 203);
+            lblBoxPhoneNumber.Margin = new Padding(1, 0, 1, 0);
             lblBoxPhoneNumber.Name = "lblBoxPhoneNumber";
-            lblBoxPhoneNumber.Size = new Size(266, 81);
+            lblBoxPhoneNumber.Size = new Size(109, 29);
             lblBoxPhoneNumber.TabIndex = 29;
             lblBoxPhoneNumber.Text = "Telefonummer";
             lblBoxPhoneNumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -185,10 +185,10 @@
             // 
             lblBoxSex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxSex.AutoSize = true;
-            lblBoxSex.Location = new Point(2, 486);
-            lblBoxSex.Margin = new Padding(2, 0, 2, 0);
+            lblBoxSex.Location = new Point(1, 174);
+            lblBoxSex.Margin = new Padding(1, 0, 1, 0);
             lblBoxSex.Name = "lblBoxSex";
-            lblBoxSex.Size = new Size(266, 81);
+            lblBoxSex.Size = new Size(109, 29);
             lblBoxSex.TabIndex = 28;
             lblBoxSex.Text = "Geschlecht";
             lblBoxSex.TextAlign = ContentAlignment.MiddleLeft;
@@ -197,10 +197,10 @@
             // 
             lblBoxOrt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxOrt.AutoSize = true;
-            lblBoxOrt.Location = new Point(2, 405);
-            lblBoxOrt.Margin = new Padding(2, 0, 2, 0);
+            lblBoxOrt.Location = new Point(1, 145);
+            lblBoxOrt.Margin = new Padding(1, 0, 1, 0);
             lblBoxOrt.Name = "lblBoxOrt";
-            lblBoxOrt.Size = new Size(266, 81);
+            lblBoxOrt.Size = new Size(109, 29);
             lblBoxOrt.TabIndex = 27;
             lblBoxOrt.Text = "Ort";
             lblBoxOrt.TextAlign = ContentAlignment.MiddleLeft;
@@ -209,10 +209,10 @@
             // 
             lblBoxPLZ.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxPLZ.AutoSize = true;
-            lblBoxPLZ.Location = new Point(2, 324);
-            lblBoxPLZ.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPLZ.Location = new Point(1, 116);
+            lblBoxPLZ.Margin = new Padding(1, 0, 1, 0);
             lblBoxPLZ.Name = "lblBoxPLZ";
-            lblBoxPLZ.Size = new Size(266, 81);
+            lblBoxPLZ.Size = new Size(109, 29);
             lblBoxPLZ.TabIndex = 26;
             lblBoxPLZ.Text = "PLZ";
             lblBoxPLZ.TextAlign = ContentAlignment.MiddleLeft;
@@ -221,10 +221,10 @@
             // 
             lblBoxHouseNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxHouseNumber.AutoSize = true;
-            lblBoxHouseNumber.Location = new Point(2, 243);
-            lblBoxHouseNumber.Margin = new Padding(2, 0, 2, 0);
+            lblBoxHouseNumber.Location = new Point(1, 87);
+            lblBoxHouseNumber.Margin = new Padding(1, 0, 1, 0);
             lblBoxHouseNumber.Name = "lblBoxHouseNumber";
-            lblBoxHouseNumber.Size = new Size(266, 81);
+            lblBoxHouseNumber.Size = new Size(109, 29);
             lblBoxHouseNumber.TabIndex = 25;
             lblBoxHouseNumber.Text = "Hausnummer";
             lblBoxHouseNumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -233,10 +233,10 @@
             // 
             lblBoxAdress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxAdress.AutoSize = true;
-            lblBoxAdress.Location = new Point(2, 162);
-            lblBoxAdress.Margin = new Padding(2, 0, 2, 0);
+            lblBoxAdress.Location = new Point(1, 58);
+            lblBoxAdress.Margin = new Padding(1, 0, 1, 0);
             lblBoxAdress.Name = "lblBoxAdress";
-            lblBoxAdress.Size = new Size(266, 81);
+            lblBoxAdress.Size = new Size(109, 29);
             lblBoxAdress.TabIndex = 24;
             lblBoxAdress.Text = "Adresse";
             lblBoxAdress.TextAlign = ContentAlignment.MiddleLeft;
@@ -245,10 +245,10 @@
             // 
             lbltxtBoxSurName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lbltxtBoxSurName.AutoSize = true;
-            lbltxtBoxSurName.Location = new Point(2, 81);
-            lbltxtBoxSurName.Margin = new Padding(2, 0, 2, 0);
+            lbltxtBoxSurName.Location = new Point(1, 29);
+            lbltxtBoxSurName.Margin = new Padding(1, 0, 1, 0);
             lbltxtBoxSurName.Name = "lbltxtBoxSurName";
-            lbltxtBoxSurName.Size = new Size(266, 81);
+            lbltxtBoxSurName.Size = new Size(109, 29);
             lbltxtBoxSurName.TabIndex = 23;
             lbltxtBoxSurName.Text = "Nachname";
             lbltxtBoxSurName.TextAlign = ContentAlignment.MiddleLeft;
@@ -257,10 +257,10 @@
             // 
             lblBoxPreName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblBoxPreName.AutoSize = true;
-            lblBoxPreName.Location = new Point(2, 0);
-            lblBoxPreName.Margin = new Padding(2, 0, 2, 0);
+            lblBoxPreName.Location = new Point(1, 0);
+            lblBoxPreName.Margin = new Padding(1, 0, 1, 0);
             lblBoxPreName.Name = "lblBoxPreName";
-            lblBoxPreName.Size = new Size(266, 81);
+            lblBoxPreName.Size = new Size(109, 29);
             lblBoxPreName.TabIndex = 22;
             lblBoxPreName.Text = "Vorname";
             lblBoxPreName.TextAlign = ContentAlignment.MiddleLeft;
@@ -268,11 +268,11 @@
             // txtBoxKundenErfassungTitel
             // 
             txtBoxKundenErfassungTitel.Font = new Font("Segoe UI", 15F);
-            txtBoxKundenErfassungTitel.Location = new Point(51, 59);
-            txtBoxKundenErfassungTitel.Margin = new Padding(2);
+            txtBoxKundenErfassungTitel.Location = new Point(21, 22);
+            txtBoxKundenErfassungTitel.Margin = new Padding(1);
             txtBoxKundenErfassungTitel.Multiline = true;
             txtBoxKundenErfassungTitel.Name = "txtBoxKundenErfassungTitel";
-            txtBoxKundenErfassungTitel.Size = new Size(682, 88);
+            txtBoxKundenErfassungTitel.Size = new Size(283, 35);
             txtBoxKundenErfassungTitel.TabIndex = 42;
             txtBoxKundenErfassungTitel.TabStop = false;
             txtBoxKundenErfassungTitel.Text = "KUNDEN ERFASSUNG";
@@ -301,10 +301,10 @@
             tableLayoutPanel1.Controls.Add(txtBoxAdress, 1, 2);
             tableLayoutPanel1.Controls.Add(lbltxtBoxEmailAdress, 0, 9);
             tableLayoutPanel1.Controls.Add(txtBoxSurName, 1, 1);
-            tableLayoutPanel1.Controls.Add(txtBoxPreName, 1, 0);
+            tableLayoutPanel1.Controls.Add(TxtCostumerFirstname, 1, 0);
             tableLayoutPanel1.Controls.Add(txtBoxEmailAdress, 1, 9);
-            tableLayoutPanel1.Location = new Point(58, 215);
-            tableLayoutPanel1.Margin = new Padding(6);
+            tableLayoutPanel1.Location = new Point(24, 79);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -317,27 +317,28 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(675, 816);
+            tableLayoutPanel1.Size = new Size(278, 299);
             tableLayoutPanel1.TabIndex = 43;
             // 
             // btnSaveClientRegistration
             // 
-            btnSaveClientRegistration.Location = new Point(827, 964);
+            btnSaveClientRegistration.Location = new Point(341, 353);
+            btnSaveClientRegistration.Margin = new Padding(1);
             btnSaveClientRegistration.Name = "btnSaveClientRegistration";
-            btnSaveClientRegistration.Size = new Size(250, 47);
+            btnSaveClientRegistration.Size = new Size(103, 30);
             btnSaveClientRegistration.TabIndex = 44;
             btnSaveClientRegistration.Text = "Speichern";
             btnSaveClientRegistration.UseVisualStyleBackColor = true;
             // 
             // ClientRegistration
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1218, 1062);
+            ClientSize = new Size(502, 388);
             Controls.Add(btnSaveClientRegistration);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(txtBoxKundenErfassungTitel);
-            Margin = new Padding(2);
+            Margin = new Padding(1);
             Name = "ClientRegistration";
             Text = "Kundenerfassung";
             Load += ClientRegistration_Load;
@@ -358,7 +359,7 @@
         private MaskedTextBox txtBoxHouseNumber;
         private MaskedTextBox txtBoxAdress;
         private MaskedTextBox txtBoxSurName;
-        private MaskedTextBox txtBoxPreName;
+        private MaskedTextBox TxtCostumerFirstname;
         private Label lbltxtBoxEmailAdress;
         private Label lblBoxMobileNumber;
         private Label lblBoxPhoneNumber;
