@@ -90,5 +90,10 @@ namespace ContactManager.Forms
         {
 
         }
+
+        private void ChkEmployeeTrainee_CheckedChanged(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

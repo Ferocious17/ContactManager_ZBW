@@ -1,4 +1,6 @@
-﻿namespace ContactManager.Forms
+﻿using Org.BouncyCastle.Pqc.Crypto.Lms;
+
+namespace ContactManager.Forms
 {
     public partial class LblEmployeeRegistration : Form
     {
@@ -40,7 +42,10 @@
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
         {
-            // Event handler logic
+            // Code hier einfügen, um die gewünschten Aktionen auszuführen,
+            // wenn die Checkbox geändert wird.
+            // Beispiel: Ein Textfeld ein- oder ausschalten
+            TxtEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
         }
 
         // Helper method to create a rounded rectangle region
@@ -114,10 +119,10 @@
             RadEmployeeFemale = new RadioButton();
             RadEmployeeMale = new RadioButton();
             maskedTextBox1 = new MaskedTextBox();
+            CmbEmployeeRegistration = new ComboBox();
             label3 = new Label();
             btnSaveEmpoloyeRegistration = new Button();
             TxtTitleEmployeeRegistration = new TextBox();
-            CmbEmployeeRegistration = new ComboBox();
             TblLayoutCostumer.SuspendLayout();
             GrpEmployeeSex.SuspendLayout();
             SuspendLayout();
@@ -459,7 +464,9 @@
             ChkEmployeeTrainee.TabIndex = 52;
             ChkEmployeeTrainee.Text = "Lehrling";
             ChkEmployeeTrainee.UseVisualStyleBackColor = true;
-            ChkEmployeeTrainee.CheckedChanged += this.ChkEmployeeTrainee_CheckedChanged;
+            ChkEmployeeTrainee.CheckedChanged += new System.EventHandler(checkBoxTrainee_CheckedChanged);
+            
+           
             // 
             // LblEmployeeLevel
             // 
@@ -541,6 +548,14 @@
             maskedTextBox1.Size = new Size(298, 23);
             maskedTextBox1.TabIndex = 62;
             // 
+            // CmbEmployeeRegistration
+            // 
+            CmbEmployeeRegistration.FormattingEnabled = true;
+            CmbEmployeeRegistration.Location = new Point(103, 378);
+            CmbEmployeeRegistration.Name = "CmbEmployeeRegistration";
+            CmbEmployeeRegistration.Size = new Size(198, 23);
+            CmbEmployeeRegistration.TabIndex = 71;
+            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -574,14 +589,6 @@
             TxtTitleEmployeeRegistration.TabIndex = 64;
             TxtTitleEmployeeRegistration.TabStop = false;
             TxtTitleEmployeeRegistration.Text = "MITARBEITER ERFASSUNG";
-            // 
-            // CmbEmployeeRegistration
-            // 
-            CmbEmployeeRegistration.FormattingEnabled = true;
-            CmbEmployeeRegistration.Location = new Point(103, 378);
-            CmbEmployeeRegistration.Name = "CmbEmployeeRegistration";
-            CmbEmployeeRegistration.Size = new Size(198, 23);
-            CmbEmployeeRegistration.TabIndex = 71;
             // 
             // LblEmployeeRegistration
             // 
@@ -642,5 +649,7 @@
         private RadioButton RadEmployeeFemale;
         private RadioButton RadEmployeeMale;
         private ComboBox CmbEmployeeRegistration;
+
+        public EventHandler ChkEmployeeTrainee_CheckedChanged { get; private set; }
     }
 }

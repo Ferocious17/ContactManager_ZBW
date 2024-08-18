@@ -36,9 +36,7 @@
             TxtTitleEmployeeRegistration = new TextBox();
             btnSaveEmpoloyeRegistration = new Button();
             TblLayoutCostumer = new TableLayoutPanel();
-            TxtEmployeeTrainigyear = new MaskedTextBox();
             maskedTextBox1 = new MaskedTextBox();
-            comboBox3 = new ComboBox();
             DtpEmployeeEnddate = new DateTimePicker();
             LblEmployeeRole = new Label();
             LblEmployeeEnddate = new Label();
@@ -66,10 +64,12 @@
             LblEmployeeStartdate = new Label();
             ChkEmployeeTrainee = new CheckBox();
             LblEmployeeLevel = new Label();
-            LblEmployeeTrainigyear = new Label();
             DtpEmployeeStartdate = new DateTimePicker();
+            TxtEmployeeLevel = new ComboBox();
             CmbEmployeeDepartement = new ComboBox();
             label3 = new Label();
+            LblEmployeeTrainigyear = new Label();
+            TxtEmployeeTrainigyear = new MaskedTextBox();
             TblLayoutCostumer.SuspendLayout();
             SuspendLayout();
             // 
@@ -127,18 +127,18 @@
             // TxtTitleEmployeeRegistration
             // 
             TxtTitleEmployeeRegistration.Font = new Font("Segoe UI", 15F);
-            TxtTitleEmployeeRegistration.Location = new Point(15, 13);
+            TxtTitleEmployeeRegistration.Location = new Point(10, 10);
             TxtTitleEmployeeRegistration.Margin = new Padding(1);
             TxtTitleEmployeeRegistration.Multiline = true;
             TxtTitleEmployeeRegistration.Name = "TxtTitleEmployeeRegistration";
-            TxtTitleEmployeeRegistration.Size = new Size(199, 35);
+            TxtTitleEmployeeRegistration.Size = new Size(274, 35);
             TxtTitleEmployeeRegistration.TabIndex = 22;
             TxtTitleEmployeeRegistration.TabStop = false;
             TxtTitleEmployeeRegistration.Text = "MITARBEITER ERFASSUNG";
             // 
             // btnSaveEmpoloyeRegistration
             // 
-            btnSaveEmpoloyeRegistration.Location = new Point(351, 395);
+            btnSaveEmpoloyeRegistration.Location = new Point(334, 480);
             btnSaveEmpoloyeRegistration.Margin = new Padding(1);
             btnSaveEmpoloyeRegistration.Name = "btnSaveEmpoloyeRegistration";
             btnSaveEmpoloyeRegistration.Size = new Size(103, 30);
@@ -154,7 +154,6 @@
             TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
             TblLayoutCostumer.Controls.Add(TxtEmployeeTrainigyear, 1, 16);
             TblLayoutCostumer.Controls.Add(maskedTextBox1, 1, 14);
-            TblLayoutCostumer.Controls.Add(comboBox3, 1, 15);
             TblLayoutCostumer.Controls.Add(DtpEmployeeEnddate, 1, 13);
             TblLayoutCostumer.Controls.Add(LblEmployeeRole, 0, 14);
             TblLayoutCostumer.Controls.Add(LblEmployeeEnddate, 0, 13);
@@ -184,6 +183,7 @@
             TblLayoutCostumer.Controls.Add(LblEmployeeLevel, 0, 15);
             TblLayoutCostumer.Controls.Add(LblEmployeeTrainigyear, 0, 16);
             TblLayoutCostumer.Controls.Add(DtpEmployeeStartdate, 1, 12);
+            TblLayoutCostumer.Controls.Add(TxtEmployeeLevel, 1, 15);
             TblLayoutCostumer.Controls.Add(CmbEmployeeDepartement, 1, 11);
             TblLayoutCostumer.Location = new Point(6, 83);
             TblLayoutCostumer.Margin = new Padding(2);
@@ -208,17 +208,8 @@
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            TblLayoutCostumer.Size = new Size(278, 428);
+            TblLayoutCostumer.Size = new Size(278, 427);
             TblLayoutCostumer.TabIndex = 45;
-            // 
-            // TxtEmployeeTrainigyear
-            // 
-            TxtEmployeeTrainigyear.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeTrainigyear.Location = new Point(101, 401);
-            TxtEmployeeTrainigyear.Margin = new Padding(1);
-            TxtEmployeeTrainigyear.Name = "TxtEmployeeTrainigyear";
-            TxtEmployeeTrainigyear.Size = new Size(198, 23);
-            TxtEmployeeTrainigyear.TabIndex = 63;
             // 
             // maskedTextBox1
             // 
@@ -226,22 +217,15 @@
             maskedTextBox1.Location = new Point(101, 351);
             maskedTextBox1.Margin = new Padding(1);
             maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(198, 23);
+            maskedTextBox1.Size = new Size(177, 23);
             maskedTextBox1.TabIndex = 62;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(103, 378);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(177, 23);
-            comboBox3.TabIndex = 61;
             // 
             // DtpEmployeeEnddate
             // 
-            DtpEmployeeEnddate.Location = new Point(103, 328);
+            DtpEmployeeEnddate.Location = new Point(101, 326);
+            DtpEmployeeEnddate.Margin = new Padding(1);
             DtpEmployeeEnddate.Name = "DtpEmployeeEnddate";
-            DtpEmployeeEnddate.Size = new Size(175, 23);
+            DtpEmployeeEnddate.Size = new Size(198, 23);
             DtpEmployeeEnddate.TabIndex = 59;
             // 
             // LblEmployeeRole
@@ -511,6 +495,7 @@
             ChkEmployeeTrainee.TabIndex = 52;
             ChkEmployeeTrainee.Text = "Lehrling";
             ChkEmployeeTrainee.UseVisualStyleBackColor = true;
+            ChkEmployeeTrainee.CheckedChanged += ChkEmployeeTrainee_CheckedChanged;
             // 
             // LblEmployeeLevel
             // 
@@ -524,29 +509,28 @@
             LblEmployeeLevel.Text = "Kaderstufe";
             LblEmployeeLevel.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // LblEmployeeTrainigyear
-            // 
-            LblEmployeeTrainigyear.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            LblEmployeeTrainigyear.AutoSize = true;
-            LblEmployeeTrainigyear.Location = new Point(1, 400);
-            LblEmployeeTrainigyear.Margin = new Padding(1, 0, 1, 0);
-            LblEmployeeTrainigyear.Name = "LblEmployeeTrainigyear";
-            LblEmployeeTrainigyear.Size = new Size(98, 25);
-            LblEmployeeTrainigyear.TabIndex = 56;
-            LblEmployeeTrainigyear.Text = "Ausbildungsjahr";
-            LblEmployeeTrainigyear.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // DtpEmployeeStartdate
             // 
-            DtpEmployeeStartdate.Location = new Point(103, 303);
+            DtpEmployeeStartdate.Location = new Point(101, 301);
+            DtpEmployeeStartdate.Margin = new Padding(1);
             DtpEmployeeStartdate.Name = "DtpEmployeeStartdate";
-            DtpEmployeeStartdate.Size = new Size(175, 23);
+            DtpEmployeeStartdate.Size = new Size(198, 23);
             DtpEmployeeStartdate.TabIndex = 57;
+            // 
+            // TxtEmployeeLevel
+            // 
+            TxtEmployeeLevel.FormattingEnabled = true;
+            TxtEmployeeLevel.Location = new Point(101, 376);
+            TxtEmployeeLevel.Margin = new Padding(1);
+            TxtEmployeeLevel.Name = "TxtEmployeeLevel";
+            TxtEmployeeLevel.Size = new Size(198, 23);
+            TxtEmployeeLevel.TabIndex = 61;
             // 
             // CmbEmployeeDepartement
             // 
             CmbEmployeeDepartement.FormattingEnabled = true;
-            CmbEmployeeDepartement.Location = new Point(103, 278);
+            CmbEmployeeDepartement.Location = new Point(101, 276);
+            CmbEmployeeDepartement.Margin = new Padding(1);
             CmbEmployeeDepartement.Name = "CmbEmployeeDepartement";
             CmbEmployeeDepartement.Size = new Size(177, 23);
             CmbEmployeeDepartement.TabIndex = 58;
@@ -563,12 +547,33 @@
             label3.Text = "Email-Adresse";
             label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // LblEmployeeTrainigyear
+            // 
+            LblEmployeeTrainigyear.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LblEmployeeTrainigyear.AutoSize = true;
+            LblEmployeeTrainigyear.Location = new Point(1, 400);
+            LblEmployeeTrainigyear.Margin = new Padding(1, 0, 1, 0);
+            LblEmployeeTrainigyear.Name = "LblEmployeeTrainigyear";
+            LblEmployeeTrainigyear.Size = new Size(98, 25);
+            LblEmployeeTrainigyear.TabIndex = 56;
+            LblEmployeeTrainigyear.Text = "Ausbildungsjahr";
+            LblEmployeeTrainigyear.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // TxtEmployeeTrainigyear
+            // 
+            TxtEmployeeTrainigyear.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeTrainigyear.Location = new Point(101, 401);
+            TxtEmployeeTrainigyear.Margin = new Padding(1);
+            TxtEmployeeTrainigyear.Name = "TxtEmployeeTrainigyear";
+            TxtEmployeeTrainigyear.Size = new Size(198, 23);
+            TxtEmployeeTrainigyear.TabIndex = 63;
+            // 
             // UserRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(502, 652);
+            ClientSize = new Size(502, 530);
             Controls.Add(TblLayoutCostumer);
             Controls.Add(label3);
             Controls.Add(btnSaveEmpoloyeRegistration);
@@ -617,14 +622,14 @@
         private Label LblEmployeeStartdate;
         private Label label3;
         private CheckBox ChkEmployeeTrainee;
-        private MaskedTextBox TxtEmployeeTrainigyear;
         private MaskedTextBox maskedTextBox1;
-        private ComboBox comboBox3;
+        private ComboBox TxtEmployeeLevel;
         private DateTimePicker DtpEmployeeEnddate;
         private Label LblEmployeeRole;
         private Label LblEmployeeLevel;
-        private Label LblEmployeeTrainigyear;
         private DateTimePicker DtpEmployeeStartdate;
         private ComboBox CmbEmployeeDepartement;
+        private MaskedTextBox TxtEmployeeTrainigyear;
+        private Label LblEmployeeTrainigyear;
     }
 }
