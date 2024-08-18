@@ -192,39 +192,39 @@
             // 
             // TxtEmployeeFirstname
             // 
-            txtBoxPreNameEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPreNameEmp.Location = new Point(102, 29);
-            txtBoxPreNameEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxPreNameEmp.Name = "txtBoxPreNameEmp";
-            txtBoxPreNameEmp.Size = new Size(175, 23);
-            txtBoxPreNameEmp.TabIndex = 12;
+            TxtEmployeeFirstname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeFirstname.Location = new Point(102, 29);
+            TxtEmployeeFirstname.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeFirstname.Name = "txtBoxPreNameEmp";
+            TxtEmployeeFirstname.Size = new Size(175, 23);
+            TxtEmployeeFirstname.TabIndex = 12;
             // 
             // TxtEmployeeLastname
             // 
-            txtBoxSurNameEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxSurNameEmp.Location = new Point(102, 56);
-            txtBoxSurNameEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxSurNameEmp.Name = "txtBoxSurNameEmp";
-            txtBoxSurNameEmp.Size = new Size(175, 23);
-            txtBoxSurNameEmp.TabIndex = 13;
+            TxtEmployeeLastname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeLastname.Location = new Point(102, 56);
+            TxtEmployeeLastname.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeLastname.Name = "txtBoxSurNameEmp";
+            TxtEmployeeLastname.Size = new Size(175, 23);
+            TxtEmployeeLastname.TabIndex = 13;
             // 
             // TxtEmployeeAddress
             // 
-            txtBoxAdressEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxAdressEmp.Location = new Point(102, 83);
-            txtBoxAdressEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxAdressEmp.Name = "txtBoxAdressEmp";
-            txtBoxAdressEmp.Size = new Size(175, 23);
-            txtBoxAdressEmp.TabIndex = 14;
+            TxtEmployeeAddress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeAddress.Location = new Point(102, 83);
+            TxtEmployeeAddress.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeAddress.Name = "txtBoxAdressEmp";
+            TxtEmployeeAddress.Size = new Size(175, 23);
+            TxtEmployeeAddress.TabIndex = 14;
             // 
             // TxtEmployeeStreetnumber
             // 
-            txtBoxHouseNumberEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxHouseNumberEmp.Location = new Point(102, 110);
-            txtBoxHouseNumberEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxHouseNumberEmp.Name = "txtBoxHouseNumberEmp";
-            txtBoxHouseNumberEmp.Size = new Size(175, 23);
-            txtBoxHouseNumberEmp.TabIndex = 15;
+            TxtEmployeeStreetnumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeStreetnumber.Location = new Point(102, 110);
+            TxtEmployeeStreetnumber.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeStreetnumber.Name = "txtBoxHouseNumberEmp";
+            TxtEmployeeStreetnumber.Size = new Size(175, 23);
+            TxtEmployeeStreetnumber.TabIndex = 15;
             // 
             // txtBoxPhoneNumberEmp
             // 
@@ -237,30 +237,30 @@
             // 
             // TxtEmployeeSex
             // 
-            txtBoxSexEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxSexEmp.Location = new Point(102, 191);
-            txtBoxSexEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxSexEmp.Name = "txtBoxSexEmp";
-            txtBoxSexEmp.Size = new Size(175, 23);
-            txtBoxSexEmp.TabIndex = 18;
+            TxtEmployeeSex.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeSex.Location = new Point(102, 191);
+            TxtEmployeeSex.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeSex.Name = "txtBoxSexEmp";
+            TxtEmployeeSex.Size = new Size(175, 23);
+            TxtEmployeeSex.TabIndex = 18;
             // 
             // TxtEmployeePlace
             // 
-            txtBoxPlaceEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPlaceEmp.Location = new Point(102, 164);
-            txtBoxPlaceEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxPlaceEmp.Name = "txtBoxPlaceEmp";
-            txtBoxPlaceEmp.Size = new Size(175, 23);
-            txtBoxPlaceEmp.TabIndex = 17;
+            TxtEmployeePlace.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeePlace.Location = new Point(102, 164);
+            TxtEmployeePlace.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeePlace.Name = "txtBoxPlaceEmp";
+            TxtEmployeePlace.Size = new Size(175, 23);
+            TxtEmployeePlace.TabIndex = 17;
             // 
             // TxtEmployeeZIPcode
             // 
-            txtBoxPLZEmp.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtBoxPLZEmp.Location = new Point(102, 137);
-            txtBoxPLZEmp.Margin = new Padding(1, 1, 1, 1);
-            txtBoxPLZEmp.Name = "txtBoxPLZEmp";
-            txtBoxPLZEmp.Size = new Size(175, 23);
-            txtBoxPLZEmp.TabIndex = 16;
+            TxtEmployeeZIPcode.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeZIPcode.Location = new Point(102, 137);
+            TxtEmployeeZIPcode.Margin = new Padding(1, 1, 1, 1);
+            TxtEmployeeZIPcode.Name = "txtBoxPLZEmp";
+            TxtEmployeeZIPcode.Size = new Size(175, 23);
+            TxtEmployeeZIPcode.TabIndex = 16;
             // 
             // txtBoxEmailAdressEmp
             // 
@@ -282,15 +282,15 @@
             // 
             // TxtTitleEmployeeRegistration
             // 
-            txtBoxErfassungTitel.Font = new Font("Segoe UI", 15F);
-            txtBoxErfassungTitel.Location = new Point(21, 22);
-            txtBoxErfassungTitel.Margin = new Padding(1, 1, 1, 1);
-            txtBoxErfassungTitel.Multiline = true;
-            txtBoxErfassungTitel.Name = "txtBoxErfassungTitel";
-            txtBoxErfassungTitel.Size = new Size(283, 35);
-            txtBoxErfassungTitel.TabIndex = 22;
-            txtBoxErfassungTitel.TabStop = false;
-            txtBoxErfassungTitel.Text = "MITARBEITER ERFASSUNG";
+            TxtTitleEmployeeRegistration.Font = new Font("Segoe UI", 15F);
+            TxtTitleEmployeeRegistration.Location = new Point(21, 22);
+            TxtTitleEmployeeRegistration.Margin = new Padding(1, 1, 1, 1);
+            TxtTitleEmployeeRegistration.Multiline = true;
+            TxtTitleEmployeeRegistration.Name = "txtBoxErfassungTitel";
+            TxtTitleEmployeeRegistration.Size = new Size(283, 35);
+            TxtTitleEmployeeRegistration.TabIndex = 22;
+            TxtTitleEmployeeRegistration.TabStop = false;
+            TxtTitleEmployeeRegistration.Text = "MITARBEITER ERFASSUNG";
             // 
             // tableLayoutPanel1
             // 
@@ -305,19 +305,19 @@
             tableLayoutPanel1.Controls.Add(txtBoxMobileNumberEmp, 1, 9);
             tableLayoutPanel1.Controls.Add(LblEmployeeStreetnumber, 0, 4);
             tableLayoutPanel1.Controls.Add(txtBoxPhoneNumberEmp, 1, 8);
-            tableLayoutPanel1.Controls.Add(lblBoxPLZEmp, 0, 5);
-            tableLayoutPanel1.Controls.Add(txtBoxSexEmp, 1, 7);
-            tableLayoutPanel1.Controls.Add(lblBoxPlaceEmp, 0, 6);
-            tableLayoutPanel1.Controls.Add(txtBoxPlaceEmp, 1, 6);
-            tableLayoutPanel1.Controls.Add(lblBoxSexEmp, 0, 7);
-            tableLayoutPanel1.Controls.Add(txtBoxPLZEmp, 1, 5);
-            tableLayoutPanel1.Controls.Add(lbltxtBoxPhoneNumberEmp, 0, 8);
-            tableLayoutPanel1.Controls.Add(txtBoxHouseNumberEmp, 1, 4);
-            tableLayoutPanel1.Controls.Add(lblBoxMobileNumberEmp, 0, 9);
-            tableLayoutPanel1.Controls.Add(txtBoxAdressEmp, 1, 3);
-            tableLayoutPanel1.Controls.Add(txtBoxSurNameEmp, 1, 2);
-            tableLayoutPanel1.Controls.Add(txtBoxPreNameEmp, 1, 1);
-            tableLayoutPanel1.Controls.Add(lblBoxEmailAdressEmp, 0, 10);
+            tableLayoutPanel1.Controls.Add(LblEmployeeZIPcode, 0, 5);
+            tableLayoutPanel1.Controls.Add(TxtEmployeeSex, 1, 7);
+            tableLayoutPanel1.Controls.Add(LblEmployeePlace, 0, 6);
+            tableLayoutPanel1.Controls.Add(TxtEmployeePlace, 1, 6);
+            tableLayoutPanel1.Controls.Add(LblEmployeeSex, 0, 7);
+            tableLayoutPanel1.Controls.Add(TxtEmployeeZIPcode, 1, 5);
+            tableLayoutPanel1.Controls.Add(txtBoxPhoneNumberEmp, 0, 8);
+            tableLayoutPanel1.Controls.Add(txtBoxPhoneNumberEmp, 1, 4);
+            tableLayoutPanel1.Controls.Add(txtBoxMobileNumberEmp, 0, 9);
+            tableLayoutPanel1.Controls.Add(lblBoxAdressEmp, 1, 3);
+            tableLayoutPanel1.Controls.Add(TxtEmployeeFirstname, 1, 2);
+            tableLayoutPanel1.Controls.Add(LblEmployeeFirstname, 1, 1);
+            tableLayoutPanel1.Controls.Add(TxtEmployeeEmail, 0, 10);
             tableLayoutPanel1.Location = new Point(24, 73);
             tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -355,7 +355,7 @@
             ClientSize = new Size(717, 647);
             Controls.Add(btnSaveEmpoloyeRegistration);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(txtBoxErfassungTitel);
+            Controls.Add(TxtTitleEmployeeRegistration);
             Margin = new Padding(1, 1, 1, 1);
             Name = "UserRegistration";
             Text = "Mitarbeitererfassung";
