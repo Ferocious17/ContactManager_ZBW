@@ -1,15 +1,18 @@
-﻿namespace ContactManager.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace ContactManager.Models;
 
 public class Department
 {
-    public Department(int departmentId, string name)
+    public Department(string name)
     {
-        DepartmentId = departmentId;
         Name = name;
     }
 
     private Department() { }
 
+    [Key]
     public int DepartmentId { get; set; }
     public string Name { get; set; }
 }
