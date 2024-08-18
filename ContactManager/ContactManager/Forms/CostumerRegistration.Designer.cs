@@ -56,8 +56,8 @@
             CmbCostumerCostumertype = new ComboBox();
             TxtCostumerContactperson = new MaskedTextBox();
             GrpCostumerSex = new GroupBox();
-            RadEmployeeFemale = new RadioButton();
-            RadEmployeeMale = new RadioButton();
+            RadCostumerFemale = new RadioButton();
+            RadCostumerMale = new RadioButton();
             CmdCostumerSave = new Button();
             label3 = new Label();
             groupBox = new GroupBox();
@@ -393,35 +393,35 @@
             // 
             // GrpCostumerSex
             // 
-            GrpCostumerSex.Controls.Add(RadEmployeeFemale);
-            GrpCostumerSex.Controls.Add(RadEmployeeMale);
+            GrpCostumerSex.Controls.Add(RadCostumerFemale);
+            GrpCostumerSex.Controls.Add(RadCostumerMale);
             GrpCostumerSex.Location = new Point(103, 153);
             GrpCostumerSex.Name = "GrpCostumerSex";
             GrpCostumerSex.Size = new Size(164, 19);
             GrpCostumerSex.TabIndex = 52;
             GrpCostumerSex.TabStop = false;
             // 
-            // RadEmployeeFemale
+            // RadCostumerFemale
             // 
-            RadEmployeeFemale.AutoSize = true;
-            RadEmployeeFemale.Location = new Point(81, 3);
-            RadEmployeeFemale.Name = "RadEmployeeFemale";
-            RadEmployeeFemale.Size = new Size(71, 19);
-            RadEmployeeFemale.TabIndex = 1;
-            RadEmployeeFemale.TabStop = true;
-            RadEmployeeFemale.Text = "Weiblich";
-            RadEmployeeFemale.UseVisualStyleBackColor = true;
+            RadCostumerFemale.AutoSize = true;
+            RadCostumerFemale.Location = new Point(81, 3);
+            RadCostumerFemale.Name = "RadCostumerFemale";
+            RadCostumerFemale.Size = new Size(71, 19);
+            RadCostumerFemale.TabIndex = 1;
+            RadCostumerFemale.TabStop = true;
+            RadCostumerFemale.Text = "Weiblich";
+            RadCostumerFemale.UseVisualStyleBackColor = true;
             // 
-            // RadEmployeeMale
+            // RadCostumerMale
             // 
-            RadEmployeeMale.AutoSize = true;
-            RadEmployeeMale.Location = new Point(0, 3);
-            RadEmployeeMale.Name = "RadEmployeeMale";
-            RadEmployeeMale.Size = new Size(75, 19);
-            RadEmployeeMale.TabIndex = 0;
-            RadEmployeeMale.TabStop = true;
-            RadEmployeeMale.Text = "Männlich";
-            RadEmployeeMale.UseVisualStyleBackColor = true;
+            RadCostumerMale.AutoSize = true;
+            RadCostumerMale.Location = new Point(0, 3);
+            RadCostumerMale.Name = "RadCostumerMale";
+            RadCostumerMale.Size = new Size(75, 19);
+            RadCostumerMale.TabIndex = 0;
+            RadCostumerMale.TabStop = true;
+            RadCostumerMale.Text = "Männlich";
+            RadCostumerMale.UseVisualStyleBackColor = true;
             // 
             // CmdCostumerSave
             // 
@@ -529,7 +529,7 @@
         private RadioButton radioButton2;
         private Label LblEmployeeContactperson;
         private GroupBox GrpCostumerSex;
-        private RadioButton RadEmployeeMale;
-        private RadioButton RadEmployeeFemale;
+        private RadioButton RadCostumerMale;
+        private RadioButton RadCostumerFemale;
     }
 }

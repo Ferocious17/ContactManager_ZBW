@@ -84,8 +84,6 @@
             LblEmployeeFirstname = new Label();
             LblEmployeeZIPcode = new Label();
             TxtEmployeeTrainigyear = new MaskedTextBox();
-            maskedTextBox1 = new MaskedTextBox();
-            comboBox3 = new ComboBox();
             DtpEmployeeEnddate = new DateTimePicker();
             LblEmployeeRole = new Label();
             LblEmployeeEnddate = new Label();
@@ -93,7 +91,6 @@
             TxtCostumerMobilenumber = new MaskedTextBox();
             LblEmployeeHousenumber = new Label();
             TxtCostumerPhonenumber = new MaskedTextBox();
-            TxtCostumerSex = new MaskedTextBox();
             LblEmployeePlace = new Label();
             TxtCostumerPlace = new MaskedTextBox();
             LblEmployeeSex = new Label();
@@ -113,23 +110,27 @@
             LblEmployeeTrainigyear = new Label();
             DtpEmployeeStartdate = new DateTimePicker();
             CmbEmployeeDepartement = new ComboBox();
+            GrpEmployeeSex = new GroupBox();
+            RadEmployeeFemale = new RadioButton();
+            RadEmployeeMale = new RadioButton();
+            maskedTextBox1 = new MaskedTextBox();
             label3 = new Label();
             btnSaveEmpoloyeRegistration = new Button();
             TxtTitleEmployeeRegistration = new TextBox();
+            CmbEmployeeRegistration = new ComboBox();
             TblLayoutCostumer.SuspendLayout();
+            GrpEmployeeSex.SuspendLayout();
             SuspendLayout();
             // 
             // TblLayoutCostumer
             // 
             TblLayoutCostumer.ColumnCount = 2;
             TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
-            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 300F));
             TblLayoutCostumer.Controls.Add(LblEmployeeLastname, 0, 2);
             TblLayoutCostumer.Controls.Add(LblEmployeeFirstname, 0, 1);
             TblLayoutCostumer.Controls.Add(LblEmployeeZIPcode, 0, 5);
             TblLayoutCostumer.Controls.Add(TxtEmployeeTrainigyear, 1, 16);
-            TblLayoutCostumer.Controls.Add(maskedTextBox1, 1, 14);
-            TblLayoutCostumer.Controls.Add(comboBox3, 1, 15);
             TblLayoutCostumer.Controls.Add(DtpEmployeeEnddate, 1, 13);
             TblLayoutCostumer.Controls.Add(LblEmployeeRole, 0, 14);
             TblLayoutCostumer.Controls.Add(LblEmployeeEnddate, 0, 13);
@@ -137,7 +138,6 @@
             TblLayoutCostumer.Controls.Add(TxtCostumerMobilenumber, 1, 9);
             TblLayoutCostumer.Controls.Add(LblEmployeeHousenumber, 0, 4);
             TblLayoutCostumer.Controls.Add(TxtCostumerPhonenumber, 1, 8);
-            TblLayoutCostumer.Controls.Add(TxtCostumerSex, 1, 7);
             TblLayoutCostumer.Controls.Add(LblEmployeePlace, 0, 6);
             TblLayoutCostumer.Controls.Add(TxtCostumerPlace, 1, 6);
             TblLayoutCostumer.Controls.Add(LblEmployeeSex, 0, 7);
@@ -157,6 +157,9 @@
             TblLayoutCostumer.Controls.Add(LblEmployeeTrainigyear, 0, 16);
             TblLayoutCostumer.Controls.Add(DtpEmployeeStartdate, 1, 12);
             TblLayoutCostumer.Controls.Add(CmbEmployeeDepartement, 1, 11);
+            TblLayoutCostumer.Controls.Add(GrpEmployeeSex, 1, 7);
+            TblLayoutCostumer.Controls.Add(maskedTextBox1, 1, 14);
+            TblLayoutCostumer.Controls.Add(CmbEmployeeRegistration, 1, 15);
             TblLayoutCostumer.Location = new Point(11, 60);
             TblLayoutCostumer.Margin = new Padding(2);
             TblLayoutCostumer.Name = "TblLayoutCostumer";
@@ -179,8 +182,7 @@
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            TblLayoutCostumer.Size = new Size(278, 428);
+            TblLayoutCostumer.Size = new Size(299, 428);
             TblLayoutCostumer.TabIndex = 48;
             // 
             // LblEmployeeLastname
@@ -225,31 +227,14 @@
             TxtEmployeeTrainigyear.Location = new Point(101, 401);
             TxtEmployeeTrainigyear.Margin = new Padding(1);
             TxtEmployeeTrainigyear.Name = "TxtEmployeeTrainigyear";
-            TxtEmployeeTrainigyear.Size = new Size(198, 23);
+            TxtEmployeeTrainigyear.Size = new Size(298, 23);
             TxtEmployeeTrainigyear.TabIndex = 63;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            maskedTextBox1.Location = new Point(101, 351);
-            maskedTextBox1.Margin = new Padding(1);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(198, 23);
-            maskedTextBox1.TabIndex = 62;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(103, 378);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(177, 23);
-            comboBox3.TabIndex = 61;
             // 
             // DtpEmployeeEnddate
             // 
             DtpEmployeeEnddate.Location = new Point(103, 328);
             DtpEmployeeEnddate.Name = "DtpEmployeeEnddate";
-            DtpEmployeeEnddate.Size = new Size(175, 23);
+            DtpEmployeeEnddate.Size = new Size(194, 23);
             DtpEmployeeEnddate.TabIndex = 59;
             // 
             // LblEmployeeRole
@@ -294,7 +279,7 @@
             TxtCostumerMobilenumber.Location = new Point(101, 226);
             TxtCostumerMobilenumber.Margin = new Padding(1);
             TxtCostumerMobilenumber.Name = "TxtCostumerMobilenumber";
-            TxtCostumerMobilenumber.Size = new Size(198, 23);
+            TxtCostumerMobilenumber.Size = new Size(298, 23);
             TxtCostumerMobilenumber.TabIndex = 40;
             // 
             // LblEmployeeHousenumber
@@ -315,17 +300,8 @@
             TxtCostumerPhonenumber.Location = new Point(101, 201);
             TxtCostumerPhonenumber.Margin = new Padding(1);
             TxtCostumerPhonenumber.Name = "TxtCostumerPhonenumber";
-            TxtCostumerPhonenumber.Size = new Size(198, 23);
+            TxtCostumerPhonenumber.Size = new Size(298, 23);
             TxtCostumerPhonenumber.TabIndex = 39;
-            // 
-            // TxtCostumerSex
-            // 
-            TxtCostumerSex.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerSex.Location = new Point(101, 176);
-            TxtCostumerSex.Margin = new Padding(1);
-            TxtCostumerSex.Name = "TxtCostumerSex";
-            TxtCostumerSex.Size = new Size(198, 23);
-            TxtCostumerSex.TabIndex = 38;
             // 
             // LblEmployeePlace
             // 
@@ -345,7 +321,7 @@
             TxtCostumerPlace.Location = new Point(101, 151);
             TxtCostumerPlace.Margin = new Padding(1);
             TxtCostumerPlace.Name = "TxtCostumerPlace";
-            TxtCostumerPlace.Size = new Size(198, 23);
+            TxtCostumerPlace.Size = new Size(298, 23);
             TxtCostumerPlace.TabIndex = 37;
             // 
             // LblEmployeeSex
@@ -366,7 +342,7 @@
             TxtCostumerZIPcode.Location = new Point(101, 126);
             TxtCostumerZIPcode.Margin = new Padding(1);
             TxtCostumerZIPcode.Name = "TxtCostumerZIPcode";
-            TxtCostumerZIPcode.Size = new Size(198, 23);
+            TxtCostumerZIPcode.Size = new Size(298, 23);
             TxtCostumerZIPcode.TabIndex = 36;
             // 
             // LblEmployeePhonenumber
@@ -387,7 +363,7 @@
             TxtCostumerStreetnumber.Location = new Point(101, 101);
             TxtCostumerStreetnumber.Margin = new Padding(1);
             TxtCostumerStreetnumber.Name = "TxtCostumerStreetnumber";
-            TxtCostumerStreetnumber.Size = new Size(198, 23);
+            TxtCostumerStreetnumber.Size = new Size(298, 23);
             TxtCostumerStreetnumber.TabIndex = 35;
             // 
             // LblEmployeeMobilenumber
@@ -408,7 +384,7 @@
             TxtCostumerStreet.Location = new Point(101, 76);
             TxtCostumerStreet.Margin = new Padding(1);
             TxtCostumerStreet.Name = "TxtCostumerStreet";
-            TxtCostumerStreet.Size = new Size(198, 23);
+            TxtCostumerStreet.Size = new Size(298, 23);
             TxtCostumerStreet.TabIndex = 34;
             // 
             // LblEmployeeEmail
@@ -429,7 +405,7 @@
             TxtCostumerLastname.Location = new Point(101, 51);
             TxtCostumerLastname.Margin = new Padding(1);
             TxtCostumerLastname.Name = "TxtCostumerLastname";
-            TxtCostumerLastname.Size = new Size(198, 23);
+            TxtCostumerLastname.Size = new Size(298, 23);
             TxtCostumerLastname.TabIndex = 33;
             // 
             // TxtCostumerFirstname
@@ -438,7 +414,7 @@
             TxtCostumerFirstname.Location = new Point(101, 26);
             TxtCostumerFirstname.Margin = new Padding(1);
             TxtCostumerFirstname.Name = "TxtCostumerFirstname";
-            TxtCostumerFirstname.Size = new Size(198, 23);
+            TxtCostumerFirstname.Size = new Size(298, 23);
             TxtCostumerFirstname.TabIndex = 32;
             // 
             // TxtCostumerEmail
@@ -447,7 +423,7 @@
             TxtCostumerEmail.Location = new Point(101, 251);
             TxtCostumerEmail.Margin = new Padding(1);
             TxtCostumerEmail.Name = "TxtCostumerEmail";
-            TxtCostumerEmail.Size = new Size(198, 23);
+            TxtCostumerEmail.Size = new Size(298, 23);
             TxtCostumerEmail.TabIndex = 41;
             // 
             // LblEmployeeDepartement
@@ -483,6 +459,7 @@
             ChkEmployeeTrainee.TabIndex = 52;
             ChkEmployeeTrainee.Text = "Lehrling";
             ChkEmployeeTrainee.UseVisualStyleBackColor = true;
+            ChkEmployeeTrainee.CheckedChanged += this.ChkEmployeeTrainee_CheckedChanged;
             // 
             // LblEmployeeLevel
             // 
@@ -512,7 +489,7 @@
             // 
             DtpEmployeeStartdate.Location = new Point(103, 303);
             DtpEmployeeStartdate.Name = "DtpEmployeeStartdate";
-            DtpEmployeeStartdate.Size = new Size(175, 23);
+            DtpEmployeeStartdate.Size = new Size(196, 23);
             DtpEmployeeStartdate.TabIndex = 57;
             // 
             // CmbEmployeeDepartement
@@ -520,8 +497,49 @@
             CmbEmployeeDepartement.FormattingEnabled = true;
             CmbEmployeeDepartement.Location = new Point(103, 278);
             CmbEmployeeDepartement.Name = "CmbEmployeeDepartement";
-            CmbEmployeeDepartement.Size = new Size(177, 23);
+            CmbEmployeeDepartement.Size = new Size(196, 23);
             CmbEmployeeDepartement.TabIndex = 58;
+            // 
+            // GrpEmployeeSex
+            // 
+            GrpEmployeeSex.Controls.Add(RadEmployeeFemale);
+            GrpEmployeeSex.Controls.Add(RadEmployeeMale);
+            GrpEmployeeSex.Location = new Point(103, 178);
+            GrpEmployeeSex.Name = "GrpEmployeeSex";
+            GrpEmployeeSex.Size = new Size(194, 19);
+            GrpEmployeeSex.TabIndex = 70;
+            GrpEmployeeSex.TabStop = false;
+            // 
+            // RadEmployeeFemale
+            // 
+            RadEmployeeFemale.AutoSize = true;
+            RadEmployeeFemale.Location = new Point(81, 0);
+            RadEmployeeFemale.Name = "RadEmployeeFemale";
+            RadEmployeeFemale.Size = new Size(71, 19);
+            RadEmployeeFemale.TabIndex = 1;
+            RadEmployeeFemale.TabStop = true;
+            RadEmployeeFemale.Text = "Weiblich";
+            RadEmployeeFemale.UseVisualStyleBackColor = true;
+            // 
+            // RadEmployeeMale
+            // 
+            RadEmployeeMale.AutoSize = true;
+            RadEmployeeMale.Location = new Point(0, 0);
+            RadEmployeeMale.Name = "RadEmployeeMale";
+            RadEmployeeMale.Size = new Size(75, 19);
+            RadEmployeeMale.TabIndex = 0;
+            RadEmployeeMale.TabStop = true;
+            RadEmployeeMale.Text = "Männlich";
+            RadEmployeeMale.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            maskedTextBox1.Location = new Point(101, 351);
+            maskedTextBox1.Margin = new Padding(1);
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(298, 23);
+            maskedTextBox1.TabIndex = 62;
             // 
             // label3
             // 
@@ -552,16 +570,24 @@
             TxtTitleEmployeeRegistration.Margin = new Padding(1);
             TxtTitleEmployeeRegistration.Multiline = true;
             TxtTitleEmployeeRegistration.Name = "TxtTitleEmployeeRegistration";
-            TxtTitleEmployeeRegistration.Size = new Size(140, 35);
+            TxtTitleEmployeeRegistration.Size = new Size(251, 35);
             TxtTitleEmployeeRegistration.TabIndex = 64;
             TxtTitleEmployeeRegistration.TabStop = false;
             TxtTitleEmployeeRegistration.Text = "MITARBEITER ERFASSUNG";
+            // 
+            // CmbEmployeeRegistration
+            // 
+            CmbEmployeeRegistration.FormattingEnabled = true;
+            CmbEmployeeRegistration.Location = new Point(103, 378);
+            CmbEmployeeRegistration.Name = "CmbEmployeeRegistration";
+            CmbEmployeeRegistration.Size = new Size(198, 23);
+            CmbEmployeeRegistration.TabIndex = 71;
             // 
             // LblEmployeeRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 570);
+            ClientSize = new Size(462, 518);
             Controls.Add(TxtTitleEmployeeRegistration);
             Controls.Add(TblLayoutCostumer);
             Controls.Add(label3);
@@ -571,6 +597,8 @@
             Load += EmployeeRegistration_Load;
             TblLayoutCostumer.ResumeLayout(false);
             TblLayoutCostumer.PerformLayout();
+            GrpEmployeeSex.ResumeLayout(false);
+            GrpEmployeeSex.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -578,7 +606,6 @@
         private TableLayoutPanel TblLayoutCostumer;
         private MaskedTextBox TxtEmployeeTrainigyear;
         private MaskedTextBox maskedTextBox1;
-        private ComboBox comboBox3;
         private DateTimePicker DtpEmployeeEnddate;
         private Label LblEmployeeRole;
         private Label LblEmployeeEnddate;
@@ -586,7 +613,6 @@
         private MaskedTextBox TxtCostumerMobilenumber;
         private Label LblEmployeeHousenumber;
         private MaskedTextBox TxtCostumerPhonenumber;
-        private MaskedTextBox TxtCostumerSex;
         private Label LblEmployeePlace;
         private MaskedTextBox TxtCostumerPlace;
         private Label LblEmployeeSex;
@@ -612,5 +638,9 @@
         private Label LblEmployeeLastname;
         private Label LblEmployeeFirstname;
         private Label LblEmployeeZIPcode;
+        private GroupBox GrpEmployeeSex;
+        private RadioButton RadEmployeeFemale;
+        private RadioButton RadEmployeeMale;
+        private ComboBox CmbEmployeeRegistration;
     }
 }
