@@ -54,7 +54,7 @@ namespace ContactManager.Forms
             Address address = new("street", "streetNumber", 9500, "St. Gallen");
             Department dep = null;
 
-            if(context.Departments.Any(x => x.Name == "dep1"))
+            if (context.Departments.Any(x => x.Name == "dep1"))
             {
                 dep = context.Departments.First(x => x.Name == "dep1");
             }
@@ -77,6 +77,16 @@ namespace ContactManager.Forms
         }
 
         private void lblBoxAdressEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

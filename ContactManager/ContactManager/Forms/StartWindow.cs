@@ -9,7 +9,7 @@ namespace ContactManager.Forms
 
         private void btnUserRegistration_Click(object sender, EventArgs e)
         {
-            UserRegistration userRegistration = new UserRegistration();
+            LblEmployeeRegistration userRegistration = new LblEmployeeRegistration();
 
             userRegistration.ShowDialog();
         }
@@ -23,7 +23,7 @@ namespace ContactManager.Forms
 
         private void btnClientRegistration_Click(object sender, EventArgs e)
         {
-            ClientRegistration clientRegistration = new ClientRegistration();
+            CustumerRegistration clientRegistration = new CustumerRegistration();
 
             clientRegistration.ShowDialog();
         }

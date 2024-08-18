@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ContactManager.Forms
+﻿namespace ContactManager.Forms
 {
-    public partial class ClientRegistration : Form
+    public partial class CustumerRegistration : Form
     {
-        public ClientRegistration()
+        public CustumerRegistration()
         {
             InitializeComponent();
         }
 
-        private void ClientRegistration_Load(object sender, EventArgs e)
+        private void CostumerRegistration_Load(object sender, EventArgs e)
         {
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
@@ -45,7 +35,7 @@ namespace ContactManager.Forms
 
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
-        private void label10_Click(object sender, EventArgs e)
+        private void LblCostumerContactperson_Click(object sender, EventArgs e)
         {
 
         }
