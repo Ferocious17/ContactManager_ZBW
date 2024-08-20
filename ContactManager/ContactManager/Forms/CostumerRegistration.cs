@@ -11,10 +11,10 @@
         {
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            LblCostumerTitle.Font = new Font(LblCostumerTitle.Font, FontStyle.Bold);
-            LblCostumerTitle.ForeColor = Color.Black;
-            LblCostumerTitle.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
-            LblCostumerTitle.BorderStyle = BorderStyle.None;
+            LblCostumerRegistration.Font = new Font(LblCostumerRegistration.Font, FontStyle.Bold);
+            LblCostumerRegistration.ForeColor = Color.Black;
+            LblCostumerRegistration.BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
+            LblCostumerRegistration.BorderStyle = BorderStyle.None;
 
             //Buttons Design
             CmdCostumerSave.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
@@ -36,6 +36,21 @@
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         private void LblCostumerContactperson_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCostumerFirstname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TblLayoutCostumer_Paint(object sender, PaintEventArgs e)
         {
 
         }
