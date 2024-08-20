@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Pqc.Crypto.Lms;
+﻿using ContactManager.Models;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 
 namespace ContactManager.Forms
 {
@@ -655,6 +656,7 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.TabIndex = 47;
             btnSaveEmpoloyeRegistration.Text = "Speichern";
             btnSaveEmpoloyeRegistration.UseVisualStyleBackColor = true;
+            btnSaveEmpoloyeRegistration.Click += btnSaveEmpoloyeRegistration_Click;
             // 
             // TxtTitleEmployeeRegistration
             // 
@@ -825,6 +827,14 @@ namespace ContactManager.Forms
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void btnSaveEmpoloyeRegistration_Click(object sender, EventArgs e)
+        {
+            if(ChkEmployeeTrainee.Checked)
+            {
+                //Trainee trainee = new Trainee(RadEmployeeMale.Checked ? true : false, "title-Placeholder", Txt);
+            }
         }
 
         public EventHandler ChkEmployeeTrainee_CheckedChanged { get; private set; }
