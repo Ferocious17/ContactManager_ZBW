@@ -269,8 +269,8 @@ namespace ContactManager.Forms
             // 
             LblEmployeeFirstname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblEmployeeFirstname.AutoSize = true;
-            LblEmployeeFirstname.Location = new Point(2, 136);
-            LblEmployeeFirstname.Margin = new Padding(2, 0, 2, 0);
+            LblEmployeeFirstname.Location = new Point(1, 50);
+            LblEmployeeFirstname.Margin = new Padding(1, 0, 1, 0);
             LblEmployeeFirstname.Name = "LblEmployeeFirstname";
             LblEmployeeFirstname.Size = new Size(264, 68);
             LblEmployeeFirstname.TabIndex = 65;
@@ -457,10 +457,9 @@ namespace ContactManager.Forms
             // ChkEmployeeTrainee
             // 
             ChkEmployeeTrainee.AutoSize = true;
-            ChkEmployeeTrainee.Location = new Point(7, 8);
-            ChkEmployeeTrainee.Margin = new Padding(7, 8, 7, 8);
+            ChkEmployeeTrainee.Location = new Point(3, 3);
             ChkEmployeeTrainee.Name = "ChkEmployeeTrainee";
-            ChkEmployeeTrainee.Size = new Size(162, 45);
+            ChkEmployeeTrainee.Size = new Size(69, 19);
             ChkEmployeeTrainee.TabIndex = 52;
             ChkEmployeeTrainee.Text = "Lehrling";
             ChkEmployeeTrainee.UseVisualStyleBackColor = true;
@@ -505,10 +504,9 @@ namespace ContactManager.Forms
             // RadEmployeeFemale
             // 
             RadEmployeeFemale.AutoSize = true;
-            RadEmployeeFemale.Location = new Point(328, 0);
-            RadEmployeeFemale.Margin = new Padding(7, 8, 7, 8);
+            RadEmployeeFemale.Location = new Point(135, 0);
             RadEmployeeFemale.Name = "RadEmployeeFemale";
-            RadEmployeeFemale.Size = new Size(168, 45);
+            RadEmployeeFemale.Size = new Size(71, 19);
             RadEmployeeFemale.TabIndex = 1;
             RadEmployeeFemale.TabStop = true;
             RadEmployeeFemale.Text = "Weiblich";
@@ -518,9 +516,8 @@ namespace ContactManager.Forms
             // 
             RadEmployeeMale.AutoSize = true;
             RadEmployeeMale.Location = new Point(0, 0);
-            RadEmployeeMale.Margin = new Padding(7, 8, 7, 8);
             RadEmployeeMale.Name = "RadEmployeeMale";
-            RadEmployeeMale.Size = new Size(176, 45);
+            RadEmployeeMale.Size = new Size(75, 19);
             RadEmployeeMale.TabIndex = 0;
             RadEmployeeMale.TabStop = true;
             RadEmployeeMale.Text = "Männlich";
@@ -548,8 +545,8 @@ namespace ContactManager.Forms
             // 
             LblEmployeeTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblEmployeeTitle.AutoSize = true;
-            LblEmployeeTitle.Location = new Point(2, 68);
-            LblEmployeeTitle.Margin = new Padding(2, 0, 2, 0);
+            LblEmployeeTitle.Location = new Point(1, 25);
+            LblEmployeeTitle.Margin = new Padding(1, 0, 1, 0);
             LblEmployeeTitle.Name = "LblEmployeeTitle";
             LblEmployeeTitle.Size = new Size(264, 68);
             LblEmployeeTitle.TabIndex = 73;
@@ -748,14 +745,13 @@ namespace ContactManager.Forms
             // 
             // LblEmployeeRegistration
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 1673);
             Controls.Add(TxtTitleEmployeeRegistration);
             Controls.Add(TblLayoutCostumer);
             Controls.Add(label3);
             Controls.Add(btnSaveEmpoloyeRegistration);
-            Margin = new Padding(7, 8, 7, 8);
             Name = "LblEmployeeRegistration";
             Text = "Employee Registration";
             Load += EmployeeRegistration_Load;
@@ -833,7 +829,7 @@ namespace ContactManager.Forms
         {
             if(ChkEmployeeTrainee.Checked)
             {
-                //Trainee trainee = new Trainee(RadEmployeeMale.Checked ? true : false, "title-Placeholder", Txt);
+                Trainee trainee = new Trainee(RadEmployeeMale.Checked ? true : false, TxtEmployeeTitle.Text, TxtEmployeeFirstname.Text, TxtEmployeeLastname.Text, dateofbirth);
             }
         }
 
