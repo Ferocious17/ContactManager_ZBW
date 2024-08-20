@@ -38,6 +38,7 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSaveEmpoloyeRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveEmpoloyeRegistration.Width, btnSaveEmpoloyeRegistration.Height, 5, 5)); // Create rounded rectangle region
 
+            TxtEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
         }
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
@@ -464,9 +465,7 @@ namespace ContactManager.Forms
             ChkEmployeeTrainee.TabIndex = 52;
             ChkEmployeeTrainee.Text = "Lehrling";
             ChkEmployeeTrainee.UseVisualStyleBackColor = true;
-            ChkEmployeeTrainee.CheckedChanged += new System.EventHandler(checkBoxTrainee_CheckedChanged);
-            
-           
+            ChkEmployeeTrainee.CheckedChanged += checkBoxTrainee_CheckedChanged;
             // 
             // LblEmployeeLevel
             // 
