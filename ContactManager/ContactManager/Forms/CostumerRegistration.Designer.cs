@@ -163,7 +163,7 @@
             TxtCostumerTitle.Margin = new Padding(1);
             TxtCostumerTitle.Name = "TxtCostumerTitle";
             TxtCostumerTitle.Size = new Size(229, 23);
-            TxtCostumerTitle.TabIndex = 54;
+            TxtCostumerTitle.TabIndex = 1;
             // 
             // LblCostumerTitle
             // 
@@ -184,7 +184,7 @@
             GrpCostumerSex.Location = new Point(103, 202);
             GrpCostumerSex.Name = "GrpCostumerSex";
             GrpCostumerSex.Size = new Size(164, 19);
-            GrpCostumerSex.TabIndex = 52;
+            GrpCostumerSex.TabIndex = 0;
             GrpCostumerSex.TabStop = false;
             // 
             // RadCostumerFemale
@@ -193,7 +193,7 @@
             RadCostumerFemale.Location = new Point(81, 3);
             RadCostumerFemale.Name = "RadCostumerFemale";
             RadCostumerFemale.Size = new Size(71, 19);
-            RadCostumerFemale.TabIndex = 1;
+            RadCostumerFemale.TabIndex = 10;
             RadCostumerFemale.Text = "Weiblich";
             RadCostumerFemale.UseVisualStyleBackColor = true;
             // 
@@ -204,7 +204,7 @@
             RadCostumerMale.Location = new Point(0, 3);
             RadCostumerMale.Name = "RadCostumerMale";
             RadCostumerMale.Size = new Size(75, 19);
-            RadCostumerMale.TabIndex = 0;
+            RadCostumerMale.TabIndex = 9;
             RadCostumerMale.TabStop = true;
             RadCostumerMale.Text = "Männlich";
             RadCostumerMale.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             TxtCostumerContactperson.Location = new Point(103, 352);
             TxtCostumerContactperson.Name = "TxtCostumerContactperson";
             TxtCostumerContactperson.Size = new Size(225, 23);
-            TxtCostumerContactperson.TabIndex = 50;
+            TxtCostumerContactperson.TabIndex = 15;
             // 
             // CmbCostumerCostumertype
             // 
@@ -222,14 +222,14 @@
             CmbCostumerCostumertype.Location = new Point(103, 327);
             CmbCostumerCostumertype.Name = "CmbCostumerCostumertype";
             CmbCostumerCostumertype.Size = new Size(225, 23);
-            CmbCostumerCostumertype.TabIndex = 49;
+            CmbCostumerCostumertype.TabIndex = 14;
             // 
             // TxtCostumerCompany
             // 
             TxtCostumerCompany.Location = new Point(103, 302);
             TxtCostumerCompany.Name = "TxtCostumerCompany";
             TxtCostumerCompany.Size = new Size(225, 23);
-            TxtCostumerCompany.TabIndex = 48;
+            TxtCostumerCompany.TabIndex = 13;
             // 
             // LblCostumerCostumertype
             // 
@@ -262,7 +262,7 @@
             TxtCostumerEmail.Margin = new Padding(1);
             TxtCostumerEmail.Name = "TxtCostumerEmail";
             TxtCostumerEmail.Size = new Size(229, 23);
-            TxtCostumerEmail.TabIndex = 41;
+            TxtCostumerEmail.TabIndex = 12;
             // 
             // TxtCostumerFirstname
             // 
@@ -271,7 +271,7 @@
             TxtCostumerFirstname.Margin = new Padding(1);
             TxtCostumerFirstname.Name = "TxtCostumerFirstname";
             TxtCostumerFirstname.Size = new Size(229, 23);
-            TxtCostumerFirstname.TabIndex = 32;
+            TxtCostumerFirstname.TabIndex = 2;
             // 
             // TxtCostumerLastname
             // 
@@ -280,7 +280,7 @@
             TxtCostumerLastname.Margin = new Padding(1);
             TxtCostumerLastname.Name = "TxtCostumerLastname";
             TxtCostumerLastname.Size = new Size(229, 23);
-            TxtCostumerLastname.TabIndex = 33;
+            TxtCostumerLastname.TabIndex = 3;
             // 
             // LblCostumerEmail
             // 
@@ -301,7 +301,7 @@
             TxtCostumerStreet.Margin = new Padding(1);
             TxtCostumerStreet.Name = "TxtCostumerStreet";
             TxtCostumerStreet.Size = new Size(229, 23);
-            TxtCostumerStreet.TabIndex = 34;
+            TxtCostumerStreet.TabIndex = 5;
             // 
             // LblCostumerMobilenumber
             // 
@@ -322,7 +322,7 @@
             TxtCostumerStreetnumber.Margin = new Padding(1);
             TxtCostumerStreetnumber.Name = "TxtCostumerStreetnumber";
             TxtCostumerStreetnumber.Size = new Size(229, 23);
-            TxtCostumerStreetnumber.TabIndex = 35;
+            TxtCostumerStreetnumber.TabIndex = 6;
             // 
             // LblCostumerPhonenumber
             // 
@@ -343,7 +343,7 @@
             TxtCostumerZIPcode.Margin = new Padding(1);
             TxtCostumerZIPcode.Name = "TxtCostumerZIPcode";
             TxtCostumerZIPcode.Size = new Size(229, 23);
-            TxtCostumerZIPcode.TabIndex = 36;
+            TxtCostumerZIPcode.TabIndex = 7;
             // 
             // LblCostumerSex
             // 
@@ -364,7 +364,7 @@
             TxtCostumerPlace.Margin = new Padding(1);
             TxtCostumerPlace.Name = "TxtCostumerPlace";
             TxtCostumerPlace.Size = new Size(229, 23);
-            TxtCostumerPlace.TabIndex = 37;
+            TxtCostumerPlace.TabIndex = 8;
             // 
             // LblCostumerPlace
             // 
@@ -397,7 +397,7 @@
             TxtCostumerPhonenumber.Margin = new Padding(1);
             TxtCostumerPhonenumber.Name = "TxtCostumerPhonenumber";
             TxtCostumerPhonenumber.Size = new Size(229, 23);
-            TxtCostumerPhonenumber.TabIndex = 39;
+            TxtCostumerPhonenumber.TabIndex = 10;
             // 
             // LblCostumerStreetnumber
             // 
@@ -418,7 +418,7 @@
             TxtCostumerMobilenumber.Margin = new Padding(1);
             TxtCostumerMobilenumber.Name = "TxtCostumerMobilenumber";
             TxtCostumerMobilenumber.Size = new Size(229, 23);
-            TxtCostumerMobilenumber.TabIndex = 40;
+            TxtCostumerMobilenumber.TabIndex = 11;
             // 
             // LblCostumerStreet
             // 
@@ -547,7 +547,7 @@
             TxtCostumerDateofBirth.Margin = new Padding(1);
             TxtCostumerDateofBirth.Name = "TxtCostumerDateofBirth";
             TxtCostumerDateofBirth.Size = new Size(229, 23);
-            TxtCostumerDateofBirth.TabIndex = 59;
+            TxtCostumerDateofBirth.TabIndex = 4;
             // 
             // CustumerRegistration
             // 
