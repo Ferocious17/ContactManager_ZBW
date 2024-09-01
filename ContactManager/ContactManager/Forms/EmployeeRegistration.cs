@@ -3,6 +3,7 @@ using ContactManager.Enums;
 using ContactManager.Models;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System.Runtime.Serialization;
 
 namespace ContactManager.Forms
 {
@@ -15,7 +16,7 @@ namespace ContactManager.Forms
 
         private Label LblEmployeeAdress;
         private Label LblEmployeeZipCode;
-        private Employee? _employee = null;
+        private Employee? _employee = new();
         private readonly ContactManagerContext _context = new();
 
 
@@ -37,6 +38,8 @@ namespace ContactManager.Forms
         private void EmployeeRegistration_Load(object sender, EventArgs e)
         {
 
+            CmbEmployeeLevel.DataSource = Enum.GetValues(typeof(CadreLevel));
+
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
             TxtTitleEmployeeRegistration.Font = new Font(TxtTitleEmployeeRegistration.Font, FontStyle.Bold);
@@ -52,7 +55,34 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSaveEmpoloyeRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveEmpoloyeRegistration.Width, btnSaveEmpoloyeRegistration.Height, 5, 5)); // Create rounded rectangle region
 
-            LblEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
+            //LblEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
+
+            TxtEmployeeTitle.DataBindings.Add("Text", _employee, nameof(Employee.Title));
+            TxtEmployeeFirstname.DataBindings.Add("Text", _employee, nameof(Employee.FirstName));
+            TxtEmployeeLastname.DataBindings.Add("Text", _employee, nameof(Employee.LastName));
+            TxtEmployeeDateofBirth.DataBindings.Add("Text", _employee, nameof(Employee.DateOfBirth));
+            TxtEmployeeStreet.DataBindings.Add("Text", _employee.Address, nameof(Employee.Address.Street));
+            TxtEmployeeHousenumber.DataBindings.Add("Text", _employee.Address, nameof(Employee.Address.StreetNumber));
+            TxtEmployeeZIPcode.DataBindings.Add("Text", _employee.Address, nameof(Employee.Address.ZipCode));
+            TxtEmployeePlace.DataBindings.Add("Text", _employee.Address, nameof(Employee.Address.City));
+            TxtEmployeeSSN.DataBindings.Add("Text", _employee, nameof(Employee.SocialSecurityNumber));
+
+            RadEmployeeFemale.DataBindings.Add("Checked", _employee, nameof(Employee.Gender));
+            RadEmployeeFemale.DataBindings[0].Format += (s, e) => e.Value = !(bool)e.Value;
+            RadEmployeeFemale.DataBindings[0].Parse += (s, e) => e.Value = !(bool)e.Value;
+            RadEmployeeMale.DataBindings.Add("Checked", _employee, nameof(Employee.Gender));
+
+            TxtEmployeePhonenumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberPrivate));
+            TxtEmployeeMobilenumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberMobile));
+            TxtEmployeeBusinessnumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberBusiness));
+            TxtEmployeeEmail.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.Email));
+            CmbEmployeeDepartement.DataBindings.Add("Text", _employee, nameof(Employee.Department));
+            //DtpEmployeeStartdate.DataBindings.Add("Text", _employee, nameof(Employee.StartDate));
+            //DtpEmployeeEnddate.DataBindings.Add("Text", _employee, nameof(Employee.EndDate));
+            TxtEmployeeRole.DataBindings.Add("Text", _employee, nameof(Employee.Role));
+            CmbEmployeeLevel.DataBindings.Add("Text", _employee, nameof(Employee.CadreLevel));
+
+            //training year
         }
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
@@ -144,7 +174,7 @@ namespace ContactManager.Forms
             LblEmployeeBusinessnumber = new Label();
             TxtEmployeeBusinessnumber = new MaskedTextBox();
             CmbEmployeeDepartement = new ComboBox();
-            CmbEmployeeRegistration = new ComboBox();
+            CmbEmployeeLevel = new ComboBox();
             btnSaveEmpoloyeRegistration = new Button();
             TxtTitleEmployeeRegistration = new TextBox();
             CmdEmployeeSave = new Button();
@@ -199,7 +229,7 @@ namespace ContactManager.Forms
             TblLayoutCostumer.Controls.Add(LblEmployeeBusinessnumber, 0, 14);
             TblLayoutCostumer.Controls.Add(TxtEmployeeBusinessnumber, 1, 14);
             TblLayoutCostumer.Controls.Add(CmbEmployeeDepartement, 1, 16);
-            TblLayoutCostumer.Controls.Add(CmbEmployeeRegistration, 1, 20);
+            TblLayoutCostumer.Controls.Add(CmbEmployeeLevel, 1, 20);
             TblLayoutCostumer.Location = new Point(36, 98);
             TblLayoutCostumer.Margin = new Padding(5);
             TblLayoutCostumer.Name = "TblLayoutCostumer";
@@ -700,24 +730,14 @@ namespace ContactManager.Forms
             CmbEmployeeDepartement.Size = new Size(282, 23);
             CmbEmployeeDepartement.TabIndex = 58;
             // 
-            // CmbEmployeeRegistration
+            // CmbEmployeeLevel
             // 
-            CmbEmployeeRegistration.DataSource = new CadreLevel[]
-    {
-    CadreLevel.Zero,
-    CadreLevel.One,
-    CadreLevel.Two,
-    CadreLevel.Three,
-    CadreLevel.Four,
-    CadreLevel.Five
-    };
-            CmbEmployeeRegistration.FormattingEnabled = true;
-            CmbEmployeeRegistration.Items.AddRange(new object[] { CadreLevel.Zero, CadreLevel.One, CadreLevel.Two, CadreLevel.Three, CadreLevel.Four, CadreLevel.Five });
-            CmbEmployeeRegistration.Location = new Point(145, 508);
-            CmbEmployeeRegistration.Margin = new Padding(7, 8, 7, 8);
-            CmbEmployeeRegistration.Name = "CmbEmployeeRegistration";
-            CmbEmployeeRegistration.Size = new Size(280, 23);
-            CmbEmployeeRegistration.TabIndex = 71;
+            CmbEmployeeLevel.FormattingEnabled = true;
+            CmbEmployeeLevel.Location = new Point(145, 508);
+            CmbEmployeeLevel.Margin = new Padding(7, 8, 7, 8);
+            CmbEmployeeLevel.Name = "CmbEmployeeLevel";
+            CmbEmployeeLevel.Size = new Size(280, 23);
+            CmbEmployeeLevel.TabIndex = 71;
             // 
             // btnSaveEmpoloyeRegistration
             // 
@@ -806,7 +826,7 @@ namespace ContactManager.Forms
         private Label LblEmployeeZIPcode;
         private RadioButton RadEmployeeFemale;
         private RadioButton RadEmployeeMale;
-        private ComboBox CmbEmployeeRegistration;
+        private ComboBox CmbEmployeeLevel;
         private MaskedTextBox TxtEmployeeTitle;
 
         private void TblLayoutCostumer_Paint(object sender, PaintEventArgs e)
@@ -863,7 +883,7 @@ namespace ContactManager.Forms
                 }
                 else
                 {
-                    Employee employee = new(RadEmployeeMale.Checked, TxtEmployeeTitle.Text, TxtEmployeeFirstname.Text, TxtEmployeeLastname.Text, dateOfBrith, TxtEmployeeSSN.Text, communcationInfo, address, true, string.Empty, Guid.NewGuid(), department, DtpEmployeeStartdate.Value, DtpEmployeeEnddate.Value, 0, TxtEmployeeRole.Text, Enum.Parse<CadreLevel>(CmbEmployeeRegistration.SelectedItem.ToString()));
+                    Employee employee = new(RadEmployeeMale.Checked, TxtEmployeeTitle.Text, TxtEmployeeFirstname.Text, TxtEmployeeLastname.Text, dateOfBrith, TxtEmployeeSSN.Text, communcationInfo, address, true, string.Empty, Guid.NewGuid(), department, DtpEmployeeStartdate.Value, DtpEmployeeEnddate.Value, 0, TxtEmployeeRole.Text, Enum.Parse<CadreLevel>(CmbEmployeeLevel.SelectedItem.ToString()));
                     _context.Add(employee);
                 }
             }

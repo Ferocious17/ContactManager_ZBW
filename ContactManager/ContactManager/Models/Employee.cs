@@ -15,7 +15,11 @@ public class Employee : Person
         CadreLevel = cadreLevel;
     }
 
-    protected Employee() : base() { }
+    internal Employee() : base()
+    {
+        Address = new();
+        CommunicationInfo = new();
+    }
 
     public Guid EmployeeNumber { get; set; }
     public Department Department { get; set; }
