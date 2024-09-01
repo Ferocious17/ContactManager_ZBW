@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ContactManager.DB;
+using ContactManager.Models;
+using MySqlX.XDevAPI.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,7 +49,24 @@ namespace ContactManager.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-         
+            if (!string.IsNullOrEmpty(TxtSearchbar.Text.Trim()))
+            {
+                string searchText = TxtSearchbar.Text.Trim();
+                bool dateConverted = DateTime.TryParse(searchText, out DateTime date);
+                List<Person> persons = [];
+
+                ContactManagerContext context = new();
+                if(dateConverted)
+                {
+                    persons.AddRange(context.People.Where(p => p.DateOfBirth == date));
+                }
+                else
+                {
+                    persons.AddRange(context.People.Where(p => p.FirstName == searchText || p.LastName == searchText));
+                }
+                
+                TxtOutgrid.DataSource = persons;
+            }
         }
 
 

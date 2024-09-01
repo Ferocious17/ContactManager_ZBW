@@ -219,6 +219,37 @@ namespace ContactManager.Migrations
                         .HasForeignKey("ContactManager.Models.Customer", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.OwnsMany("ContactManager.Models.Note", "Notes", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasColumnName("id");
+
+                            b1.Property<int?>("CustomerId")
+                                .HasColumnType("int");
+
+                            b1.Property<DateTime>("Date")
+                                .HasColumnType("datetime(6)")
+                                .HasColumnName("date");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("longtext")
+                                .HasColumnName("text");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("CustomerId");
+
+                            b1.ToTable("Note");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CustomerId");
+                        });
+
+                    b.Navigation("Notes");
                 });
 
             modelBuilder.Entity("ContactManager.Models.Employee", b =>

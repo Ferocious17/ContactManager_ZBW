@@ -15,4 +15,6 @@ public class Customer : Person
     public string CompanyName { get; set; }
     public CustomerType CustomerType { get; set; }
     public string CompanyContact {  get; set; }
+    
+    public ICollection<Note> Notes { get; set; }
 }

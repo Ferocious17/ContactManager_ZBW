@@ -63,6 +63,13 @@ public class ContactManagerContext : DbContext
                 address.Property(a => a.ZipCode).HasColumnName("zipCode");
                 address.Property(a => a.City).HasColumnName("place");
             });
+
+            entity.OwnsMany(e => e.Notes, notes =>
+            {
+                notes.Property(n => n.Id).HasColumnName("id");
+                notes.Property(n => n.Date).HasColumnName("date");
+                notes.Property(n => n.Text).HasColumnName("text");
+            });
         });
     }
 }

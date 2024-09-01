@@ -7,7 +7,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace ContactManager.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class ContactManager : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -112,6 +112,28 @@ namespace ContactManager.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Note",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    text = table.Column<string>(type: "longtext", nullable: false),
+                    date = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    CustomerId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Note", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Note_Customer_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Trainee",
                 columns: table => new
                 {
@@ -135,16 +157,24 @@ namespace ContactManager.Migrations
                 name: "IX_Employee_DepartmentId",
                 table: "Employee",
                 column: "DepartmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Note_CustomerId",
+                table: "Note",
+                column: "CustomerId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Customer");
+                name: "Note");
 
             migrationBuilder.DropTable(
                 name: "Trainee");
+
+            migrationBuilder.DropTable(
+                name: "Customer");
 
             migrationBuilder.DropTable(
                 name: "Employee");
