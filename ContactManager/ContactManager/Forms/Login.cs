@@ -33,6 +33,17 @@ namespace ContactManager.Forms
             BtnLoginSave.FlatAppearance.BorderSize = 0; // Set button border size to 0
             BtnLoginSave.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, BtnLoginSave.Width, BtnLoginSave.Height, 5, 5)); // Create rounded rectangle region
 
+            TxtLoginUsername.KeyDown += Textbox_KeyDown;
+            TxtLoginPassword.KeyDown += Textbox_KeyDown;
+        }
+
+        private void Textbox_KeyDown(object? sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnLoginSave_Click(sender, e);
+                e.Handled = true;
+            }
         }
 
         // Helper method to create a rounded rectangle region
