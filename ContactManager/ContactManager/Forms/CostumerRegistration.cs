@@ -38,6 +38,8 @@ namespace ContactManager.Forms
             CmdCostumerSave.FlatAppearance.BorderSize = 0; // Set button border size to 0
             CmdCostumerSave.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdCostumerSave.Width, CmdCostumerSave.Height, 5, 5)); // Create rounded rectangle region
 
+            CmbCostumerCostumertype.DataSource = Enum.GetValues(typeof(CustomerType));
+
             TxtCostumerTitle.DataBindings.Add("Text", _customer, nameof(Customer.Title));
             TxtCostumerFirstname.DataBindings.Add("Text", _customer, nameof(Customer.FirstName));
             TxtCostumerLastname.DataBindings.Add("Text", _customer, nameof(Customer.LastName));
