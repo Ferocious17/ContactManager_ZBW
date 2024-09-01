@@ -10,7 +10,7 @@ public class Address
         City = city;
     }
 
-    private Address() { }
+    internal Address() { }
 
     public string Street { get; set; }
     public string StreetNumber { get; set; }

@@ -869,6 +869,7 @@ namespace ContactManager.Forms
             }
 
             _context.SaveChanges();
+            Close();
         }
 
         public EventHandler ChkEmployeeTrainee_CheckedChanged { get; private set; }

@@ -10,7 +10,11 @@ public class Customer : Person
         CompanyContact = companyContact;
     }
 
-    private Customer() : base() { }
+    internal Customer() : base()
+    {
+        Address = new();
+        CommunicationInfo = new();
+    }
 
     public string CompanyName { get; set; }
     public CustomerType CustomerType { get; set; }

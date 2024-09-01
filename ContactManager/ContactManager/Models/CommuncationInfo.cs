@@ -10,7 +10,7 @@ public class CommuncationInfo
         Email = email;
     }
 
-    private CommuncationInfo() { }
+    internal CommuncationInfo() { }
 
     public string PhoneNumberPrivate { get; set; }
     public string PhoneNumberMobile { get; set; }
