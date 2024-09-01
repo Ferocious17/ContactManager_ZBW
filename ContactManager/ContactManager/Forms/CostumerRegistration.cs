@@ -1,16 +1,27 @@
 ﻿using ContactManager.DB;
 using ContactManager.Enums;
 using ContactManager.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContactManager.Forms
 {
     public partial class CustumerRegistration : Form
     {
         private Customer? _customer = null;
+        private readonly ContactManagerContext _context = new();
 
         public CustumerRegistration()
         {
             InitializeComponent();
+        }
+
+        public CustumerRegistration(Customer customer)
+        {
+            InitializeComponent();
+            _customer = customer;
+            _context.Update(_customer);
+
+            TxtCostumerFirstname.Text = _customer.FirstName;
         }
 
         private void CostumerRegistration_Load(object sender, EventArgs e)
@@ -63,29 +74,30 @@ namespace ContactManager.Forms
 
         private void CmdCostumerSave_Click(object sender, EventArgs e)
         {
-            Enum.TryParse(CmbCostumerCostumertype.Text, out CustomerType selectedCostomerType);
-            DateTime.TryParse(TxtCostumerDateofBirth.Text, out DateTime dateOfBirth);
+            _ = Enum.TryParse(CmbCostumerCostumertype.Text, out CustomerType selectedCostomerType);
+            _ = DateTime.TryParse(TxtCostumerDateofBirth.Text, out DateTime dateOfBirth);
 
             CommuncationInfo communicationInfo = new(TxtCostumerMobilenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerEmail.Text);
             Address address = new(TxtCostumerStreet.Text, TxtCostumerStreetnumber.Text, Convert.ToInt32(TxtCostumerZIPcode.Text), TxtCostumerPlace.Text);
-            Customer newCustomer = new(RadCostumerMale.Checked, TxtCostumerTitle.Text, TxtCostumerFirstname.Text, TxtCostumerLastname.Text, dateOfBirth, string.Empty, communicationInfo, address, true, string.Empty, TxtCostumerCompany.Text, selectedCostomerType, TxtCostumerContactperson.Text);
 
-            ContactManagerContext context = new();
+            if(_customer is null)
+            {
+                Customer newCustomer = new(RadCostumerMale.Checked, TxtCostumerTitle.Text, TxtCostumerFirstname.Text, TxtCostumerLastname.Text, dateOfBirth, string.Empty, communicationInfo, address, true, string.Empty, TxtCostumerCompany.Text, selectedCostomerType, TxtCostumerContactperson.Text);
 
-            context.Add(newCustomer);
-            context.SaveChanges();
+                _context.Add(newCustomer);
+                _customer = _context.Customers.FirstOrDefault(c => c.Id == newCustomer.Id);
+            }
 
-            _customer = context.Customers.FirstOrDefault(c => c.Id == newCustomer.Id);
+            _context.SaveChanges();
         }
 
         private void BtnSaveNote_Click(object sender, EventArgs e)
         {
-            if(_customer != null && !string.IsNullOrEmpty(TxtNotes.Text))
+            if (_customer != null && !string.IsNullOrEmpty(TxtNotes.Text))
             {
-                ContactManagerContext context = new();
+                _context.Update(_customer);
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
-                context.Add(_customer);
-                context.SaveChanges();
+                _context.SaveChanges();
             }
         }
     }

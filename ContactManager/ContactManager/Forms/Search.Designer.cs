@@ -39,18 +39,18 @@
         // 
         // TxtSearchbar
         // 
-        TxtSearchbar.Location = new Point(151, 208);
-        TxtSearchbar.Margin = new Padding(2, 3, 2, 3);
+        TxtSearchbar.Location = new Point(62, 76);
+        TxtSearchbar.Margin = new Padding(1);
         TxtSearchbar.Name = "TxtSearchbar";
-        TxtSearchbar.Size = new Size(582, 47);
+        TxtSearchbar.Size = new Size(242, 23);
         TxtSearchbar.TabIndex = 0;
         // 
         // CmdSearch
         // 
-        CmdSearch.Location = new Point(765, 202);
-        CmdSearch.Margin = new Padding(2, 3, 2, 3);
+        CmdSearch.Location = new Point(315, 74);
+        CmdSearch.Margin = new Padding(1);
         CmdSearch.Name = "CmdSearch";
-        CmdSearch.Size = new Size(187, 57);
+        CmdSearch.Size = new Size(77, 21);
         CmdSearch.TabIndex = 1;
         CmdSearch.Text = "Suche";
         CmdSearch.UseVisualStyleBackColor = true;
@@ -59,11 +59,11 @@
         // LblSearchTitle
         // 
         LblSearchTitle.Font = new Font("Segoe UI", 15F);
-        LblSearchTitle.Location = new Point(151, 87);
-        LblSearchTitle.Margin = new Padding(2, 3, 2, 3);
+        LblSearchTitle.Location = new Point(62, 32);
+        LblSearchTitle.Margin = new Padding(1);
         LblSearchTitle.Multiline = true;
         LblSearchTitle.Name = "LblSearchTitle";
-        LblSearchTitle.Size = new Size(259, 72);
+        LblSearchTitle.Size = new Size(109, 29);
         LblSearchTitle.TabIndex = 3;
         LblSearchTitle.Text = "SUCHE";
         LblSearchTitle.TextChanged += txtBoxTitelSearch_TextChanged;
@@ -71,48 +71,49 @@
         // TxtOutgrid
         // 
         TxtOutgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        TxtOutgrid.Location = new Point(151, 358);
-        TxtOutgrid.Margin = new Padding(5, 5, 5, 5);
+        TxtOutgrid.Location = new Point(62, 131);
+        TxtOutgrid.Margin = new Padding(2);
         TxtOutgrid.Name = "TxtOutgrid";
         TxtOutgrid.RowHeadersWidth = 51;
-        TxtOutgrid.Size = new Size(648, 651);
+        TxtOutgrid.Size = new Size(267, 238);
         TxtOutgrid.TabIndex = 4;
+        TxtOutgrid.CellDoubleClick += TxtOutgrid_CellDoubleClick;
         // 
         // BtnEdit
         // 
-        BtnEdit.Location = new Point(911, 358);
-        BtnEdit.Margin = new Padding(2, 3, 2, 3);
+        BtnEdit.Location = new Point(375, 131);
+        BtnEdit.Margin = new Padding(1);
         BtnEdit.Name = "BtnEdit";
-        BtnEdit.Size = new Size(187, 57);
+        BtnEdit.Size = new Size(77, 21);
         BtnEdit.TabIndex = 5;
         BtnEdit.Text = "Editieren";
         BtnEdit.UseVisualStyleBackColor = true;
         // 
         // BtnAcivateDeactive
         // 
-        BtnAcivateDeactive.Location = new Point(911, 421);
-        BtnAcivateDeactive.Margin = new Padding(2, 3, 2, 3);
+        BtnAcivateDeactive.Location = new Point(375, 154);
+        BtnAcivateDeactive.Margin = new Padding(1);
         BtnAcivateDeactive.Name = "BtnAcivateDeactive";
-        BtnAcivateDeactive.Size = new Size(187, 53);
+        BtnAcivateDeactive.Size = new Size(77, 19);
         BtnAcivateDeactive.TabIndex = 6;
         BtnAcivateDeactive.Text = "Aktivieren";
         BtnAcivateDeactive.UseVisualStyleBackColor = true;
         // 
         // BtnDelete
         // 
-        BtnDelete.Location = new Point(911, 480);
-        BtnDelete.Margin = new Padding(2, 3, 2, 3);
+        BtnDelete.Location = new Point(375, 176);
+        BtnDelete.Margin = new Padding(1);
         BtnDelete.Name = "BtnDelete";
-        BtnDelete.Size = new Size(187, 57);
+        BtnDelete.Size = new Size(77, 21);
         BtnDelete.TabIndex = 8;
         BtnDelete.Text = "Löschen";
         BtnDelete.UseVisualStyleBackColor = true;
         // 
         // Search
         // 
-        AutoScaleDimensions = new SizeF(17F, 41F);
+        AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1219, 1061);
+        ClientSize = new Size(502, 388);
         Controls.Add(BtnDelete);
         Controls.Add(BtnAcivateDeactive);
         Controls.Add(BtnEdit);
@@ -120,7 +121,7 @@
         Controls.Add(LblSearchTitle);
         Controls.Add(CmdSearch);
         Controls.Add(TxtSearchbar);
-        Margin = new Padding(2, 3, 2, 3);
+        Margin = new Padding(1);
         Name = "Search";
         Text = "Suche";
         Load += Search_Load;

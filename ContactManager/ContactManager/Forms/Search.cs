@@ -56,7 +56,7 @@ namespace ContactManager.Forms
                 List<Person> persons = [];
 
                 ContactManagerContext context = new();
-                if(dateConverted)
+                if (dateConverted)
                 {
                     persons.AddRange(context.People.Where(p => p.DateOfBirth == date));
                 }
@@ -64,7 +64,7 @@ namespace ContactManager.Forms
                 {
                     persons.AddRange(context.People.Where(p => p.FirstName == searchText || p.LastName == searchText));
                 }
-                
+
                 TxtOutgrid.DataSource = persons;
             }
         }
@@ -75,5 +75,21 @@ namespace ContactManager.Forms
 
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
+        private void TxtOutgrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ContactManagerContext context = new();
+            Person selectedPerson = context.People.Where(p => p.Id == (int)TxtOutgrid.Rows[e.RowIndex].Cells[0].Value).First();
+
+            if (context.Employees.Any(e => e.Id == selectedPerson.Id))
+            {
+                LblEmployeeRegistration employeeRegistration = new(context.Employees.First(e => e.Id == selectedPerson.Id));
+                employeeRegistration.ShowDialog();
+            }
+            else
+            {
+                CustumerRegistration custumerRegistration = new(context.Customers.First(e => e.Id == selectedPerson.Id));
+                custumerRegistration.ShowDialog();
+            }
+        }
     }
 }
