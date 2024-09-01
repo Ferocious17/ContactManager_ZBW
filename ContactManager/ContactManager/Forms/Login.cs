@@ -27,7 +27,6 @@ namespace ContactManager.Forms
             TxtLoginTitle.BorderStyle = BorderStyle.None;
 
             //Buttons Design
-
             BtnLoginSave.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
             BtnLoginSave.ForeColor = Color.White;
             BtnLoginSave.FlatStyle = FlatStyle.Flat;
@@ -38,7 +37,6 @@ namespace ContactManager.Forms
 
         // Helper method to create a rounded rectangle region
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         private void LblCostumerTitle_TextChanged(object sender, EventArgs e)
@@ -48,24 +46,14 @@ namespace ContactManager.Forms
 
         private void BtnLoginSave_Click(object sender, EventArgs e)
         {
-          
+            if (TxtLoginUsername.Text == "admin" && TxtLoginPassword.Text == "admin")
             {
-
-                if 
-                    (TxtLoginUsername.Text == "admin" && TxtLoginPassword.Text == "admin")
-                {
-                    StartWindow startWindow = new StartWindow();
-                    this.Hide();
-                    startWindow.ShowDialog();
-                    
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Login Failed");
-                }
-                
-
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Login Failed");
             }
         }
     }
