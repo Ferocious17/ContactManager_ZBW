@@ -17,7 +17,12 @@ namespace ContactManager
             Login login = new();
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new StartWindow());
+                StartWindow startWindow = new()
+                {
+                    StartPosition = FormStartPosition.Manual,
+                    Location = login.Location
+                };
+                Application.Run(startWindow);
             }
             else
             {

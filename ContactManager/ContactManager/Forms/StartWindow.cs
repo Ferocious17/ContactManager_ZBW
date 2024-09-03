@@ -9,21 +9,33 @@ namespace ContactManager.Forms
 
         private void btnUserRegistration_Click(object sender, EventArgs e)
         {
-            LblEmployeeRegistration userRegistration = new LblEmployeeRegistration();
+            LblEmployeeRegistration userRegistration = new LblEmployeeRegistration()
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                Location = this.Location
+            };
 
             userRegistration.ShowDialog();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Search search = new Search();
+            Search search = new Search()
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                Location = this.Location
+            };
 
             search.ShowDialog();
         }
 
         private void btnClientRegistration_Click(object sender, EventArgs e)
         {
-            CustumerRegistration clientRegistration = new CustumerRegistration();
+            CustumerRegistration clientRegistration = new CustumerRegistration()
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                Location = this.Location
+            };
 
             clientRegistration.ShowDialog();
         }
