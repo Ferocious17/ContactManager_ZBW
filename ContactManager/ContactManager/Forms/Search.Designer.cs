@@ -73,6 +73,7 @@
         TxtOutgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         TxtOutgrid.Location = new Point(62, 131);
         TxtOutgrid.Margin = new Padding(2);
+        TxtOutgrid.MultiSelect = false;
         TxtOutgrid.Name = "TxtOutgrid";
         TxtOutgrid.RowHeadersWidth = 51;
         TxtOutgrid.Size = new Size(267, 238);
@@ -88,6 +89,7 @@
         BtnEdit.TabIndex = 5;
         BtnEdit.Text = "Editieren";
         BtnEdit.UseVisualStyleBackColor = true;
+        BtnEdit.Click += BtnEdit_Click;
         // 
         // BtnAcivateDeactive
         // 
@@ -98,6 +100,7 @@
         BtnAcivateDeactive.TabIndex = 6;
         BtnAcivateDeactive.Text = "Aktivieren";
         BtnAcivateDeactive.UseVisualStyleBackColor = true;
+        BtnAcivateDeactive.Click += BtnAcivateDeactive_Click;
         // 
         // BtnDelete
         // 
@@ -108,6 +111,7 @@
         BtnDelete.TabIndex = 8;
         BtnDelete.Text = "Löschen";
         BtnDelete.UseVisualStyleBackColor = true;
+        BtnDelete.Click += BtnDelete_Click;
         // 
         // Search
         // 

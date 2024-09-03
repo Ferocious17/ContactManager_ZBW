@@ -887,6 +887,7 @@ namespace ContactManager.Forms
                     _context.Add(employee);
                 }
             }
+            _employee.Status = true;
 
             _context.SaveChanges();
             Close();

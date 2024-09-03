@@ -15,6 +15,8 @@ namespace ContactManager.Forms
 {
     public partial class Search : Form
     {
+        private readonly BindingList<Person> _searchResults = [];
+
         public Search()
         {
             InitializeComponent();
@@ -42,7 +44,42 @@ namespace ContactManager.Forms
             CmdSearch.FlatAppearance.BorderSize = 0; // Set button border size to 0
             CmdSearch.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdSearch.Width, CmdSearch.Height, 5, 5)); // Create rounded rectangle region
 
+            ContactManagerContext context = new();
+            foreach (var person in context.People)
+                _searchResults.Add(person);
+
+            TxtOutgrid.DataSource = _searchResults;
+            TxtOutgrid.AutoGenerateColumns = true;
+            TxtOutgrid.SelectionChanged += TxtOutgrid_SelectionChanged;
+            TxtOutgrid.CellFormatting += TxtOutgrid_CellFormatting;
+
             TxtSearchbar.KeyDown += TxtSearchbar_KeyDown;
+        }
+
+        private void TxtOutgrid_SelectionChanged(object? sender, EventArgs e)
+        {
+            if (TxtOutgrid.CurrentRow == null)
+            {
+                BtnAcivateDeactive.Enabled = false;
+                return;
+            }
+
+            if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
+                return;
+
+            BtnAcivateDeactive.Enabled = true;
+            BtnAcivateDeactive.Text = person.Status ? "Deactivate" : "Activate";
+        }
+
+        private void TxtOutgrid_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewRow row = TxtOutgrid.Rows[e.RowIndex];
+            if (row.DataBoundItem is not Person person)
+                return;
+
+            row.ReadOnly = person.Status;
+            row.DefaultCellStyle.BackColor = person.Status ? Color.White : Color.LightGray;
+            row.DefaultCellStyle.ForeColor = person.Status ? Color.Black : Color.DarkGray;
         }
 
         private void TxtSearchbar_KeyDown(object? sender, KeyEventArgs e)
@@ -56,24 +93,29 @@ namespace ContactManager.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TxtSearchbar.Text.Trim()))
+            _searchResults.Clear();
+
+            if (!string.IsNullOrWhiteSpace(TxtSearchbar.Text))
             {
                 string searchText = TxtSearchbar.Text.Trim();
                 bool dateConverted = DateTime.TryParse(searchText, out DateTime date);
-                List<Person> persons = [];
 
                 ContactManagerContext context = new();
                 if (dateConverted)
                 {
-                    persons.AddRange(context.People.Where(p => p.DateOfBirth == date));
+                    //searchResults.AddRange(context.People.Where(p => p.DateOfBirth == date));
+                    foreach (var person in context.People.Where(p => p.DateOfBirth == date))
+                        _searchResults.Add(person);
                 }
                 else
                 {
-                    persons.AddRange(context.People.Where(p => p.FirstName == searchText || p.LastName == searchText));
+                    //searchResults.AddRange(context.People.Where(p => p.FirstName == searchText || p.LastName == searchText));
+                    foreach (var person in context.People.Where(p => p.FirstName == searchText || p.LastName == searchText))
+                        _searchResults.Add(person);
                 }
-
-                TxtOutgrid.DataSource = persons;
             }
+
+            TxtOutgrid.Refresh();
         }
 
 
@@ -82,10 +124,17 @@ namespace ContactManager.Forms
 
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
-        private void TxtOutgrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void TxtOutgrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e) => EditElement(TxtOutgrid.Rows[e.RowIndex]);
+
+        private void BtnEdit_Click(object sender, EventArgs e) => EditElement(TxtOutgrid.CurrentRow);
+
+        private void EditElement(DataGridViewRow currentRow)
         {
+            if (currentRow.DataBoundItem is not Person person)
+                return;
+
             ContactManagerContext context = new();
-            Person selectedPerson = context.People.Where(p => p.Id == (int)TxtOutgrid.Rows[e.RowIndex].Cells[0].Value).First();
+            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
 
             if (context.Employees.Any(e => e.Id == selectedPerson.Id))
             {
@@ -97,6 +146,40 @@ namespace ContactManager.Forms
                 CustumerRegistration custumerRegistration = new(context.Customers.First(e => e.Id == selectedPerson.Id));
                 custumerRegistration.ShowDialog();
             }
+        }
+
+        private void BtnAcivateDeactive_Click(object sender, EventArgs e)
+        {
+            if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
+                return;
+
+            ContactManagerContext context = new();
+            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
+            selectedPerson.Status = !selectedPerson.Status;
+
+            context.Update(selectedPerson);
+            context.SaveChanges();
+
+            btnSearch_Click(null, null);
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
+                return;
+
+            ContactManagerContext context = new();
+            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
+            
+            context.People.Remove(selectedPerson);
+            context.SaveChanges();
+
+            if (!string.IsNullOrWhiteSpace(TxtSearchbar.Text))
+                btnSearch_Click(null, null);
+
+            _searchResults.Clear();
+            foreach (var p in context.People)
+                _searchResults.Add(p);
         }
     }
 }

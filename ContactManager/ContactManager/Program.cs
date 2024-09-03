@@ -12,6 +12,10 @@ namespace ContactManager
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler((sender, args) =>
+            {
+                MessageBox.Show("An unexpected error occurred", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            });
             ApplicationConfiguration.Initialize();
 
             Login login = new();

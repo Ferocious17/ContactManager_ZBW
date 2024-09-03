@@ -111,6 +111,7 @@ namespace ContactManager.Forms
                 _customer.SocialSecurityNumber = string.Empty;
                 _customer.Nationality = string.Empty;
                 _customer.CommunicationInfo.PhoneNumberBusiness = string.Empty;
+                _customer.Status = true;
                 _context.Add(_customer);
             }
             else
