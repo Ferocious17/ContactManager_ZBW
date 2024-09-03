@@ -55,8 +55,6 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSaveEmpoloyeRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveEmpoloyeRegistration.Width, btnSaveEmpoloyeRegistration.Height, 5, 5)); // Create rounded rectangle region
 
-            //LblEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
-
             TxtEmployeeTitle.DataBindings.Add("Text", _employee, nameof(Employee.Title));
             TxtEmployeeFirstname.DataBindings.Add("Text", _employee, nameof(Employee.FirstName));
             TxtEmployeeLastname.DataBindings.Add("Text", _employee, nameof(Employee.LastName));
@@ -82,7 +80,18 @@ namespace ContactManager.Forms
             TxtEmployeeRole.DataBindings.Add("Text", _employee, nameof(Employee.Role));
             CmbEmployeeLevel.DataBindings.Add("Text", _employee, nameof(Employee.CadreLevel));
 
-            //training year
+            if (_employee is Trainee trainee)
+            {
+                TxtEmployeeTrainigyear.DataBindings.Add("Text", trainee, nameof(Trainee.ActualTraineeYear));
+                ChkEmployeeTrainee.Checked = true;
+                LblEmployeeTrainigyear.Enabled = true;
+                TxtEmployeeTrainigyear.Enabled = true;
+            }
+            else
+            {
+                LblEmployeeTrainigyear.Enabled = false;
+                TxtEmployeeTrainigyear.Enabled = false;
+            }
         }
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
@@ -91,6 +100,7 @@ namespace ContactManager.Forms
             // wenn die Checkbox geändert wird.
             // Beispiel: Ein Textfeld ein- oder ausschalten
             LblEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
+            TxtEmployeeTrainigyear.Enabled = ChkEmployeeTrainee.Checked;
         }
 
         // Helper method to create a rounded rectangle region
@@ -869,25 +879,30 @@ namespace ContactManager.Forms
         {
             CommuncationInfo communcationInfo = new(TxtEmployeePhonenumber.Text, TxtEmployeeMobilenumber.Text, TxtEmployeeBusinessnumber.Text, TxtEmployeeEmail.Text);
             Address address = new(TxtEmployeeStreet.Text, TxtEmployeeHousenumber.Text, Convert.ToInt32(TxtEmployeeZIPcode.Text), TxtEmployeePlace.Text);
-            _ = DateTime.TryParse(TxtEmployeeDateofBirth.Text, out DateTime dateOfBrith);
+            _ = DateTime.TryParse(TxtEmployeeDateofBirth.Text, out DateTime dateOfBirth);
             //Department department = context.Departments.First(d => d.Name.Equals(CmbEmployeeDepartement.SelectedText, StringComparison.CurrentCultureIgnoreCase));
             Department department = new("test");
 
-            if(_employee is null)
+            _employee.DateOfBirth = dateOfBirth;
+            _employee.Nationality = string.Empty;
+            _employee.Department = department;
+            _employee.EmployeeNumber = Guid.NewGuid();
+            _employee.Status = true;
+            if (_employee.Id == 0)
             {
                 if (ChkEmployeeTrainee.Checked)
                 {
 
-                    Trainee trainee = new(RadEmployeeMale.Checked, TxtEmployeeTitle.Text, TxtEmployeeFirstname.Text, TxtEmployeeLastname.Text, dateOfBrith, TxtEmployeeSSN.Text, communcationInfo, address, true, string.Empty, Guid.NewGuid(), department, DtpEmployeeStartdate.Value, DtpEmployeeEnddate.Value, 0, TxtEmployeeRole.Text, Enum.Parse<CadreLevel>(LblEmployeeLevel.Text), Convert.ToInt32(TxtEmployeeTrainigyear.Text), 1);
-                    _context.Add(trainee);
+                    Trainee trainee = new(_employee.Gender, _employee.Title, _employee.FirstName, _employee.LastName, _employee.DateOfBirth, _employee.SocialSecurityNumber, communcationInfo, address, true, string.Empty, _employee.EmployeeNumber, _employee.Department, DtpEmployeeStartdate.Value, DtpEmployeeEnddate.Value, 0, TxtEmployeeRole.Text, Enum.Parse<CadreLevel>(CmbEmployeeLevel.Text), Convert.ToInt32(TxtEmployeeTrainigyear.Text), 1);
+                    _employee = trainee;
                 }
-                else
-                {
-                    Employee employee = new(RadEmployeeMale.Checked, TxtEmployeeTitle.Text, TxtEmployeeFirstname.Text, TxtEmployeeLastname.Text, dateOfBrith, TxtEmployeeSSN.Text, communcationInfo, address, true, string.Empty, Guid.NewGuid(), department, DtpEmployeeStartdate.Value, DtpEmployeeEnddate.Value, 0, TxtEmployeeRole.Text, Enum.Parse<CadreLevel>(CmbEmployeeLevel.SelectedItem.ToString()));
-                    _context.Add(employee);
-                }
+
+                _context.Add(_employee);
             }
-            _employee.Status = true;
+            else
+            {
+                _context.Update(_employee);
+            }
 
             _context.SaveChanges();
             Close();
