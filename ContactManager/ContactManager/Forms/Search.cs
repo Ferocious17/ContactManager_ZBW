@@ -42,9 +42,16 @@ namespace ContactManager.Forms
             CmdSearch.FlatAppearance.BorderSize = 0; // Set button border size to 0
             CmdSearch.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdSearch.Width, CmdSearch.Height, 5, 5)); // Create rounded rectangle region
 
+            TxtSearchbar.KeyDown += TxtSearchbar_KeyDown;
+        }
 
-
-
+        private void TxtSearchbar_KeyDown(object? sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch_Click(sender, e);
+                e.Handled = true;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
