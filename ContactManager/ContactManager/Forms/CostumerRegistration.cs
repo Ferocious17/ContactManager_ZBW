@@ -38,6 +38,12 @@ namespace ContactManager.Forms
             CmdCostumerSave.FlatAppearance.BorderSize = 0; // Set button border size to 0
             CmdCostumerSave.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdCostumerSave.Width, CmdCostumerSave.Height, 5, 5)); // Create rounded rectangle region
 
+            CmdSaveNote.BackColor = System.Drawing.ColorTranslator.FromHtml("#404040");
+            CmdSaveNote.ForeColor = Color.White;
+            CmdSaveNote.FlatStyle = FlatStyle.Flat;
+            CmdSaveNote.FlatAppearance.BorderSize = 0; // Set button border size to 0
+            CmdSaveNote.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdSaveNote.Width, CmdSaveNote.Height, 5, 5)); // Create rounded rectangle region
+
             CmbCostumerCostumertype.DataSource = Enum.GetValues(typeof(CustomerType));
 
             TxtCostumerTitle.DataBindings.Add("Text", _customer, nameof(Customer.Title));
@@ -60,7 +66,7 @@ namespace ContactManager.Forms
             TxtCostumerCompany.DataBindings.Add("Text", _customer, nameof(Customer.CompanyName));
             CmbCostumerCostumertype.DataBindings.Add("", _customer, nameof(Customer.CustomerType));
             TxtCostumerContactperson.DataBindings.Add("Text", _customer, nameof(Customer.CompanyContact));
-            
+
         }
 
         private void CustumerRegistration_Parse(object? sender, ConvertEventArgs e)
@@ -106,7 +112,7 @@ namespace ContactManager.Forms
             CommuncationInfo communicationInfo = new(TxtCostumerMobilenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerEmail.Text);
             Address address = new(TxtCostumerStreet.Text, TxtCostumerStreetnumber.Text, Convert.ToInt32(TxtCostumerZIPcode.Text), TxtCostumerPlace.Text);
 
-            if(_customer.Id == 0)
+            if (_customer.Id == 0)
             {
                 _customer.SocialSecurityNumber = string.Empty;
                 _customer.Nationality = string.Empty;
@@ -131,6 +137,16 @@ namespace ContactManager.Forms
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
                 _context.SaveChanges();
             }
+        }
+
+        private void LblCostumerPhonenumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

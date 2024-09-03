@@ -171,9 +171,9 @@ namespace ContactManager.Forms
             LblEmployeeTitle = new Label();
             TxtEmployeeDateofBirth = new MaskedTextBox();
             LblEmployeeDateofBirth = new Label();
-            label5 = new Label();
+            LblEmployeeNationality = new Label();
             TxtEmployeeSSN = new MaskedTextBox();
-            maskedTextBox3 = new MaskedTextBox();
+            TxtEmployeeNatonality = new MaskedTextBox();
             LblEmployeeEnddate = new Label();
             DtpEmployeeEnddate = new DateTimePicker();
             DtpEmployeeStartdate = new DateTimePicker();
@@ -195,8 +195,8 @@ namespace ContactManager.Forms
             // TblLayoutCostumer
             // 
             TblLayoutCostumer.ColumnCount = 2;
-            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
-            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 377F));
+            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
+            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             TblLayoutCostumer.Controls.Add(TxtEmployeeTrainigyear, 1, 21);
             TblLayoutCostumer.Controls.Add(LblEmployeeTrainigyear, 0, 21);
             TblLayoutCostumer.Controls.Add(GrpEmployeeSex, 1, 11);
@@ -226,9 +226,9 @@ namespace ContactManager.Forms
             TblLayoutCostumer.Controls.Add(LblEmployeeTitle, 0, 1);
             TblLayoutCostumer.Controls.Add(TxtEmployeeDateofBirth, 1, 3);
             TblLayoutCostumer.Controls.Add(LblEmployeeDateofBirth, 0, 3);
-            TblLayoutCostumer.Controls.Add(label5, 0, 10);
+            TblLayoutCostumer.Controls.Add(LblEmployeeNationality, 0, 10);
             TblLayoutCostumer.Controls.Add(TxtEmployeeSSN, 1, 9);
-            TblLayoutCostumer.Controls.Add(maskedTextBox3, 1, 10);
+            TblLayoutCostumer.Controls.Add(TxtEmployeeNatonality, 1, 10);
             TblLayoutCostumer.Controls.Add(LblEmployeeEnddate, 0, 18);
             TblLayoutCostumer.Controls.Add(DtpEmployeeEnddate, 1, 18);
             TblLayoutCostumer.Controls.Add(DtpEmployeeStartdate, 1, 17);
@@ -254,9 +254,6 @@ namespace ContactManager.Forms
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
@@ -265,20 +262,21 @@ namespace ContactManager.Forms
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 7F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 7F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 7F));
-            TblLayoutCostumer.Size = new Size(425, 568);
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            TblLayoutCostumer.Size = new Size(540, 552);
             TblLayoutCostumer.TabIndex = 48;
             TblLayoutCostumer.Paint += TblLayoutCostumer_Paint;
             // 
             // TxtEmployeeTrainigyear
             // 
             TxtEmployeeTrainigyear.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeTrainigyear.Location = new Point(140, 535);
-            TxtEmployeeTrainigyear.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeTrainigyear.Location = new Point(140, 527);
+            TxtEmployeeTrainigyear.Margin = new Padding(0);
             TxtEmployeeTrainigyear.Name = "TxtEmployeeTrainigyear";
-            TxtEmployeeTrainigyear.Size = new Size(373, 23);
+            TxtEmployeeTrainigyear.Size = new Size(400, 23);
             TxtEmployeeTrainigyear.TabIndex = 85;
             TxtEmployeeTrainigyear.MaskInputRejected += maskedTextBox1_MaskInputRejected_1;
             // 
@@ -289,7 +287,7 @@ namespace ContactManager.Forms
             LblEmployeeTrainigyear.Location = new Point(2, 525);
             LblEmployeeTrainigyear.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeTrainigyear.Name = "LblEmployeeTrainigyear";
-            LblEmployeeTrainigyear.Size = new Size(134, 43);
+            LblEmployeeTrainigyear.Size = new Size(136, 27);
             LblEmployeeTrainigyear.TabIndex = 84;
             LblEmployeeTrainigyear.Text = "Ausbildungsjahr";
             LblEmployeeTrainigyear.TextAlign = ContentAlignment.MiddleLeft;
@@ -298,11 +296,11 @@ namespace ContactManager.Forms
             // 
             GrpEmployeeSex.Controls.Add(RadEmployeeFemale);
             GrpEmployeeSex.Controls.Add(RadEmployeeMale);
-            GrpEmployeeSex.Location = new Point(139, 271);
+            GrpEmployeeSex.Location = new Point(141, 276);
             GrpEmployeeSex.Margin = new Padding(1);
             GrpEmployeeSex.Name = "GrpEmployeeSex";
             GrpEmployeeSex.Padding = new Padding(1);
-            GrpEmployeeSex.Size = new Size(246, 27);
+            GrpEmployeeSex.Size = new Size(246, 23);
             GrpEmployeeSex.TabIndex = 65;
             GrpEmployeeSex.TabStop = false;
             // 
@@ -335,7 +333,7 @@ namespace ContactManager.Forms
             LblEmployeeSSN.Location = new Point(2, 225);
             LblEmployeeSSN.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeSSN.Name = "LblEmployeeSSN";
-            LblEmployeeSSN.Size = new Size(134, 25);
+            LblEmployeeSSN.Size = new Size(136, 25);
             LblEmployeeSSN.TabIndex = 65;
             LblEmployeeSSN.Text = "AHV-Nummer";
             LblEmployeeSSN.TextAlign = ContentAlignment.MiddleLeft;
@@ -343,19 +341,19 @@ namespace ContactManager.Forms
             // TxtEmployeeTitle
             // 
             TxtEmployeeTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeTitle.Location = new Point(140, 28);
-            TxtEmployeeTitle.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeTitle.Location = new Point(140, 26);
+            TxtEmployeeTitle.Margin = new Padding(0);
             TxtEmployeeTitle.Name = "TxtEmployeeTitle";
-            TxtEmployeeTitle.Size = new Size(373, 23);
+            TxtEmployeeTitle.Size = new Size(400, 23);
             TxtEmployeeTitle.TabIndex = 72;
             // 
             // TxtEmployeeRole
             // 
             TxtEmployeeRole.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeRole.Location = new Point(140, 478);
-            TxtEmployeeRole.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeRole.Location = new Point(140, 476);
+            TxtEmployeeRole.Margin = new Padding(0);
             TxtEmployeeRole.Name = "TxtEmployeeRole";
-            TxtEmployeeRole.Size = new Size(373, 23);
+            TxtEmployeeRole.Size = new Size(400, 23);
             TxtEmployeeRole.TabIndex = 62;
             // 
             // LblEmployeeLastname
@@ -365,7 +363,7 @@ namespace ContactManager.Forms
             LblEmployeeLastname.Location = new Point(2, 100);
             LblEmployeeLastname.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeLastname.Name = "LblEmployeeLastname";
-            LblEmployeeLastname.Size = new Size(134, 25);
+            LblEmployeeLastname.Size = new Size(136, 25);
             LblEmployeeLastname.TabIndex = 66;
             LblEmployeeLastname.Text = "Nachname";
             LblEmployeeLastname.TextAlign = ContentAlignment.MiddleLeft;
@@ -377,7 +375,7 @@ namespace ContactManager.Forms
             LblEmployeeFirstname.Location = new Point(1, 50);
             LblEmployeeFirstname.Margin = new Padding(1, 0, 1, 0);
             LblEmployeeFirstname.Name = "LblEmployeeFirstname";
-            LblEmployeeFirstname.Size = new Size(136, 25);
+            LblEmployeeFirstname.Size = new Size(138, 25);
             LblEmployeeFirstname.TabIndex = 65;
             LblEmployeeFirstname.Text = "Vorname";
             LblEmployeeFirstname.TextAlign = ContentAlignment.MiddleLeft;
@@ -389,7 +387,7 @@ namespace ContactManager.Forms
             LblEmployeeZIPcode.Location = new Point(2, 175);
             LblEmployeeZIPcode.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeZIPcode.Name = "LblEmployeeZIPcode";
-            LblEmployeeZIPcode.Size = new Size(134, 25);
+            LblEmployeeZIPcode.Size = new Size(136, 25);
             LblEmployeeZIPcode.TabIndex = 69;
             LblEmployeeZIPcode.Text = "PLZ";
             LblEmployeeZIPcode.TextAlign = ContentAlignment.MiddleLeft;
@@ -401,7 +399,7 @@ namespace ContactManager.Forms
             LblEmployeeRole.Location = new Point(2, 475);
             LblEmployeeRole.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeRole.Name = "LblEmployeeRole";
-            LblEmployeeRole.Size = new Size(134, 25);
+            LblEmployeeRole.Size = new Size(136, 25);
             LblEmployeeRole.TabIndex = 54;
             LblEmployeeRole.Text = "Rolle";
             LblEmployeeRole.TextAlign = ContentAlignment.MiddleLeft;
@@ -413,7 +411,7 @@ namespace ContactManager.Forms
             LblEmployeeStreet.Location = new Point(2, 125);
             LblEmployeeStreet.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeStreet.Name = "LblEmployeeStreet";
-            LblEmployeeStreet.Size = new Size(134, 25);
+            LblEmployeeStreet.Size = new Size(136, 25);
             LblEmployeeStreet.TabIndex = 24;
             LblEmployeeStreet.Text = "Strasse";
             LblEmployeeStreet.TextAlign = ContentAlignment.MiddleLeft;
@@ -421,10 +419,10 @@ namespace ContactManager.Forms
             // TxtEmployeeMobilenumber
             // 
             TxtEmployeeMobilenumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeMobilenumber.Location = new Point(140, 328);
-            TxtEmployeeMobilenumber.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeMobilenumber.Location = new Point(140, 326);
+            TxtEmployeeMobilenumber.Margin = new Padding(0);
             TxtEmployeeMobilenumber.Name = "TxtEmployeeMobilenumber";
-            TxtEmployeeMobilenumber.Size = new Size(373, 23);
+            TxtEmployeeMobilenumber.Size = new Size(400, 23);
             TxtEmployeeMobilenumber.TabIndex = 40;
             // 
             // LblEmployeeHousenumber
@@ -434,7 +432,7 @@ namespace ContactManager.Forms
             LblEmployeeHousenumber.Location = new Point(2, 150);
             LblEmployeeHousenumber.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeHousenumber.Name = "LblEmployeeHousenumber";
-            LblEmployeeHousenumber.Size = new Size(134, 25);
+            LblEmployeeHousenumber.Size = new Size(136, 25);
             LblEmployeeHousenumber.TabIndex = 25;
             LblEmployeeHousenumber.Text = "Hausnummer";
             LblEmployeeHousenumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -442,10 +440,10 @@ namespace ContactManager.Forms
             // TxtEmployeePhonenumber
             // 
             TxtEmployeePhonenumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeePhonenumber.Location = new Point(140, 302);
-            TxtEmployeePhonenumber.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeePhonenumber.Location = new Point(140, 301);
+            TxtEmployeePhonenumber.Margin = new Padding(0);
             TxtEmployeePhonenumber.Name = "TxtEmployeePhonenumber";
-            TxtEmployeePhonenumber.Size = new Size(373, 23);
+            TxtEmployeePhonenumber.Size = new Size(400, 23);
             TxtEmployeePhonenumber.TabIndex = 39;
             // 
             // LblEmployeePlace
@@ -455,7 +453,7 @@ namespace ContactManager.Forms
             LblEmployeePlace.Location = new Point(2, 200);
             LblEmployeePlace.Margin = new Padding(2, 0, 2, 0);
             LblEmployeePlace.Name = "LblEmployeePlace";
-            LblEmployeePlace.Size = new Size(134, 25);
+            LblEmployeePlace.Size = new Size(136, 25);
             LblEmployeePlace.TabIndex = 27;
             LblEmployeePlace.Text = "Ort";
             LblEmployeePlace.TextAlign = ContentAlignment.MiddleLeft;
@@ -463,20 +461,20 @@ namespace ContactManager.Forms
             // TxtEmployeePlace
             // 
             TxtEmployeePlace.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeePlace.Location = new Point(140, 203);
-            TxtEmployeePlace.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeePlace.Location = new Point(140, 201);
+            TxtEmployeePlace.Margin = new Padding(0);
             TxtEmployeePlace.Name = "TxtEmployeePlace";
-            TxtEmployeePlace.Size = new Size(373, 23);
+            TxtEmployeePlace.Size = new Size(400, 23);
             TxtEmployeePlace.TabIndex = 37;
             // 
             // LblEmployeeSex
             // 
             LblEmployeeSex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblEmployeeSex.AutoSize = true;
-            LblEmployeeSex.Location = new Point(2, 270);
+            LblEmployeeSex.Location = new Point(2, 275);
             LblEmployeeSex.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeSex.Name = "LblEmployeeSex";
-            LblEmployeeSex.Size = new Size(134, 29);
+            LblEmployeeSex.Size = new Size(136, 25);
             LblEmployeeSex.TabIndex = 28;
             LblEmployeeSex.Text = "Geschlecht";
             LblEmployeeSex.TextAlign = ContentAlignment.MiddleLeft;
@@ -484,20 +482,20 @@ namespace ContactManager.Forms
             // TxtEmployeeZIPcode
             // 
             TxtEmployeeZIPcode.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeZIPcode.Location = new Point(140, 178);
-            TxtEmployeeZIPcode.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeZIPcode.Location = new Point(140, 176);
+            TxtEmployeeZIPcode.Margin = new Padding(0);
             TxtEmployeeZIPcode.Name = "TxtEmployeeZIPcode";
-            TxtEmployeeZIPcode.Size = new Size(373, 23);
+            TxtEmployeeZIPcode.Size = new Size(400, 23);
             TxtEmployeeZIPcode.TabIndex = 36;
             // 
             // LblEmployeePhonenumber
             // 
             LblEmployeePhonenumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblEmployeePhonenumber.AutoSize = true;
-            LblEmployeePhonenumber.Location = new Point(2, 299);
+            LblEmployeePhonenumber.Location = new Point(2, 300);
             LblEmployeePhonenumber.Margin = new Padding(2, 0, 2, 0);
             LblEmployeePhonenumber.Name = "LblEmployeePhonenumber";
-            LblEmployeePhonenumber.Size = new Size(134, 26);
+            LblEmployeePhonenumber.Size = new Size(136, 25);
             LblEmployeePhonenumber.TabIndex = 29;
             LblEmployeePhonenumber.Text = "Telefonummer";
             LblEmployeePhonenumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -505,10 +503,10 @@ namespace ContactManager.Forms
             // TxtEmployeeHousenumber
             // 
             TxtEmployeeHousenumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeHousenumber.Location = new Point(140, 153);
-            TxtEmployeeHousenumber.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeHousenumber.Location = new Point(140, 151);
+            TxtEmployeeHousenumber.Margin = new Padding(0);
             TxtEmployeeHousenumber.Name = "TxtEmployeeHousenumber";
-            TxtEmployeeHousenumber.Size = new Size(373, 23);
+            TxtEmployeeHousenumber.Size = new Size(400, 23);
             TxtEmployeeHousenumber.TabIndex = 35;
             // 
             // LblEmployeeMobilenumber
@@ -518,7 +516,7 @@ namespace ContactManager.Forms
             LblEmployeeMobilenumber.Location = new Point(2, 325);
             LblEmployeeMobilenumber.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeMobilenumber.Name = "LblEmployeeMobilenumber";
-            LblEmployeeMobilenumber.Size = new Size(134, 25);
+            LblEmployeeMobilenumber.Size = new Size(136, 25);
             LblEmployeeMobilenumber.TabIndex = 30;
             LblEmployeeMobilenumber.Text = "Mobilnummer";
             LblEmployeeMobilenumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -526,28 +524,28 @@ namespace ContactManager.Forms
             // TxtEmployeeStreet
             // 
             TxtEmployeeStreet.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeStreet.Location = new Point(140, 128);
-            TxtEmployeeStreet.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeStreet.Location = new Point(140, 126);
+            TxtEmployeeStreet.Margin = new Padding(0);
             TxtEmployeeStreet.Name = "TxtEmployeeStreet";
-            TxtEmployeeStreet.Size = new Size(373, 23);
+            TxtEmployeeStreet.Size = new Size(400, 23);
             TxtEmployeeStreet.TabIndex = 34;
             // 
             // TxtEmployeeLastname
             // 
             TxtEmployeeLastname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeLastname.Location = new Point(140, 103);
-            TxtEmployeeLastname.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeLastname.Location = new Point(140, 101);
+            TxtEmployeeLastname.Margin = new Padding(0);
             TxtEmployeeLastname.Name = "TxtEmployeeLastname";
-            TxtEmployeeLastname.Size = new Size(373, 23);
+            TxtEmployeeLastname.Size = new Size(400, 23);
             TxtEmployeeLastname.TabIndex = 33;
             // 
             // TxtEmployeeFirstname
             // 
             TxtEmployeeFirstname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeFirstname.Location = new Point(140, 53);
-            TxtEmployeeFirstname.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeFirstname.Location = new Point(140, 51);
+            TxtEmployeeFirstname.Margin = new Padding(0);
             TxtEmployeeFirstname.Name = "TxtEmployeeFirstname";
-            TxtEmployeeFirstname.Size = new Size(373, 23);
+            TxtEmployeeFirstname.Size = new Size(400, 23);
             TxtEmployeeFirstname.TabIndex = 32;
             // 
             // ChkEmployeeTrainee
@@ -568,7 +566,7 @@ namespace ContactManager.Forms
             LblEmployeeLevel.Location = new Point(2, 500);
             LblEmployeeLevel.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeLevel.Name = "LblEmployeeLevel";
-            LblEmployeeLevel.Size = new Size(134, 25);
+            LblEmployeeLevel.Size = new Size(136, 25);
             LblEmployeeLevel.TabIndex = 55;
             LblEmployeeLevel.Text = "Kaderstufe";
             LblEmployeeLevel.TextAlign = ContentAlignment.MiddleLeft;
@@ -580,7 +578,7 @@ namespace ContactManager.Forms
             LblEmployeeTitle.Location = new Point(1, 25);
             LblEmployeeTitle.Margin = new Padding(1, 0, 1, 0);
             LblEmployeeTitle.Name = "LblEmployeeTitle";
-            LblEmployeeTitle.Size = new Size(136, 25);
+            LblEmployeeTitle.Size = new Size(138, 25);
             LblEmployeeTitle.TabIndex = 73;
             LblEmployeeTitle.Text = "Titel";
             LblEmployeeTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -588,10 +586,10 @@ namespace ContactManager.Forms
             // TxtEmployeeDateofBirth
             // 
             TxtEmployeeDateofBirth.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeDateofBirth.Location = new Point(140, 78);
-            TxtEmployeeDateofBirth.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeDateofBirth.Location = new Point(140, 76);
+            TxtEmployeeDateofBirth.Margin = new Padding(0);
             TxtEmployeeDateofBirth.Name = "TxtEmployeeDateofBirth";
-            TxtEmployeeDateofBirth.Size = new Size(373, 23);
+            TxtEmployeeDateofBirth.Size = new Size(400, 23);
             TxtEmployeeDateofBirth.TabIndex = 74;
             // 
             // LblEmployeeDateofBirth
@@ -601,40 +599,40 @@ namespace ContactManager.Forms
             LblEmployeeDateofBirth.Location = new Point(2, 75);
             LblEmployeeDateofBirth.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeDateofBirth.Name = "LblEmployeeDateofBirth";
-            LblEmployeeDateofBirth.Size = new Size(134, 25);
+            LblEmployeeDateofBirth.Size = new Size(136, 25);
             LblEmployeeDateofBirth.TabIndex = 75;
             LblEmployeeDateofBirth.Text = "Geburtsdatum";
             LblEmployeeDateofBirth.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // LblEmployeeNationality
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Location = new Point(2, 250);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(134, 20);
-            label5.TabIndex = 78;
-            label5.Text = "Ort";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            LblEmployeeNationality.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LblEmployeeNationality.AutoSize = true;
+            LblEmployeeNationality.Location = new Point(2, 250);
+            LblEmployeeNationality.Margin = new Padding(2, 0, 2, 0);
+            LblEmployeeNationality.Name = "LblEmployeeNationality";
+            LblEmployeeNationality.Size = new Size(136, 25);
+            LblEmployeeNationality.TabIndex = 78;
+            LblEmployeeNationality.Text = "Nationalität";
+            LblEmployeeNationality.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // TxtEmployeeSSN
             // 
             TxtEmployeeSSN.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeSSN.Location = new Point(140, 228);
-            TxtEmployeeSSN.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeSSN.Location = new Point(140, 226);
+            TxtEmployeeSSN.Margin = new Padding(0);
             TxtEmployeeSSN.Name = "TxtEmployeeSSN";
-            TxtEmployeeSSN.Size = new Size(373, 23);
+            TxtEmployeeSSN.Size = new Size(400, 23);
             TxtEmployeeSSN.TabIndex = 79;
             // 
-            // maskedTextBox3
+            // TxtEmployeeNatonality
             // 
-            maskedTextBox3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            maskedTextBox3.Location = new Point(140, 253);
-            maskedTextBox3.Margin = new Padding(2, 3, 2, 3);
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(373, 23);
-            maskedTextBox3.TabIndex = 81;
+            TxtEmployeeNatonality.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeNatonality.Location = new Point(140, 251);
+            TxtEmployeeNatonality.Margin = new Padding(0);
+            TxtEmployeeNatonality.Name = "TxtEmployeeNatonality";
+            TxtEmployeeNatonality.Size = new Size(400, 23);
+            TxtEmployeeNatonality.TabIndex = 81;
             // 
             // LblEmployeeEnddate
             // 
@@ -643,25 +641,25 @@ namespace ContactManager.Forms
             LblEmployeeEnddate.Location = new Point(2, 450);
             LblEmployeeEnddate.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeEnddate.Name = "LblEmployeeEnddate";
-            LblEmployeeEnddate.Size = new Size(134, 25);
+            LblEmployeeEnddate.Size = new Size(136, 25);
             LblEmployeeEnddate.TabIndex = 51;
             LblEmployeeEnddate.Text = "Enddatum";
             LblEmployeeEnddate.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // DtpEmployeeEnddate
             // 
-            DtpEmployeeEnddate.Location = new Point(145, 458);
-            DtpEmployeeEnddate.Margin = new Padding(7, 8, 7, 8);
+            DtpEmployeeEnddate.Location = new Point(140, 450);
+            DtpEmployeeEnddate.Margin = new Padding(0);
             DtpEmployeeEnddate.Name = "DtpEmployeeEnddate";
-            DtpEmployeeEnddate.Size = new Size(363, 23);
+            DtpEmployeeEnddate.Size = new Size(398, 23);
             DtpEmployeeEnddate.TabIndex = 59;
             // 
             // DtpEmployeeStartdate
             // 
-            DtpEmployeeStartdate.Location = new Point(145, 433);
-            DtpEmployeeStartdate.Margin = new Padding(7, 8, 7, 8);
+            DtpEmployeeStartdate.Location = new Point(140, 425);
+            DtpEmployeeStartdate.Margin = new Padding(0);
             DtpEmployeeStartdate.Name = "DtpEmployeeStartdate";
-            DtpEmployeeStartdate.Size = new Size(363, 23);
+            DtpEmployeeStartdate.Size = new Size(400, 23);
             DtpEmployeeStartdate.TabIndex = 57;
             // 
             // LblEmployeeStartdate
@@ -671,7 +669,7 @@ namespace ContactManager.Forms
             LblEmployeeStartdate.Location = new Point(2, 425);
             LblEmployeeStartdate.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeStartdate.Name = "LblEmployeeStartdate";
-            LblEmployeeStartdate.Size = new Size(134, 25);
+            LblEmployeeStartdate.Size = new Size(136, 25);
             LblEmployeeStartdate.TabIndex = 47;
             LblEmployeeStartdate.Text = "Startdatum";
             LblEmployeeStartdate.TextAlign = ContentAlignment.MiddleLeft;
@@ -683,7 +681,7 @@ namespace ContactManager.Forms
             LblEmployeeDepartement.Location = new Point(2, 400);
             LblEmployeeDepartement.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeDepartement.Name = "LblEmployeeDepartement";
-            LblEmployeeDepartement.Size = new Size(134, 25);
+            LblEmployeeDepartement.Size = new Size(136, 25);
             LblEmployeeDepartement.TabIndex = 43;
             LblEmployeeDepartement.Text = "Abteilung";
             LblEmployeeDepartement.TextAlign = ContentAlignment.MiddleLeft;
@@ -695,7 +693,7 @@ namespace ContactManager.Forms
             LblEmployeeEmail.Location = new Point(2, 375);
             LblEmployeeEmail.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeEmail.Name = "LblEmployeeEmail";
-            LblEmployeeEmail.Size = new Size(134, 25);
+            LblEmployeeEmail.Size = new Size(136, 25);
             LblEmployeeEmail.TabIndex = 31;
             LblEmployeeEmail.Text = "Email-Adresse";
             LblEmployeeEmail.TextAlign = ContentAlignment.MiddleLeft;
@@ -703,10 +701,10 @@ namespace ContactManager.Forms
             // TxtEmployeeEmail
             // 
             TxtEmployeeEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeEmail.Location = new Point(140, 378);
-            TxtEmployeeEmail.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeEmail.Location = new Point(140, 376);
+            TxtEmployeeEmail.Margin = new Padding(0);
             TxtEmployeeEmail.Name = "TxtEmployeeEmail";
-            TxtEmployeeEmail.Size = new Size(373, 23);
+            TxtEmployeeEmail.Size = new Size(400, 23);
             TxtEmployeeEmail.TabIndex = 41;
             // 
             // LblEmployeeBusinessnumber
@@ -716,7 +714,7 @@ namespace ContactManager.Forms
             LblEmployeeBusinessnumber.Location = new Point(2, 350);
             LblEmployeeBusinessnumber.Margin = new Padding(2, 0, 2, 0);
             LblEmployeeBusinessnumber.Name = "LblEmployeeBusinessnumber";
-            LblEmployeeBusinessnumber.Size = new Size(134, 25);
+            LblEmployeeBusinessnumber.Size = new Size(136, 25);
             LblEmployeeBusinessnumber.TabIndex = 82;
             LblEmployeeBusinessnumber.Text = "Geschäftsnummer";
             LblEmployeeBusinessnumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -724,29 +722,29 @@ namespace ContactManager.Forms
             // TxtEmployeeBusinessnumber
             // 
             TxtEmployeeBusinessnumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeBusinessnumber.Location = new Point(140, 353);
-            TxtEmployeeBusinessnumber.Margin = new Padding(2, 3, 2, 3);
+            TxtEmployeeBusinessnumber.Location = new Point(140, 351);
+            TxtEmployeeBusinessnumber.Margin = new Padding(0);
             TxtEmployeeBusinessnumber.Name = "TxtEmployeeBusinessnumber";
-            TxtEmployeeBusinessnumber.Size = new Size(373, 23);
+            TxtEmployeeBusinessnumber.Size = new Size(400, 23);
             TxtEmployeeBusinessnumber.TabIndex = 83;
             TxtEmployeeBusinessnumber.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // CmbEmployeeDepartement
             // 
             CmbEmployeeDepartement.FormattingEnabled = true;
-            CmbEmployeeDepartement.Location = new Point(145, 408);
-            CmbEmployeeDepartement.Margin = new Padding(7, 8, 7, 8);
+            CmbEmployeeDepartement.Location = new Point(140, 400);
+            CmbEmployeeDepartement.Margin = new Padding(0);
             CmbEmployeeDepartement.Name = "CmbEmployeeDepartement";
-            CmbEmployeeDepartement.Size = new Size(282, 23);
+            CmbEmployeeDepartement.Size = new Size(400, 23);
             CmbEmployeeDepartement.TabIndex = 58;
             // 
             // CmbEmployeeLevel
             // 
             CmbEmployeeLevel.FormattingEnabled = true;
-            CmbEmployeeLevel.Location = new Point(145, 508);
-            CmbEmployeeLevel.Margin = new Padding(7, 8, 7, 8);
+            CmbEmployeeLevel.Location = new Point(140, 500);
+            CmbEmployeeLevel.Margin = new Padding(0);
             CmbEmployeeLevel.Name = "CmbEmployeeLevel";
-            CmbEmployeeLevel.Size = new Size(280, 23);
+            CmbEmployeeLevel.Size = new Size(398, 23);
             CmbEmployeeLevel.TabIndex = 71;
             // 
             // btnSaveEmpoloyeRegistration
@@ -773,7 +771,7 @@ namespace ContactManager.Forms
             // 
             // CmdEmployeeSave
             // 
-            CmdEmployeeSave.Location = new Point(515, 612);
+            CmdEmployeeSave.Location = new Point(634, 621);
             CmdEmployeeSave.Margin = new Padding(1);
             CmdEmployeeSave.Name = "CmdEmployeeSave";
             CmdEmployeeSave.Size = new Size(103, 30);
@@ -786,7 +784,7 @@ namespace ContactManager.Forms
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1122, 771);
+            ClientSize = new Size(835, 741);
             Controls.Add(CmdEmployeeSave);
             Controls.Add(TxtTitleEmployeeRegistration);
             Controls.Add(TblLayoutCostumer);
@@ -849,9 +847,9 @@ namespace ContactManager.Forms
         private Label LblEmployeeDateofBirth;
         private MaskedTextBox TxtEmployeeBusinessnumber;
         private Label LblEmployeeSSN;
-        private Label label5;
+        private Label LblEmployeeNationality;
         private MaskedTextBox TxtEmployeeSSN;
-        private MaskedTextBox maskedTextBox3;
+        private MaskedTextBox TxtEmployeeNatonality;
         private Label LblEmployeeBusinessnumber;
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
