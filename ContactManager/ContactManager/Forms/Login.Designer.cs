@@ -38,45 +38,49 @@
             // 
             // TxtLoginUsername
             // 
-            TxtLoginUsername.Location = new Point(74, 260);
+            TxtLoginUsername.Location = new Point(35, 127);
+            TxtLoginUsername.Margin = new Padding(1);
             TxtLoginUsername.Name = "TxtLoginUsername";
-            TxtLoginUsername.Size = new Size(294, 47);
+            TxtLoginUsername.Size = new Size(297, 27);
             TxtLoginUsername.TabIndex = 0;
             // 
             // TxtLoginPassword
             // 
-            TxtLoginPassword.Location = new Point(74, 381);
+            TxtLoginPassword.Location = new Point(35, 186);
+            TxtLoginPassword.Margin = new Padding(1);
             TxtLoginPassword.Name = "TxtLoginPassword";
-            TxtLoginPassword.Size = new Size(294, 47);
+            TxtLoginPassword.Size = new Size(297, 27);
             TxtLoginPassword.TabIndex = 1;
             TxtLoginPassword.UseSystemPasswordChar = true;
             // 
             // LblLoginUsername
             // 
             LblLoginUsername.AutoSize = true;
-            LblLoginUsername.Location = new Point(74, 216);
+            LblLoginUsername.Location = new Point(35, 105);
+            LblLoginUsername.Margin = new Padding(1, 0, 1, 0);
             LblLoginUsername.Name = "LblLoginUsername";
-            LblLoginUsername.Size = new Size(209, 41);
+            LblLoginUsername.Size = new Size(104, 20);
             LblLoginUsername.TabIndex = 2;
             LblLoginUsername.Text = "Benutzername";
             // 
             // LblLoginPassword
             // 
             LblLoginPassword.AutoSize = true;
-            LblLoginPassword.Location = new Point(74, 337);
+            LblLoginPassword.Location = new Point(35, 164);
+            LblLoginPassword.Margin = new Padding(1, 0, 1, 0);
             LblLoginPassword.Name = "LblLoginPassword";
-            LblLoginPassword.Size = new Size(135, 41);
+            LblLoginPassword.Size = new Size(66, 20);
             LblLoginPassword.TabIndex = 3;
             LblLoginPassword.Text = "Passwort";
             // 
             // TxtLoginTitle
             // 
             TxtLoginTitle.Font = new Font("Segoe UI", 15F);
-            TxtLoginTitle.Location = new Point(74, 54);
-            TxtLoginTitle.Margin = new Padding(2, 3, 2, 3);
+            TxtLoginTitle.Location = new Point(35, 26);
+            TxtLoginTitle.Margin = new Padding(1);
             TxtLoginTitle.Multiline = true;
             TxtLoginTitle.Name = "TxtLoginTitle";
-            TxtLoginTitle.Size = new Size(348, 89);
+            TxtLoginTitle.Size = new Size(166, 45);
             TxtLoginTitle.TabIndex = 43;
             TxtLoginTitle.TabStop = false;
             TxtLoginTitle.Text = "Anmeldung";
@@ -84,9 +88,10 @@
             // 
             // BtnLoginSave
             // 
-            BtnLoginSave.Location = new Point(712, 690);
+            BtnLoginSave.Location = new Point(244, 276);
+            BtnLoginSave.Margin = new Padding(1);
             BtnLoginSave.Name = "BtnLoginSave";
-            BtnLoginSave.Size = new Size(188, 58);
+            BtnLoginSave.Size = new Size(88, 28);
             BtnLoginSave.TabIndex = 44;
             BtnLoginSave.Text = "Weiter";
             BtnLoginSave.UseVisualStyleBackColor = true;
@@ -94,15 +99,17 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1002, 794);
+            ClientSize = new Size(370, 330);
             Controls.Add(BtnLoginSave);
             Controls.Add(TxtLoginTitle);
             Controls.Add(LblLoginPassword);
             Controls.Add(LblLoginUsername);
             Controls.Add(TxtLoginPassword);
             Controls.Add(TxtLoginUsername);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(1);
             Name = "Login";
             Text = "Login";
             Load += Login_Load;
