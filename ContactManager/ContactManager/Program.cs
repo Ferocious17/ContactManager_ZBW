@@ -1,4 +1,6 @@
+using ContactManager.DB;
 using ContactManager.Forms;
+using System.Net.Mime;
 
 namespace ContactManager
 {
@@ -17,6 +19,13 @@ namespace ContactManager
                 MessageBox.Show("An unexpected error occurred", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             });
             ApplicationConfiguration.Initialize();
+
+            using ContactManagerContext context = new();
+            if (!context.IsDatabaseAvailable())
+            {
+                MessageBox.Show("Database is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Login login = new();
             if (login.ShowDialog() == DialogResult.OK)

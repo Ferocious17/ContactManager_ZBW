@@ -72,4 +72,16 @@ public class ContactManagerContext : DbContext
             });
         });
     }
+
+    public bool IsDatabaseAvailable()
+    {
+        try
+        {
+            return Database.CanConnect();
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }
