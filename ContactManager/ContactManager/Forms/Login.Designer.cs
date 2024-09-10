@@ -76,7 +76,7 @@
             TxtLoginTitle.Margin = new Padding(2, 3, 2, 3);
             TxtLoginTitle.Multiline = true;
             TxtLoginTitle.Name = "TxtLoginTitle";
-            TxtLoginTitle.Size = new Size(294, 89);
+            TxtLoginTitle.Size = new Size(348, 89);
             TxtLoginTitle.TabIndex = 43;
             TxtLoginTitle.TabStop = false;
             TxtLoginTitle.Text = "Anmeldung";
