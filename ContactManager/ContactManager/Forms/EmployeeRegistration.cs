@@ -55,6 +55,10 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSaveEmpoloyeRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveEmpoloyeRegistration.Width, btnSaveEmpoloyeRegistration.Height, 5, 5)); // Create rounded rectangle region
 
+            TxtEmployeeHousenumber.KeyPress += Numeric_KeyPress;
+            TxtEmployeeZIPcode.KeyPress += Numeric_KeyPress;
+            TxtEmployeeTrainigyear.KeyPress += Numeric_KeyPress;
+
             TxtEmployeeTitle.DataBindings.Add("Text", _employee, nameof(Employee.Title));
             TxtEmployeeFirstname.DataBindings.Add("Text", _employee, nameof(Employee.FirstName));
             TxtEmployeeLastname.DataBindings.Add("Text", _employee, nameof(Employee.LastName));
@@ -873,6 +877,12 @@ namespace ContactManager.Forms
         private void maskedTextBox1_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void Numeric_KeyPress(object? sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
 
         private Button CmdEmployeeSave;

@@ -46,6 +46,9 @@ namespace ContactManager.Forms
 
             CmbCostumerCostumertype.DataSource = Enum.GetValues(typeof(CustomerType));
 
+            TxtCostumerStreetnumber.KeyPress += Numeric_KeyPress;
+            TxtCostumerZIPcode.KeyPress += Numeric_KeyPress;
+
             TxtCostumerTitle.DataBindings.Add("Text", _customer, nameof(Customer.Title));
             TxtCostumerFirstname.DataBindings.Add("Text", _customer, nameof(Customer.FirstName));
             TxtCostumerLastname.DataBindings.Add("Text", _customer, nameof(Customer.LastName));
@@ -104,6 +107,12 @@ namespace ContactManager.Forms
         private void TblLayoutCostumer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Numeric_KeyPress(object? sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
 
         private void CmdCostumerSave_Click(object sender, EventArgs e)
