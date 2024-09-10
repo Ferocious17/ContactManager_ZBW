@@ -51,10 +51,10 @@
             // LblStartSearch
             // 
             LblStartSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            LblStartSearch.Location = new Point(377, 26);
+            LblStartSearch.Location = new Point(431, 35);
             LblStartSearch.Margin = new Padding(1);
             LblStartSearch.Name = "LblStartSearch";
-            LblStartSearch.Size = new Size(187, 41);
+            LblStartSearch.Size = new Size(214, 55);
             LblStartSearch.TabIndex = 1;
             LblStartSearch.Text = "Suche";
             LblStartSearch.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // LblStartCostumerRegistration
             // 
             LblStartCostumerRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            LblStartCostumerRegistration.Location = new Point(189, 26);
+            LblStartCostumerRegistration.Location = new Point(216, 35);
             LblStartCostumerRegistration.Margin = new Padding(1);
             LblStartCostumerRegistration.Name = "LblStartCostumerRegistration";
-            LblStartCostumerRegistration.Size = new Size(186, 41);
+            LblStartCostumerRegistration.Size = new Size(213, 55);
             LblStartCostumerRegistration.TabIndex = 2;
             LblStartCostumerRegistration.Text = "Kunden Erfassung";
             LblStartCostumerRegistration.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
             // LblStartTitle
             // 
             LblStartTitle.Font = new Font("Segoe UI", 15F);
-            LblStartTitle.Location = new Point(34, 32);
+            LblStartTitle.Location = new Point(39, 43);
             LblStartTitle.Margin = new Padding(1);
             LblStartTitle.Name = "LblStartTitle";
-            LblStartTitle.Size = new Size(234, 34);
+            LblStartTitle.Size = new Size(267, 41);
             LblStartTitle.TabIndex = 0;
             LblStartTitle.TabStop = false;
             LblStartTitle.Text = "CONTACT MANAGER";
@@ -87,10 +87,10 @@
             // LblStartEmployeeRegistration
             // 
             LblStartEmployeeRegistration.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            LblStartEmployeeRegistration.Location = new Point(1, 26);
+            LblStartEmployeeRegistration.Location = new Point(1, 35);
             LblStartEmployeeRegistration.Margin = new Padding(1);
             LblStartEmployeeRegistration.Name = "LblStartEmployeeRegistration";
-            LblStartEmployeeRegistration.Size = new Size(186, 41);
+            LblStartEmployeeRegistration.Size = new Size(213, 55);
             LblStartEmployeeRegistration.TabIndex = 0;
             LblStartEmployeeRegistration.Text = "Mitarbeiter Erfassung";
             LblStartEmployeeRegistration.UseVisualStyleBackColor = true;
@@ -106,13 +106,13 @@
             tableLayoutPanel1.Controls.Add(LblStartEmployeeRegistration, 0, 0);
             tableLayoutPanel1.Controls.Add(LblStartCostumerRegistration, 1, 0);
             tableLayoutPanel1.Controls.Add(LblStartSearch, 2, 0);
-            tableLayoutPanel1.Location = new Point(34, 90);
-            tableLayoutPanel1.Margin = new Padding(2);
+            tableLayoutPanel1.Location = new Point(39, 120);
+            tableLayoutPanel1.Margin = new Padding(2, 3, 2, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 94F));
-            tableLayoutPanel1.Size = new Size(565, 94);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 125F));
+            tableLayoutPanel1.Size = new Size(646, 125);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -196,40 +196,42 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Controls.Add(CmdStartExport, 1, 0);
             tableLayoutPanel4.Controls.Add(CmdStartImport, 0, 0);
-            tableLayoutPanel4.Location = new Point(335, 24);
+            tableLayoutPanel4.Location = new Point(383, 32);
             tableLayoutPanel4.Margin = new Padding(1);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(245, 25);
+            tableLayoutPanel4.Size = new Size(280, 33);
             tableLayoutPanel4.TabIndex = 5;
             // 
             // CmdStartExport
             // 
-            CmdStartExport.Location = new Point(123, 1);
+            CmdStartExport.Location = new Point(141, 1);
             CmdStartExport.Margin = new Padding(1);
             CmdStartExport.Name = "CmdStartExport";
-            CmdStartExport.Size = new Size(120, 23);
+            CmdStartExport.Size = new Size(137, 31);
             CmdStartExport.TabIndex = 7;
             CmdStartExport.Text = "Exportieren";
             CmdStartExport.UseVisualStyleBackColor = true;
+            CmdStartExport.Click += CmdStartExport_Click;
             // 
             // CmdStartImport
             // 
             CmdStartImport.Location = new Point(1, 1);
             CmdStartImport.Margin = new Padding(1);
             CmdStartImport.Name = "CmdStartImport";
-            CmdStartImport.Size = new Size(120, 23);
+            CmdStartImport.Size = new Size(137, 31);
             CmdStartImport.TabIndex = 6;
             CmdStartImport.Text = "Importieren";
             CmdStartImport.UseVisualStyleBackColor = true;
+            CmdStartImport.Click += CmdStartImport_Click;
             // 
             // StartWindow
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             CausesValidation = false;
-            ClientSize = new Size(635, 241);
+            ClientSize = new Size(726, 321);
             Controls.Add(tableLayoutPanel4);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(LblStartTitle);

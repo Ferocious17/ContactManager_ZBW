@@ -1,3 +1,9 @@
+using ContactManager.DB;
+using ContactManager.Enums;
+using ContactManager.Models;
+using Microsoft.EntityFrameworkCore.Query.Internal;
+using System.Text;
+
 namespace ContactManager.Forms
 {
     public partial class StartWindow : Form
@@ -92,11 +98,73 @@ namespace ContactManager.Forms
 
         }
 
-        
+
         // Helper method to create a rounded rectangle region
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-     
+
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-        
+
+        private void CmdStartImport_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new()
+            {
+                Filter = "CSV files (*.csv)|*.csv",
+                Title = "Import CSV file"
+            };
+            if (openFileDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            using ContactManagerContext context = new();
+            var csvContent = File.ReadAllLines(openFileDialog.FileName);
+            Person[] people = new Person[csvContent.Length];
+            try
+            {
+                for (int i = 0; i < csvContent.Length; i++)
+                    people[i] = ParseCSV(csvContent[i]);
+            }
+            catch
+            {
+                MessageBox.Show("Data import failed. Please check your CSV content", "Import failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            foreach (var person in people)
+                context.Add(person);
+
+            context.SaveChanges();
+            MessageBox.Show("File data was imported into database", "Import successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private Person ParseCSV(string csv)
+        {
+            var values = csv.Split(';');
+            return values[0] switch
+            {
+                nameof(Employee) => new Employee(bool.Parse(values[1]), values[2], values[3], values[4], DateTime.Parse(values[5]), values[6], new(values[7], values[8], values[9], values[10]), new(values[11], values[12], int.Parse(values[13]), values[14]), bool.Parse(values[15]), values[16], Guid.Parse(values[17]), new Department("test"), DateTime.Parse(values[19]), DateTime.Parse(values[20]), int.Parse(values[21]), values[22], (CadreLevel)Enum.Parse(typeof(CadreLevel), values[23])),
+                nameof(Customer) => new Customer(bool.Parse(values[1]), values[2], values[3], values[4], DateTime.Parse(values[5]), values[6], new(values[7], values[8], values[9], values[10]), new(values[11], values[12], int.Parse(values[13]), values[14]), bool.Parse(values[15]), values[16], values[17], (CustomerType)Enum.Parse(typeof(CustomerType), values[18]), values[19]),
+                nameof(Trainee) => new Trainee(bool.Parse(values[1]), values[2], values[3], values[4], DateTime.Parse(values[5]), values[6], new(values[7], values[8], values[9], values[10]), new(values[11], values[12], int.Parse(values[13]), values[14]), bool.Parse(values[15]), values[16], Guid.Parse(values[17]), new Department("test"), DateTime.Parse(values[19]), DateTime.Parse(values[20]), int.Parse(values[21]), values[22], (CadreLevel)Enum.Parse(typeof(CadreLevel), values[23]), int.Parse(values[24]), int.Parse(values[25])),
+                _ => throw new ArgumentException("Invalid CSV content"),
+            };
+        }
+
+        private void CmdStartExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new()
+            {
+                Filter = "CSV files (*.csv)|*.csv",
+                Title = "Export CSV file",
+                FileName = "export.csv"
+            };
+            if (saveFileDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            StringBuilder result = new();
+            ContactManagerContext context = new();
+            foreach (var person in context.People)
+                result.AppendLine(person.GetCSV());
+
+            File.WriteAllText(saveFileDialog.FileName, result.ToString());
+            MessageBox.Show("Data was exported to CSV file", "Export successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

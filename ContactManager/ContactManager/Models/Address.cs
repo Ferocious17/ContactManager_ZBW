@@ -16,4 +16,6 @@ public class Address
     public string StreetNumber { get; set; }
     public int ZipCode { get; set; }
     public string City { get; set; }
+
+    public string GetCSV() => $"{Street};{StreetNumber};{ZipCode};{City}";
 }

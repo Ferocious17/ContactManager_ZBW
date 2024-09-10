@@ -5,9 +5,9 @@ using System.Runtime.CompilerServices;
 
 namespace ContactManager.Models;
 
-public class Person
+public abstract class Person
 {
-    public Person(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommuncationInfo communicationInfo, Address address, bool status, string nationality)
+    public Person(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommunicationInfo communicationInfo, Address address, bool status, string nationality)
     {
         Gender = gender;
         Title = title;
@@ -32,8 +32,11 @@ public class Person
     public string LastName { get; set; }
     public DateTime DateOfBirth { get; set; }
     public string SocialSecurityNumber { get; set; }
-    public CommuncationInfo CommunicationInfo { get; set; }
+    public CommunicationInfo CommunicationInfo { get; set; }
     public Address Address { get; set; }
     public bool Status { get; set; }
     public string Nationality { get; set; }
+
+    public string GetCSV() => $"{GetType().Name};{Gender};{Title};{FirstName};{LastName};{DateOfBirth};{SocialSecurityNumber};{CommunicationInfo.GetCSV()};{Address.GetCSV()};{Status};{Nationality};{GetCSVRepresentation()}";
+    protected abstract string GetCSVRepresentation();
 }

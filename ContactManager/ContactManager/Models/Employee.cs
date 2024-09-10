@@ -4,7 +4,7 @@ namespace ContactManager.Models;
 
 public class Employee : Person
 {
-    public Employee(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommuncationInfo communcationInfo, Address address, bool status, string nationality, Guid employeeNumber, Department department, DateTime startDate, DateTime endDate, int employment, string role, CadreLevel cadreLevel) : base(gender, title, firstName, lastName, dateOfBirth, socialSecurityNumber, communcationInfo, address, status, nationality)
+    public Employee(bool gender, string title, string firstName, string lastName, DateTime dateOfBirth, string socialSecurityNumber, CommunicationInfo communcationInfo, Address address, bool status, string nationality, Guid employeeNumber, Department department, DateTime startDate, DateTime endDate, int employment, string role, CadreLevel cadreLevel) : base(gender, title, firstName, lastName, dateOfBirth, socialSecurityNumber, communcationInfo, address, status, nationality)
     {
         EmployeeNumber = employeeNumber;
         Department = department;
@@ -28,4 +28,6 @@ public class Employee : Person
     public int Employment { get; set; }
     public string Role { get; set; }
     public CadreLevel CadreLevel { get; set; }
+
+    protected override string GetCSVRepresentation() => $"{EmployeeNumber};{Department?.DepartmentId};{StartDate};{EndDate};{Employment};{Role};{CadreLevel}";
 }

@@ -1,8 +1,8 @@
 ﻿namespace ContactManager.Models;
 
-public class CommuncationInfo
+public class CommunicationInfo
 {
-    public CommuncationInfo(string phoneNumberPrivate, string phoneNumberMobile, string phoneNumberBusiness, string email)
+    public CommunicationInfo(string phoneNumberPrivate, string phoneNumberMobile, string phoneNumberBusiness, string email)
     {
         PhoneNumberPrivate = phoneNumberPrivate;
         PhoneNumberMobile = phoneNumberMobile;
@@ -10,10 +10,12 @@ public class CommuncationInfo
         Email = email;
     }
 
-    internal CommuncationInfo() { }
+    internal CommunicationInfo() { }
 
     public string PhoneNumberPrivate { get; set; }
     public string PhoneNumberMobile { get; set; }
     public string PhoneNumberBusiness { get; set; }
     public string Email { get; set; }
+
+    public string GetCSV() => $"{PhoneNumberPrivate};{PhoneNumberMobile};{PhoneNumberBusiness};{Email}";
 }
