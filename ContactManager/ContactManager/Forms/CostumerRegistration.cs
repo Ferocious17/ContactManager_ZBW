@@ -63,6 +63,7 @@ namespace ContactManager.Forms
 
             TxtCostumerPhonenumber.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.PhoneNumberPrivate));
             TxtCostumerMobilenumber.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.PhoneNumberMobile));
+            TxtCostumerBusinessnumber.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.PhoneNumberBusiness));
             TxtCostumerEmail.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.Email));
             TxtCostumerCompany.DataBindings.Add("Text", _customer, nameof(Customer.CompanyName));
             CmbCostumerCostumertype.DataBindings.Add("", _customer, nameof(Customer.CustomerType));

@@ -72,9 +72,9 @@
             TxtCostumerNationality = new MaskedTextBox();
             LblCostumerNationality = new Label();
             LblCostumerDateofBirth = new Label();
+            DtpCostumerDateofBirth = new DateTimePicker();
             TxtOutGridNotes = new TextBox();
             LblOutGridNotes = new Label();
-            DtpCostumerDateofBirth = new DateTimePicker();
             groupBox.SuspendLayout();
             GrpCostumerSex.SuspendLayout();
             TblLayoutCostumer.SuspendLayout();
@@ -225,7 +225,7 @@
             TxtCostumerContactperson.Margin = new Padding(0);
             TxtCostumerContactperson.Name = "TxtCostumerContactperson";
             TxtCostumerContactperson.Size = new Size(469, 27);
-            TxtCostumerContactperson.TabIndex = 15;
+            TxtCostumerContactperson.TabIndex = 16;
             // 
             // CmbCostumerCostumertype
             // 
@@ -234,7 +234,7 @@
             CmbCostumerCostumertype.Margin = new Padding(0);
             CmbCostumerCostumertype.Name = "CmbCostumerCostumertype";
             CmbCostumerCostumertype.Size = new Size(469, 28);
-            CmbCostumerCostumertype.TabIndex = 14;
+            CmbCostumerCostumertype.TabIndex = 15;
             // 
             // TxtCostumerCompany
             // 
@@ -242,7 +242,7 @@
             TxtCostumerCompany.Margin = new Padding(0);
             TxtCostumerCompany.Name = "TxtCostumerCompany";
             TxtCostumerCompany.Size = new Size(469, 27);
-            TxtCostumerCompany.TabIndex = 13;
+            TxtCostumerCompany.TabIndex = 14;
             // 
             // LblCostumerCostumertype
             // 
@@ -275,7 +275,7 @@
             TxtCostumerEmail.Margin = new Padding(0);
             TxtCostumerEmail.Name = "TxtCostumerEmail";
             TxtCostumerEmail.Size = new Size(470, 27);
-            TxtCostumerEmail.TabIndex = 12;
+            TxtCostumerEmail.TabIndex = 13;
             // 
             // TxtCostumerFirstname
             // 
@@ -555,7 +555,7 @@
             TxtCostumerBusinessnumber.Margin = new Padding(0);
             TxtCostumerBusinessnumber.Name = "TxtCostumerBusinessnumber";
             TxtCostumerBusinessnumber.Size = new Size(470, 27);
-            TxtCostumerBusinessnumber.TabIndex = 49;
+            TxtCostumerBusinessnumber.TabIndex = 12;
             // 
             // LblCostumerBusinessnumber
             // 
@@ -576,7 +576,7 @@
             TxtCostumerNationality.Margin = new Padding(0);
             TxtCostumerNationality.Name = "TxtCostumerNationality";
             TxtCostumerNationality.Size = new Size(470, 27);
-            TxtCostumerNationality.TabIndex = 49;
+            TxtCostumerNationality.TabIndex = 9;
             // 
             // LblCostumerNationality
             // 
@@ -602,6 +602,14 @@
             LblCostumerDateofBirth.Text = "Geburtsdatum";
             LblCostumerDateofBirth.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // DtpCostumerDateofBirth
+            // 
+            DtpCostumerDateofBirth.Location = new Point(160, 99);
+            DtpCostumerDateofBirth.Margin = new Padding(0);
+            DtpCostumerDateofBirth.Name = "DtpCostumerDateofBirth";
+            DtpCostumerDateofBirth.Size = new Size(470, 27);
+            DtpCostumerDateofBirth.TabIndex = 4;
+            // 
             // TxtOutGridNotes
             // 
             TxtOutGridNotes.Location = new Point(27, 947);
@@ -622,14 +630,6 @@
             LblOutGridNotes.TabIndex = 50;
             LblOutGridNotes.Text = "Bestehende Notizen:";
             LblOutGridNotes.Click += label1_Click_1;
-            // 
-            // DtpCostumerDateofBirth
-            // 
-            DtpCostumerDateofBirth.Location = new Point(160, 99);
-            DtpCostumerDateofBirth.Margin = new Padding(0);
-            DtpCostumerDateofBirth.Name = "DtpCostumerDateofBirth";
-            DtpCostumerDateofBirth.Size = new Size(470, 27);
-            DtpCostumerDateofBirth.TabIndex = 61;
             // 
             // CustumerRegistration
             // 

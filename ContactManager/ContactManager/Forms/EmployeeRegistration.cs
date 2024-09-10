@@ -185,10 +185,10 @@ namespace ContactManager.Forms
             TxtEmployeeBusinessnumber = new MaskedTextBox();
             CmbEmployeeDepartement = new ComboBox();
             CmbEmployeeLevel = new ComboBox();
+            DtpEmployeeDateofBirth = new DateTimePicker();
             btnSaveEmpoloyeRegistration = new Button();
             TxtTitleEmployeeRegistration = new TextBox();
             CmdEmployeeSave = new Button();
-            DtpEmployeeDateofBirth = new DateTimePicker();
             TblLayoutCostumer.SuspendLayout();
             GrpEmployeeSex.SuspendLayout();
             SuspendLayout();
@@ -279,7 +279,7 @@ namespace ContactManager.Forms
             TxtEmployeeTrainigyear.Margin = new Padding(0);
             TxtEmployeeTrainigyear.Name = "TxtEmployeeTrainigyear";
             TxtEmployeeTrainigyear.Size = new Size(457, 27);
-            TxtEmployeeTrainigyear.TabIndex = 85;
+            TxtEmployeeTrainigyear.TabIndex = 20;
             TxtEmployeeTrainigyear.MaskInputRejected += maskedTextBox1_MaskInputRejected_1;
             // 
             // LblEmployeeTrainigyear
@@ -349,7 +349,7 @@ namespace ContactManager.Forms
             TxtEmployeeTitle.Margin = new Padding(0);
             TxtEmployeeTitle.Name = "TxtEmployeeTitle";
             TxtEmployeeTitle.Size = new Size(457, 27);
-            TxtEmployeeTitle.TabIndex = 72;
+            TxtEmployeeTitle.TabIndex = 1;
             // 
             // TxtEmployeeRole
             // 
@@ -358,7 +358,7 @@ namespace ContactManager.Forms
             TxtEmployeeRole.Margin = new Padding(0);
             TxtEmployeeRole.Name = "TxtEmployeeRole";
             TxtEmployeeRole.Size = new Size(457, 27);
-            TxtEmployeeRole.TabIndex = 62;
+            TxtEmployeeRole.TabIndex = 18;
             // 
             // LblEmployeeLastname
             // 
@@ -427,7 +427,7 @@ namespace ContactManager.Forms
             TxtEmployeeMobilenumber.Margin = new Padding(0);
             TxtEmployeeMobilenumber.Name = "TxtEmployeeMobilenumber";
             TxtEmployeeMobilenumber.Size = new Size(457, 27);
-            TxtEmployeeMobilenumber.TabIndex = 40;
+            TxtEmployeeMobilenumber.TabIndex = 12;
             // 
             // LblEmployeeHousenumber
             // 
@@ -448,7 +448,7 @@ namespace ContactManager.Forms
             TxtEmployeePhonenumber.Margin = new Padding(0);
             TxtEmployeePhonenumber.Name = "TxtEmployeePhonenumber";
             TxtEmployeePhonenumber.Size = new Size(457, 27);
-            TxtEmployeePhonenumber.TabIndex = 39;
+            TxtEmployeePhonenumber.TabIndex = 11;
             // 
             // LblEmployeePlace
             // 
@@ -469,7 +469,7 @@ namespace ContactManager.Forms
             TxtEmployeePlace.Margin = new Padding(0);
             TxtEmployeePlace.Name = "TxtEmployeePlace";
             TxtEmployeePlace.Size = new Size(457, 27);
-            TxtEmployeePlace.TabIndex = 37;
+            TxtEmployeePlace.TabIndex = 8;
             // 
             // LblEmployeeSex
             // 
@@ -490,7 +490,7 @@ namespace ContactManager.Forms
             TxtEmployeeZIPcode.Margin = new Padding(0);
             TxtEmployeeZIPcode.Name = "TxtEmployeeZIPcode";
             TxtEmployeeZIPcode.Size = new Size(457, 27);
-            TxtEmployeeZIPcode.TabIndex = 36;
+            TxtEmployeeZIPcode.TabIndex = 7;
             // 
             // LblEmployeePhonenumber
             // 
@@ -511,7 +511,7 @@ namespace ContactManager.Forms
             TxtEmployeeHousenumber.Margin = new Padding(0);
             TxtEmployeeHousenumber.Name = "TxtEmployeeHousenumber";
             TxtEmployeeHousenumber.Size = new Size(457, 27);
-            TxtEmployeeHousenumber.TabIndex = 35;
+            TxtEmployeeHousenumber.TabIndex = 6;
             // 
             // LblEmployeeMobilenumber
             // 
@@ -532,7 +532,7 @@ namespace ContactManager.Forms
             TxtEmployeeStreet.Margin = new Padding(0);
             TxtEmployeeStreet.Name = "TxtEmployeeStreet";
             TxtEmployeeStreet.Size = new Size(457, 27);
-            TxtEmployeeStreet.TabIndex = 34;
+            TxtEmployeeStreet.TabIndex = 5;
             // 
             // TxtEmployeeLastname
             // 
@@ -541,7 +541,7 @@ namespace ContactManager.Forms
             TxtEmployeeLastname.Margin = new Padding(0);
             TxtEmployeeLastname.Name = "TxtEmployeeLastname";
             TxtEmployeeLastname.Size = new Size(457, 27);
-            TxtEmployeeLastname.TabIndex = 33;
+            TxtEmployeeLastname.TabIndex = 4;
             // 
             // TxtEmployeeFirstname
             // 
@@ -550,7 +550,7 @@ namespace ContactManager.Forms
             TxtEmployeeFirstname.Margin = new Padding(0);
             TxtEmployeeFirstname.Name = "TxtEmployeeFirstname";
             TxtEmployeeFirstname.Size = new Size(457, 27);
-            TxtEmployeeFirstname.TabIndex = 32;
+            TxtEmployeeFirstname.TabIndex = 2;
             // 
             // ChkEmployeeTrainee
             // 
@@ -619,7 +619,7 @@ namespace ContactManager.Forms
             TxtEmployeeSSN.Margin = new Padding(0);
             TxtEmployeeSSN.Name = "TxtEmployeeSSN";
             TxtEmployeeSSN.Size = new Size(457, 27);
-            TxtEmployeeSSN.TabIndex = 79;
+            TxtEmployeeSSN.TabIndex = 9;
             // 
             // TxtEmployeeNatonality
             // 
@@ -628,7 +628,7 @@ namespace ContactManager.Forms
             TxtEmployeeNatonality.Margin = new Padding(0);
             TxtEmployeeNatonality.Name = "TxtEmployeeNatonality";
             TxtEmployeeNatonality.Size = new Size(457, 27);
-            TxtEmployeeNatonality.TabIndex = 81;
+            TxtEmployeeNatonality.TabIndex = 10;
             // 
             // LblEmployeeEnddate
             // 
@@ -648,7 +648,7 @@ namespace ContactManager.Forms
             DtpEmployeeEnddate.Margin = new Padding(0);
             DtpEmployeeEnddate.Name = "DtpEmployeeEnddate";
             DtpEmployeeEnddate.Size = new Size(454, 27);
-            DtpEmployeeEnddate.TabIndex = 59;
+            DtpEmployeeEnddate.TabIndex = 17;
             // 
             // DtpEmployeeStartdate
             // 
@@ -656,7 +656,7 @@ namespace ContactManager.Forms
             DtpEmployeeStartdate.Margin = new Padding(0);
             DtpEmployeeStartdate.Name = "DtpEmployeeStartdate";
             DtpEmployeeStartdate.Size = new Size(457, 27);
-            DtpEmployeeStartdate.TabIndex = 57;
+            DtpEmployeeStartdate.TabIndex = 16;
             // 
             // LblEmployeeStartdate
             // 
@@ -701,7 +701,7 @@ namespace ContactManager.Forms
             TxtEmployeeEmail.Margin = new Padding(0);
             TxtEmployeeEmail.Name = "TxtEmployeeEmail";
             TxtEmployeeEmail.Size = new Size(457, 27);
-            TxtEmployeeEmail.TabIndex = 41;
+            TxtEmployeeEmail.TabIndex = 14;
             // 
             // LblEmployeeBusinessnumber
             // 
@@ -722,7 +722,7 @@ namespace ContactManager.Forms
             TxtEmployeeBusinessnumber.Margin = new Padding(0);
             TxtEmployeeBusinessnumber.Name = "TxtEmployeeBusinessnumber";
             TxtEmployeeBusinessnumber.Size = new Size(457, 27);
-            TxtEmployeeBusinessnumber.TabIndex = 83;
+            TxtEmployeeBusinessnumber.TabIndex = 13;
             TxtEmployeeBusinessnumber.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // CmbEmployeeDepartement
@@ -732,7 +732,7 @@ namespace ContactManager.Forms
             CmbEmployeeDepartement.Margin = new Padding(0);
             CmbEmployeeDepartement.Name = "CmbEmployeeDepartement";
             CmbEmployeeDepartement.Size = new Size(457, 28);
-            CmbEmployeeDepartement.TabIndex = 58;
+            CmbEmployeeDepartement.TabIndex = 15;
             // 
             // CmbEmployeeLevel
             // 
@@ -741,7 +741,15 @@ namespace ContactManager.Forms
             CmbEmployeeLevel.Margin = new Padding(0);
             CmbEmployeeLevel.Name = "CmbEmployeeLevel";
             CmbEmployeeLevel.Size = new Size(454, 28);
-            CmbEmployeeLevel.TabIndex = 71;
+            CmbEmployeeLevel.TabIndex = 19;
+            // 
+            // DtpEmployeeDateofBirth
+            // 
+            DtpEmployeeDateofBirth.Location = new Point(160, 99);
+            DtpEmployeeDateofBirth.Margin = new Padding(0);
+            DtpEmployeeDateofBirth.Name = "DtpEmployeeDateofBirth";
+            DtpEmployeeDateofBirth.Size = new Size(456, 27);
+            DtpEmployeeDateofBirth.TabIndex = 3;
             // 
             // btnSaveEmpoloyeRegistration
             // 
@@ -775,14 +783,6 @@ namespace ContactManager.Forms
             CmdEmployeeSave.Text = "Speichern";
             CmdEmployeeSave.UseVisualStyleBackColor = true;
             CmdEmployeeSave.Click += CmdEmployeeSave_Click;
-            // 
-            // DtpEmployeeDateofBirth
-            // 
-            DtpEmployeeDateofBirth.Location = new Point(160, 99);
-            DtpEmployeeDateofBirth.Margin = new Padding(0);
-            DtpEmployeeDateofBirth.Name = "DtpEmployeeDateofBirth";
-            DtpEmployeeDateofBirth.Size = new Size(456, 27);
-            DtpEmployeeDateofBirth.TabIndex = 86;
             // 
             // LblEmployeeRegistration
             // 
