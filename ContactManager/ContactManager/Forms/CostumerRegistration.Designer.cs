@@ -72,9 +72,9 @@
             TxtCostumerNationality = new MaskedTextBox();
             LblCostumerNationality = new Label();
             LblCostumerDateofBirth = new Label();
-            TxtCostumerDateofBirth = new MaskedTextBox();
             TxtOutGridNotes = new TextBox();
             LblOutGridNotes = new Label();
+            DtpCostumerDateofBirth = new DateTimePicker();
             groupBox.SuspendLayout();
             GrpCostumerSex.SuspendLayout();
             TblLayoutCostumer.SuspendLayout();
@@ -83,11 +83,11 @@
             // LblCostumerRegistration
             // 
             LblCostumerRegistration.Font = new Font("Segoe UI", 15F);
-            LblCostumerRegistration.Location = new Point(21, 10);
+            LblCostumerRegistration.Location = new Point(24, 13);
             LblCostumerRegistration.Margin = new Padding(1);
             LblCostumerRegistration.Multiline = true;
             LblCostumerRegistration.Name = "LblCostumerRegistration";
-            LblCostumerRegistration.Size = new Size(283, 47);
+            LblCostumerRegistration.Size = new Size(323, 61);
             LblCostumerRegistration.TabIndex = 42;
             LblCostumerRegistration.TabStop = false;
             LblCostumerRegistration.Text = "KUNDEN ERFASSUNG";
@@ -95,10 +95,10 @@
             // 
             // CmdCostumerSave
             // 
-            CmdCostumerSave.Location = new Point(616, 491);
+            CmdCostumerSave.Location = new Point(704, 655);
             CmdCostumerSave.Margin = new Padding(1);
             CmdCostumerSave.Name = "CmdCostumerSave";
-            CmdCostumerSave.Size = new Size(103, 30);
+            CmdCostumerSave.Size = new Size(118, 40);
             CmdCostumerSave.TabIndex = 44;
             CmdCostumerSave.Text = "Speichern";
             CmdCostumerSave.UseVisualStyleBackColor = true;
@@ -133,30 +133,30 @@
             // 
             // TxtNotes
             // 
-            TxtNotes.Location = new Point(24, 576);
+            TxtNotes.Location = new Point(27, 768);
             TxtNotes.Margin = new Padding(1);
             TxtNotes.Multiline = true;
             TxtNotes.Name = "TxtNotes";
-            TxtNotes.Size = new Size(551, 109);
+            TxtNotes.Size = new Size(629, 144);
             TxtNotes.TabIndex = 45;
             // 
             // LblNotes
             // 
             LblNotes.AutoSize = true;
             LblNotes.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            LblNotes.Location = new Point(25, 560);
+            LblNotes.Location = new Point(29, 747);
             LblNotes.Margin = new Padding(1, 0, 1, 0);
             LblNotes.Name = "LblNotes";
-            LblNotes.Size = new Size(97, 15);
+            LblNotes.Size = new Size(122, 20);
             LblNotes.TabIndex = 46;
             LblNotes.Text = "Notizen erfassen:";
             // 
             // CmdSaveNote
             // 
-            CmdSaveNote.Location = new Point(616, 656);
+            CmdSaveNote.Location = new Point(704, 875);
             CmdSaveNote.Margin = new Padding(1);
             CmdSaveNote.Name = "CmdSaveNote";
-            CmdSaveNote.Size = new Size(103, 29);
+            CmdSaveNote.Size = new Size(118, 39);
             CmdSaveNote.TabIndex = 47;
             CmdSaveNote.Text = "Notiz speichern";
             CmdSaveNote.UseVisualStyleBackColor = true;
@@ -165,10 +165,10 @@
             // TxtCostumerTitle
             // 
             TxtCostumerTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerTitle.Location = new Point(140, 1);
+            TxtCostumerTitle.Location = new Point(160, 3);
             TxtCostumerTitle.Margin = new Padding(0);
             TxtCostumerTitle.Name = "TxtCostumerTitle";
-            TxtCostumerTitle.Size = new Size(411, 23);
+            TxtCostumerTitle.Size = new Size(470, 27);
             TxtCostumerTitle.TabIndex = 1;
             // 
             // LblCostumerTitle
@@ -178,7 +178,7 @@
             LblCostumerTitle.Location = new Point(1, 0);
             LblCostumerTitle.Margin = new Padding(1, 0, 1, 0);
             LblCostumerTitle.Name = "LblCostumerTitle";
-            LblCostumerTitle.Size = new Size(138, 25);
+            LblCostumerTitle.Size = new Size(158, 33);
             LblCostumerTitle.TabIndex = 53;
             LblCostumerTitle.Text = "Titel";
             LblCostumerTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -187,18 +187,21 @@
             // 
             GrpCostumerSex.Controls.Add(RadCostumerFemale);
             GrpCostumerSex.Controls.Add(RadCostumerMale);
-            GrpCostumerSex.Location = new Point(143, 228);
+            GrpCostumerSex.Location = new Point(163, 301);
+            GrpCostumerSex.Margin = new Padding(3, 4, 3, 4);
             GrpCostumerSex.Name = "GrpCostumerSex";
-            GrpCostumerSex.Size = new Size(164, 19);
+            GrpCostumerSex.Padding = new Padding(3, 4, 3, 4);
+            GrpCostumerSex.Size = new Size(187, 25);
             GrpCostumerSex.TabIndex = 0;
             GrpCostumerSex.TabStop = false;
             // 
             // RadCostumerFemale
             // 
             RadCostumerFemale.AutoSize = true;
-            RadCostumerFemale.Location = new Point(81, 3);
+            RadCostumerFemale.Location = new Point(93, 4);
+            RadCostumerFemale.Margin = new Padding(3, 4, 3, 4);
             RadCostumerFemale.Name = "RadCostumerFemale";
-            RadCostumerFemale.Size = new Size(71, 19);
+            RadCostumerFemale.Size = new Size(87, 24);
             RadCostumerFemale.TabIndex = 10;
             RadCostumerFemale.Text = "Weiblich";
             RadCostumerFemale.UseVisualStyleBackColor = true;
@@ -207,9 +210,10 @@
             // 
             RadCostumerMale.AutoSize = true;
             RadCostumerMale.Checked = true;
-            RadCostumerMale.Location = new Point(0, 3);
+            RadCostumerMale.Location = new Point(0, 4);
+            RadCostumerMale.Margin = new Padding(3, 4, 3, 4);
             RadCostumerMale.Name = "RadCostumerMale";
-            RadCostumerMale.Size = new Size(75, 19);
+            RadCostumerMale.Size = new Size(90, 24);
             RadCostumerMale.TabIndex = 9;
             RadCostumerMale.TabStop = true;
             RadCostumerMale.Text = "Männlich";
@@ -217,37 +221,37 @@
             // 
             // TxtCostumerContactperson
             // 
-            TxtCostumerContactperson.Location = new Point(140, 400);
+            TxtCostumerContactperson.Location = new Point(160, 528);
             TxtCostumerContactperson.Margin = new Padding(0);
             TxtCostumerContactperson.Name = "TxtCostumerContactperson";
-            TxtCostumerContactperson.Size = new Size(411, 23);
+            TxtCostumerContactperson.Size = new Size(469, 27);
             TxtCostumerContactperson.TabIndex = 15;
             // 
             // CmbCostumerCostumertype
             // 
             CmbCostumerCostumertype.FormattingEnabled = true;
-            CmbCostumerCostumertype.Location = new Point(140, 375);
+            CmbCostumerCostumertype.Location = new Point(160, 495);
             CmbCostumerCostumertype.Margin = new Padding(0);
             CmbCostumerCostumertype.Name = "CmbCostumerCostumertype";
-            CmbCostumerCostumertype.Size = new Size(411, 23);
+            CmbCostumerCostumertype.Size = new Size(469, 28);
             CmbCostumerCostumertype.TabIndex = 14;
             // 
             // TxtCostumerCompany
             // 
-            TxtCostumerCompany.Location = new Point(140, 350);
+            TxtCostumerCompany.Location = new Point(160, 462);
             TxtCostumerCompany.Margin = new Padding(0);
             TxtCostumerCompany.Name = "TxtCostumerCompany";
-            TxtCostumerCompany.Size = new Size(411, 23);
+            TxtCostumerCompany.Size = new Size(469, 27);
             TxtCostumerCompany.TabIndex = 13;
             // 
             // LblCostumerCostumertype
             // 
             LblCostumerCostumertype.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerCostumertype.AutoSize = true;
-            LblCostumerCostumertype.Location = new Point(1, 375);
+            LblCostumerCostumertype.Location = new Point(1, 495);
             LblCostumerCostumertype.Margin = new Padding(1, 0, 1, 0);
             LblCostumerCostumertype.Name = "LblCostumerCostumertype";
-            LblCostumerCostumertype.Size = new Size(138, 25);
+            LblCostumerCostumertype.Size = new Size(158, 33);
             LblCostumerCostumertype.TabIndex = 47;
             LblCostumerCostumertype.Text = "Kundentyp";
             LblCostumerCostumertype.TextAlign = ContentAlignment.MiddleLeft;
@@ -256,10 +260,10 @@
             // 
             LblCostumerCompany.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerCompany.AutoSize = true;
-            LblCostumerCompany.Location = new Point(1, 350);
+            LblCostumerCompany.Location = new Point(1, 462);
             LblCostumerCompany.Margin = new Padding(1, 0, 1, 0);
             LblCostumerCompany.Name = "LblCostumerCompany";
-            LblCostumerCompany.Size = new Size(138, 25);
+            LblCostumerCompany.Size = new Size(158, 33);
             LblCostumerCompany.TabIndex = 43;
             LblCostumerCompany.Text = "Firma";
             LblCostumerCompany.TextAlign = ContentAlignment.MiddleLeft;
@@ -267,38 +271,38 @@
             // TxtCostumerEmail
             // 
             TxtCostumerEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerEmail.Location = new Point(140, 326);
+            TxtCostumerEmail.Location = new Point(160, 432);
             TxtCostumerEmail.Margin = new Padding(0);
             TxtCostumerEmail.Name = "TxtCostumerEmail";
-            TxtCostumerEmail.Size = new Size(411, 23);
+            TxtCostumerEmail.Size = new Size(470, 27);
             TxtCostumerEmail.TabIndex = 12;
             // 
             // TxtCostumerFirstname
             // 
             TxtCostumerFirstname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerFirstname.Location = new Point(140, 26);
+            TxtCostumerFirstname.Location = new Point(160, 36);
             TxtCostumerFirstname.Margin = new Padding(0);
             TxtCostumerFirstname.Name = "TxtCostumerFirstname";
-            TxtCostumerFirstname.Size = new Size(411, 23);
+            TxtCostumerFirstname.Size = new Size(470, 27);
             TxtCostumerFirstname.TabIndex = 2;
             // 
             // TxtCostumerLastname
             // 
             TxtCostumerLastname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerLastname.Location = new Point(140, 51);
+            TxtCostumerLastname.Location = new Point(160, 69);
             TxtCostumerLastname.Margin = new Padding(0);
             TxtCostumerLastname.Name = "TxtCostumerLastname";
-            TxtCostumerLastname.Size = new Size(411, 23);
+            TxtCostumerLastname.Size = new Size(470, 27);
             TxtCostumerLastname.TabIndex = 3;
             // 
             // LblCostumerEmail
             // 
             LblCostumerEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerEmail.AutoSize = true;
-            LblCostumerEmail.Location = new Point(1, 325);
+            LblCostumerEmail.Location = new Point(1, 429);
             LblCostumerEmail.Margin = new Padding(1, 0, 1, 0);
             LblCostumerEmail.Name = "LblCostumerEmail";
-            LblCostumerEmail.Size = new Size(138, 25);
+            LblCostumerEmail.Size = new Size(158, 33);
             LblCostumerEmail.TabIndex = 31;
             LblCostumerEmail.Text = "Email-Adresse";
             LblCostumerEmail.TextAlign = ContentAlignment.MiddleLeft;
@@ -306,20 +310,20 @@
             // TxtCostumerStreet
             // 
             TxtCostumerStreet.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerStreet.Location = new Point(140, 101);
+            TxtCostumerStreet.Location = new Point(160, 135);
             TxtCostumerStreet.Margin = new Padding(0);
             TxtCostumerStreet.Name = "TxtCostumerStreet";
-            TxtCostumerStreet.Size = new Size(411, 23);
+            TxtCostumerStreet.Size = new Size(470, 27);
             TxtCostumerStreet.TabIndex = 5;
             // 
             // LblCostumerMobilenumber
             // 
             LblCostumerMobilenumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerMobilenumber.AutoSize = true;
-            LblCostumerMobilenumber.Location = new Point(1, 275);
+            LblCostumerMobilenumber.Location = new Point(1, 363);
             LblCostumerMobilenumber.Margin = new Padding(1, 0, 1, 0);
             LblCostumerMobilenumber.Name = "LblCostumerMobilenumber";
-            LblCostumerMobilenumber.Size = new Size(138, 25);
+            LblCostumerMobilenumber.Size = new Size(158, 33);
             LblCostumerMobilenumber.TabIndex = 30;
             LblCostumerMobilenumber.Text = "Mobilnummer";
             LblCostumerMobilenumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -327,20 +331,20 @@
             // TxtCostumerStreetnumber
             // 
             TxtCostumerStreetnumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerStreetnumber.Location = new Point(140, 126);
+            TxtCostumerStreetnumber.Location = new Point(160, 168);
             TxtCostumerStreetnumber.Margin = new Padding(0);
             TxtCostumerStreetnumber.Name = "TxtCostumerStreetnumber";
-            TxtCostumerStreetnumber.Size = new Size(411, 23);
+            TxtCostumerStreetnumber.Size = new Size(470, 27);
             TxtCostumerStreetnumber.TabIndex = 6;
             // 
             // LblCostumerPhonenumber
             // 
             LblCostumerPhonenumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerPhonenumber.AutoSize = true;
-            LblCostumerPhonenumber.Location = new Point(1, 250);
+            LblCostumerPhonenumber.Location = new Point(1, 330);
             LblCostumerPhonenumber.Margin = new Padding(1, 0, 1, 0);
             LblCostumerPhonenumber.Name = "LblCostumerPhonenumber";
-            LblCostumerPhonenumber.Size = new Size(138, 25);
+            LblCostumerPhonenumber.Size = new Size(158, 33);
             LblCostumerPhonenumber.TabIndex = 29;
             LblCostumerPhonenumber.Text = "Telefonummer";
             LblCostumerPhonenumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -349,20 +353,20 @@
             // TxtCostumerZIPcode
             // 
             TxtCostumerZIPcode.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerZIPcode.Location = new Point(140, 151);
+            TxtCostumerZIPcode.Location = new Point(160, 201);
             TxtCostumerZIPcode.Margin = new Padding(0);
             TxtCostumerZIPcode.Name = "TxtCostumerZIPcode";
-            TxtCostumerZIPcode.Size = new Size(411, 23);
+            TxtCostumerZIPcode.Size = new Size(470, 27);
             TxtCostumerZIPcode.TabIndex = 7;
             // 
             // LblCostumerSex
             // 
             LblCostumerSex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerSex.AutoSize = true;
-            LblCostumerSex.Location = new Point(1, 225);
+            LblCostumerSex.Location = new Point(1, 297);
             LblCostumerSex.Margin = new Padding(1, 0, 1, 0);
             LblCostumerSex.Name = "LblCostumerSex";
-            LblCostumerSex.Size = new Size(138, 25);
+            LblCostumerSex.Size = new Size(158, 33);
             LblCostumerSex.TabIndex = 28;
             LblCostumerSex.Text = "Geschlecht";
             LblCostumerSex.TextAlign = ContentAlignment.MiddleLeft;
@@ -370,20 +374,20 @@
             // TxtCostumerPlace
             // 
             TxtCostumerPlace.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerPlace.Location = new Point(140, 176);
+            TxtCostumerPlace.Location = new Point(160, 234);
             TxtCostumerPlace.Margin = new Padding(0);
             TxtCostumerPlace.Name = "TxtCostumerPlace";
-            TxtCostumerPlace.Size = new Size(411, 23);
+            TxtCostumerPlace.Size = new Size(470, 27);
             TxtCostumerPlace.TabIndex = 8;
             // 
             // LblCostumerPlace
             // 
             LblCostumerPlace.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerPlace.AutoSize = true;
-            LblCostumerPlace.Location = new Point(1, 175);
+            LblCostumerPlace.Location = new Point(1, 231);
             LblCostumerPlace.Margin = new Padding(1, 0, 1, 0);
             LblCostumerPlace.Name = "LblCostumerPlace";
-            LblCostumerPlace.Size = new Size(138, 25);
+            LblCostumerPlace.Size = new Size(158, 33);
             LblCostumerPlace.TabIndex = 27;
             LblCostumerPlace.Text = "Ort";
             LblCostumerPlace.TextAlign = ContentAlignment.MiddleLeft;
@@ -392,10 +396,10 @@
             // 
             LblCostumerZIPcode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerZIPcode.AutoSize = true;
-            LblCostumerZIPcode.Location = new Point(1, 150);
+            LblCostumerZIPcode.Location = new Point(1, 198);
             LblCostumerZIPcode.Margin = new Padding(1, 0, 1, 0);
             LblCostumerZIPcode.Name = "LblCostumerZIPcode";
-            LblCostumerZIPcode.Size = new Size(138, 25);
+            LblCostumerZIPcode.Size = new Size(158, 33);
             LblCostumerZIPcode.TabIndex = 26;
             LblCostumerZIPcode.Text = "PLZ";
             LblCostumerZIPcode.TextAlign = ContentAlignment.MiddleLeft;
@@ -403,20 +407,20 @@
             // TxtCostumerPhonenumber
             // 
             TxtCostumerPhonenumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerPhonenumber.Location = new Point(140, 251);
+            TxtCostumerPhonenumber.Location = new Point(160, 333);
             TxtCostumerPhonenumber.Margin = new Padding(0);
             TxtCostumerPhonenumber.Name = "TxtCostumerPhonenumber";
-            TxtCostumerPhonenumber.Size = new Size(411, 23);
+            TxtCostumerPhonenumber.Size = new Size(470, 27);
             TxtCostumerPhonenumber.TabIndex = 10;
             // 
             // LblCostumerStreetnumber
             // 
             LblCostumerStreetnumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerStreetnumber.AutoSize = true;
-            LblCostumerStreetnumber.Location = new Point(1, 125);
+            LblCostumerStreetnumber.Location = new Point(1, 165);
             LblCostumerStreetnumber.Margin = new Padding(1, 0, 1, 0);
             LblCostumerStreetnumber.Name = "LblCostumerStreetnumber";
-            LblCostumerStreetnumber.Size = new Size(138, 25);
+            LblCostumerStreetnumber.Size = new Size(158, 33);
             LblCostumerStreetnumber.TabIndex = 25;
             LblCostumerStreetnumber.Text = "Hausnummer";
             LblCostumerStreetnumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -424,20 +428,20 @@
             // TxtCostumerMobilenumber
             // 
             TxtCostumerMobilenumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerMobilenumber.Location = new Point(140, 276);
+            TxtCostumerMobilenumber.Location = new Point(160, 366);
             TxtCostumerMobilenumber.Margin = new Padding(0);
             TxtCostumerMobilenumber.Name = "TxtCostumerMobilenumber";
-            TxtCostumerMobilenumber.Size = new Size(411, 23);
+            TxtCostumerMobilenumber.Size = new Size(470, 27);
             TxtCostumerMobilenumber.TabIndex = 11;
             // 
             // LblCostumerStreet
             // 
             LblCostumerStreet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerStreet.AutoSize = true;
-            LblCostumerStreet.Location = new Point(1, 100);
+            LblCostumerStreet.Location = new Point(1, 132);
             LblCostumerStreet.Margin = new Padding(1, 0, 1, 0);
             LblCostumerStreet.Name = "LblCostumerStreet";
-            LblCostumerStreet.Size = new Size(138, 25);
+            LblCostumerStreet.Size = new Size(158, 33);
             LblCostumerStreet.TabIndex = 24;
             LblCostumerStreet.Text = "Strasse";
             LblCostumerStreet.TextAlign = ContentAlignment.MiddleLeft;
@@ -446,10 +450,10 @@
             // 
             LblCostumerLastname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerLastname.AutoSize = true;
-            LblCostumerLastname.Location = new Point(1, 50);
+            LblCostumerLastname.Location = new Point(1, 66);
             LblCostumerLastname.Margin = new Padding(1, 0, 1, 0);
             LblCostumerLastname.Name = "LblCostumerLastname";
-            LblCostumerLastname.Size = new Size(138, 25);
+            LblCostumerLastname.Size = new Size(158, 33);
             LblCostumerLastname.TabIndex = 23;
             LblCostumerLastname.Text = "Nachname";
             LblCostumerLastname.TextAlign = ContentAlignment.MiddleLeft;
@@ -458,10 +462,10 @@
             // 
             LblCostumerFirstname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerFirstname.AutoSize = true;
-            LblCostumerFirstname.Location = new Point(1, 25);
+            LblCostumerFirstname.Location = new Point(1, 33);
             LblCostumerFirstname.Margin = new Padding(1, 0, 1, 0);
             LblCostumerFirstname.Name = "LblCostumerFirstname";
-            LblCostumerFirstname.Size = new Size(138, 25);
+            LblCostumerFirstname.Size = new Size(158, 33);
             LblCostumerFirstname.TabIndex = 22;
             LblCostumerFirstname.Text = "Vorname";
             LblCostumerFirstname.TextAlign = ContentAlignment.MiddleLeft;
@@ -471,10 +475,10 @@
             // 
             LblEmployeeContactperson.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblEmployeeContactperson.AutoSize = true;
-            LblEmployeeContactperson.Location = new Point(1, 400);
+            LblEmployeeContactperson.Location = new Point(1, 528);
             LblEmployeeContactperson.Margin = new Padding(1, 0, 1, 0);
             LblEmployeeContactperson.Name = "LblEmployeeContactperson";
-            LblEmployeeContactperson.Size = new Size(138, 25);
+            LblEmployeeContactperson.Size = new Size(158, 33);
             LblEmployeeContactperson.TabIndex = 51;
             LblEmployeeContactperson.Text = "Konaktperson";
             LblEmployeeContactperson.TextAlign = ContentAlignment.MiddleLeft;
@@ -482,8 +486,8 @@
             // TblLayoutCostumer
             // 
             TblLayoutCostumer.ColumnCount = 2;
-            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
-            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
+            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 160F));
+            TblLayoutCostumer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 470F));
             TblLayoutCostumer.Controls.Add(TxtCostumerBusinessnumber, 1, 12);
             TblLayoutCostumer.Controls.Add(LblCostumerBusinessnumber, 0, 12);
             TblLayoutCostumer.Controls.Add(TxtCostumerNationality, 1, 8);
@@ -513,54 +517,54 @@
             TblLayoutCostumer.Controls.Add(LblCostumerTitle, 0, 0);
             TblLayoutCostumer.Controls.Add(TxtCostumerTitle, 1, 0);
             TblLayoutCostumer.Controls.Add(LblCostumerLastname, 0, 2);
-            TblLayoutCostumer.Controls.Add(TxtCostumerDateofBirth, 1, 3);
             TblLayoutCostumer.Controls.Add(TxtCostumerPhonenumber, 1, 10);
             TblLayoutCostumer.Controls.Add(LblCostumerPhonenumber, 0, 10);
             TblLayoutCostumer.Controls.Add(LblCostumerMobilenumber, 0, 11);
             TblLayoutCostumer.Controls.Add(TxtCostumerMobilenumber, 1, 11);
-            TblLayoutCostumer.Location = new Point(24, 93);
-            TblLayoutCostumer.Margin = new Padding(2);
+            TblLayoutCostumer.Controls.Add(DtpCostumerDateofBirth, 1, 3);
+            TblLayoutCostumer.Location = new Point(27, 124);
+            TblLayoutCostumer.Margin = new Padding(2, 3, 2, 3);
             TblLayoutCostumer.Name = "TblLayoutCostumer";
             TblLayoutCostumer.RowCount = 18;
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
-            TblLayoutCostumer.Size = new Size(551, 428);
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            TblLayoutCostumer.Size = new Size(630, 571);
             TblLayoutCostumer.TabIndex = 48;
             TblLayoutCostumer.Paint += TblLayoutCostumer_Paint;
             // 
             // TxtCostumerBusinessnumber
             // 
             TxtCostumerBusinessnumber.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerBusinessnumber.Location = new Point(140, 301);
+            TxtCostumerBusinessnumber.Location = new Point(160, 399);
             TxtCostumerBusinessnumber.Margin = new Padding(0);
             TxtCostumerBusinessnumber.Name = "TxtCostumerBusinessnumber";
-            TxtCostumerBusinessnumber.Size = new Size(411, 23);
+            TxtCostumerBusinessnumber.Size = new Size(470, 27);
             TxtCostumerBusinessnumber.TabIndex = 49;
             // 
             // LblCostumerBusinessnumber
             // 
             LblCostumerBusinessnumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerBusinessnumber.AutoSize = true;
-            LblCostumerBusinessnumber.Location = new Point(1, 300);
+            LblCostumerBusinessnumber.Location = new Point(1, 396);
             LblCostumerBusinessnumber.Margin = new Padding(1, 0, 1, 0);
             LblCostumerBusinessnumber.Name = "LblCostumerBusinessnumber";
-            LblCostumerBusinessnumber.Size = new Size(138, 25);
+            LblCostumerBusinessnumber.Size = new Size(158, 33);
             LblCostumerBusinessnumber.TabIndex = 49;
             LblCostumerBusinessnumber.Text = "Gechäftsnummer";
             LblCostumerBusinessnumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -568,20 +572,20 @@
             // TxtCostumerNationality
             // 
             TxtCostumerNationality.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtCostumerNationality.Location = new Point(140, 201);
+            TxtCostumerNationality.Location = new Point(160, 267);
             TxtCostumerNationality.Margin = new Padding(0);
             TxtCostumerNationality.Name = "TxtCostumerNationality";
-            TxtCostumerNationality.Size = new Size(411, 23);
+            TxtCostumerNationality.Size = new Size(470, 27);
             TxtCostumerNationality.TabIndex = 49;
             // 
             // LblCostumerNationality
             // 
             LblCostumerNationality.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerNationality.AutoSize = true;
-            LblCostumerNationality.Location = new Point(1, 200);
+            LblCostumerNationality.Location = new Point(1, 264);
             LblCostumerNationality.Margin = new Padding(1, 0, 1, 0);
             LblCostumerNationality.Name = "LblCostumerNationality";
-            LblCostumerNationality.Size = new Size(138, 25);
+            LblCostumerNationality.Size = new Size(158, 33);
             LblCostumerNationality.TabIndex = 49;
             LblCostumerNationality.Text = "Nationalität";
             LblCostumerNationality.TextAlign = ContentAlignment.MiddleLeft;
@@ -590,48 +594,48 @@
             // 
             LblCostumerDateofBirth.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LblCostumerDateofBirth.AutoSize = true;
-            LblCostumerDateofBirth.Location = new Point(1, 75);
+            LblCostumerDateofBirth.Location = new Point(1, 99);
             LblCostumerDateofBirth.Margin = new Padding(1, 0, 1, 0);
             LblCostumerDateofBirth.Name = "LblCostumerDateofBirth";
-            LblCostumerDateofBirth.Size = new Size(138, 25);
+            LblCostumerDateofBirth.Size = new Size(158, 33);
             LblCostumerDateofBirth.TabIndex = 60;
             LblCostumerDateofBirth.Text = "Geburtsdatum";
             LblCostumerDateofBirth.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // TxtCostumerDateofBirth
-            // 
-            TxtCostumerDateofBirth.Location = new Point(140, 75);
-            TxtCostumerDateofBirth.Margin = new Padding(0);
-            TxtCostumerDateofBirth.Name = "TxtCostumerDateofBirth";
-            TxtCostumerDateofBirth.Size = new Size(411, 23);
-            TxtCostumerDateofBirth.TabIndex = 4;
-            // 
             // TxtOutGridNotes
             // 
-            TxtOutGridNotes.Location = new Point(24, 710);
+            TxtOutGridNotes.Location = new Point(27, 947);
             TxtOutGridNotes.Margin = new Padding(1);
             TxtOutGridNotes.Multiline = true;
             TxtOutGridNotes.Name = "TxtOutGridNotes";
-            TxtOutGridNotes.Size = new Size(551, 109);
+            TxtOutGridNotes.Size = new Size(629, 144);
             TxtOutGridNotes.TabIndex = 49;
             // 
             // LblOutGridNotes
             // 
             LblOutGridNotes.AutoSize = true;
             LblOutGridNotes.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            LblOutGridNotes.Location = new Point(25, 694);
+            LblOutGridNotes.Location = new Point(29, 925);
             LblOutGridNotes.Margin = new Padding(1, 0, 1, 0);
             LblOutGridNotes.Name = "LblOutGridNotes";
-            LblOutGridNotes.Size = new Size(115, 15);
+            LblOutGridNotes.Size = new Size(145, 20);
             LblOutGridNotes.TabIndex = 50;
             LblOutGridNotes.Text = "Bestehende Notizen:";
             LblOutGridNotes.Click += label1_Click_1;
             // 
+            // DtpCostumerDateofBirth
+            // 
+            DtpCostumerDateofBirth.Location = new Point(160, 99);
+            DtpCostumerDateofBirth.Margin = new Padding(0);
+            DtpCostumerDateofBirth.Name = "DtpCostumerDateofBirth";
+            DtpCostumerDateofBirth.Size = new Size(470, 27);
+            DtpCostumerDateofBirth.TabIndex = 61;
+            // 
             // CustumerRegistration
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(931, 829);
+            ClientSize = new Size(1064, 1055);
             Controls.Add(LblOutGridNotes);
             Controls.Add(TxtOutGridNotes);
             Controls.Add(CmdSaveNote);
@@ -694,12 +698,12 @@
         private Label LblEmployeeContactperson;
         private TableLayoutPanel TblLayoutCostumer;
         private Label LblCostumerDateofBirth;
-        private MaskedTextBox TxtCostumerDateofBirth;
         private MaskedTextBox TxtCostumerNationality;
         private Label LblCostumerNationality;
         private Label LblCostumerBusinessnumber;
         private MaskedTextBox TxtCostumerBusinessnumber;
         private TextBox TxtOutGridNotes;
         private Label LblOutGridNotes;
+        private DateTimePicker DtpCostumerDateofBirth;
     }
 }

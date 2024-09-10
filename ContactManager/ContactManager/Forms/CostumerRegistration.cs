@@ -7,7 +7,7 @@ namespace ContactManager.Forms
 {
     public partial class CustumerRegistration : Form
     {
-        private Customer? _customer = new();
+        private Customer? _customer = new() { DateOfBirth = DateTime.Today };
         private readonly ContactManagerContext _context = new();
 
         public CustumerRegistration()
@@ -49,7 +49,8 @@ namespace ContactManager.Forms
             TxtCostumerTitle.DataBindings.Add("Text", _customer, nameof(Customer.Title));
             TxtCostumerFirstname.DataBindings.Add("Text", _customer, nameof(Customer.FirstName));
             TxtCostumerLastname.DataBindings.Add("Text", _customer, nameof(Customer.LastName));
-            TxtCostumerDateofBirth.DataBindings.Add("Text", _customer, nameof(Customer.DateOfBirth));
+            TxtCostumerNationality.DataBindings.Add("Text", _customer, nameof(Customer.Nationality));
+            DtpCostumerDateofBirth.DataBindings.Add("Text", _customer, nameof(Customer.DateOfBirth));
             TxtCostumerStreet.DataBindings.Add("Text", _customer.Address, nameof(Customer.Address.Street));
             TxtCostumerStreetnumber.DataBindings.Add("Text", _customer.Address, nameof(Customer.Address.StreetNumber));
             TxtCostumerZIPcode.DataBindings.Add("Text", _customer.Address, nameof(Customer.Address.ZipCode));
@@ -106,16 +107,9 @@ namespace ContactManager.Forms
 
         private void CmdCostumerSave_Click(object sender, EventArgs e)
         {
-            _ = Enum.TryParse(CmbCostumerCostumertype.Text, out CustomerType selectedCostomerType);
-            _ = DateTime.TryParse(TxtCostumerDateofBirth.Text, out DateTime dateOfBirth);
-
-            CommuncationInfo communicationInfo = new(TxtCostumerMobilenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerPhonenumber.Text, TxtCostumerEmail.Text);
-            Address address = new(TxtCostumerStreet.Text, TxtCostumerStreetnumber.Text, Convert.ToInt32(TxtCostumerZIPcode.Text), TxtCostumerPlace.Text);
-
             if (_customer.Id == 0)
             {
                 _customer.SocialSecurityNumber = string.Empty;
-                _customer.Nationality = string.Empty;
                 _customer.CommunicationInfo.PhoneNumberBusiness = string.Empty;
                 _customer.Status = true;
                 _context.Add(_customer);
