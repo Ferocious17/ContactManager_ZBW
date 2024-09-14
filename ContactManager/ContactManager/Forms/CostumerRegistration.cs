@@ -46,9 +46,6 @@ namespace ContactManager.Forms
 
             CmbCostumerCostumertype.DataSource = Enum.GetValues(typeof(CustomerType));
 
-            TxtCostumerStreetnumber.KeyPress += Numeric_KeyPress;
-            TxtCostumerZIPcode.KeyPress += Numeric_KeyPress;
-
             TxtCostumerTitle.DataBindings.Add("Text", _customer, nameof(Customer.Title));
             TxtCostumerFirstname.DataBindings.Add("Text", _customer, nameof(Customer.FirstName));
             TxtCostumerLastname.DataBindings.Add("Text", _customer, nameof(Customer.LastName));
@@ -72,6 +69,9 @@ namespace ContactManager.Forms
             CmbCostumerCostumertype.DataBindings.Add("", _customer, nameof(Customer.CustomerType));
             TxtCostumerContactperson.DataBindings.Add("Text", _customer, nameof(Customer.CompanyContact));
 
+            TxtCostumerZIPcode.KeyPress += Numeric_KeyPress;
+            if (TxtCostumerZIPcode.Text == "0")
+                TxtCostumerZIPcode.Text = "";
         }
 
         private void CustumerRegistration_Parse(object? sender, ConvertEventArgs e)

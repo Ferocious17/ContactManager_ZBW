@@ -55,10 +55,6 @@ namespace ContactManager.Forms
             btnSaveEmpoloyeRegistration.FlatAppearance.BorderSize = 0; // Set button border size to 0
             btnSaveEmpoloyeRegistration.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSaveEmpoloyeRegistration.Width, btnSaveEmpoloyeRegistration.Height, 5, 5)); // Create rounded rectangle region
 
-            TxtEmployeeHousenumber.KeyPress += Numeric_KeyPress;
-            TxtEmployeeZIPcode.KeyPress += Numeric_KeyPress;
-            TxtEmployeeTrainigyear.KeyPress += Numeric_KeyPress;
-
             TxtEmployeeTitle.DataBindings.Add("Text", _employee, nameof(Employee.Title));
             TxtEmployeeFirstname.DataBindings.Add("Text", _employee, nameof(Employee.FirstName));
             TxtEmployeeLastname.DataBindings.Add("Text", _employee, nameof(Employee.LastName));
@@ -84,6 +80,12 @@ namespace ContactManager.Forms
             DtpEmployeeEnddate.DataBindings.Add("Text", _employee, nameof(Employee.EndDate));
             TxtEmployeeRole.DataBindings.Add("Text", _employee, nameof(Employee.Role));
             CmbEmployeeLevel.DataBindings.Add("Text", _employee, nameof(Employee.CadreLevel));
+
+            TxtEmployeeZIPcode.KeyPress += Numeric_KeyPress;
+            TxtEmployeeTrainigyear.KeyPress += Numeric_KeyPress;
+
+            if (TxtEmployeeZIPcode.Text == "0")
+                TxtEmployeeZIPcode.Text = "";
 
             if (_employee is Trainee trainee)
             {
