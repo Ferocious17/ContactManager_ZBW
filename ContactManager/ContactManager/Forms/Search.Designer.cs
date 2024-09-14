@@ -47,7 +47,7 @@
         // 
         // CmdSearch
         // 
-        CmdSearch.Location = new Point(315, 74);
+        CmdSearch.Location = new Point(315, 76);
         CmdSearch.Margin = new Padding(1);
         CmdSearch.Name = "CmdSearch";
         CmdSearch.Size = new Size(77, 21);
