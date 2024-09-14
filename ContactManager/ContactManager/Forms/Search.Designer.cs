@@ -39,18 +39,18 @@
         // 
         // TxtSearchbar
         // 
-        TxtSearchbar.Location = new Point(71, 101);
+        TxtSearchbar.Location = new Point(62, 76);
         TxtSearchbar.Margin = new Padding(1);
         TxtSearchbar.Name = "TxtSearchbar";
-        TxtSearchbar.Size = new Size(276, 27);
+        TxtSearchbar.Size = new Size(242, 23);
         TxtSearchbar.TabIndex = 0;
         // 
         // CmdSearch
         // 
-        CmdSearch.Location = new Point(360, 99);
+        CmdSearch.Location = new Point(315, 74);
         CmdSearch.Margin = new Padding(1);
         CmdSearch.Name = "CmdSearch";
-        CmdSearch.Size = new Size(88, 28);
+        CmdSearch.Size = new Size(77, 21);
         CmdSearch.TabIndex = 1;
         CmdSearch.Text = "Suche";
         CmdSearch.UseVisualStyleBackColor = true;
@@ -59,11 +59,11 @@
         // LblSearchTitle
         // 
         LblSearchTitle.Font = new Font("Segoe UI", 15F);
-        LblSearchTitle.Location = new Point(71, 43);
+        LblSearchTitle.Location = new Point(62, 32);
         LblSearchTitle.Margin = new Padding(1);
         LblSearchTitle.Multiline = true;
         LblSearchTitle.Name = "LblSearchTitle";
-        LblSearchTitle.Size = new Size(124, 37);
+        LblSearchTitle.Size = new Size(109, 29);
         LblSearchTitle.TabIndex = 3;
         LblSearchTitle.Text = "SUCHE";
         LblSearchTitle.TextChanged += txtBoxTitelSearch_TextChanged;
@@ -72,22 +72,22 @@
         // 
         TxtOutgrid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         TxtOutgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        TxtOutgrid.Location = new Point(71, 175);
-        TxtOutgrid.Margin = new Padding(2, 3, 2, 3);
+        TxtOutgrid.Location = new Point(62, 115);
+        TxtOutgrid.Margin = new Padding(2);
         TxtOutgrid.MultiSelect = false;
         TxtOutgrid.Name = "TxtOutgrid";
         TxtOutgrid.RowHeadersWidth = 51;
-        TxtOutgrid.Size = new Size(810, 317);
+        TxtOutgrid.Size = new Size(709, 238);
         TxtOutgrid.TabIndex = 4;
         TxtOutgrid.CellDoubleClick += TxtOutgrid_CellDoubleClick;
         // 
         // BtnEdit
         // 
         BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        BtnEdit.Location = new Point(900, 175);
+        BtnEdit.Location = new Point(788, 131);
         BtnEdit.Margin = new Padding(1);
         BtnEdit.Name = "BtnEdit";
-        BtnEdit.Size = new Size(88, 28);
+        BtnEdit.Size = new Size(77, 21);
         BtnEdit.TabIndex = 5;
         BtnEdit.Text = "Editieren";
         BtnEdit.UseVisualStyleBackColor = true;
@@ -96,10 +96,10 @@
         // BtnAcivateDeactive
         // 
         BtnAcivateDeactive.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        BtnAcivateDeactive.Location = new Point(900, 206);
+        BtnAcivateDeactive.Location = new Point(788, 154);
         BtnAcivateDeactive.Margin = new Padding(1);
         BtnAcivateDeactive.Name = "BtnAcivateDeactive";
-        BtnAcivateDeactive.Size = new Size(88, 25);
+        BtnAcivateDeactive.Size = new Size(77, 21);
         BtnAcivateDeactive.TabIndex = 6;
         BtnAcivateDeactive.Text = "Aktivieren";
         BtnAcivateDeactive.UseVisualStyleBackColor = true;
@@ -108,10 +108,10 @@
         // BtnDelete
         // 
         BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        BtnDelete.Location = new Point(900, 235);
+        BtnDelete.Location = new Point(788, 177);
         BtnDelete.Margin = new Padding(1);
         BtnDelete.Name = "BtnDelete";
-        BtnDelete.Size = new Size(88, 28);
+        BtnDelete.Size = new Size(77, 21);
         BtnDelete.TabIndex = 8;
         BtnDelete.Text = "Löschen";
         BtnDelete.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@
         // 
         // Search
         // 
-        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1024, 517);
+        ClientSize = new Size(896, 388);
         Controls.Add(BtnDelete);
         Controls.Add(BtnAcivateDeactive);
         Controls.Add(BtnEdit);
