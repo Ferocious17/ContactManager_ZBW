@@ -7,7 +7,7 @@ namespace ContactManager.Forms
 {
     public partial class CustumerRegistration : Form
     {
-        private Customer? _customer = new() { DateOfBirth = DateTime.Today };
+        private Customer? _customer = new() { Gender = true, DateOfBirth = DateTime.Today };
         private readonly ContactManagerContext _context = new();
 
         public CustumerRegistration()
@@ -111,12 +111,21 @@ namespace ContactManager.Forms
 
         private void Numeric_KeyPress(object? sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == '\b')
+                return;
+
             if (!char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
 
         private void CmdCostumerSave_Click(object sender, EventArgs e)
         {
+            if (!ValidateTextboxes())
+            {
+                MessageBox.Show("Bitte alle Felder ausfüllen", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (_customer.Id == 0)
             {
                 _customer.SocialSecurityNumber = string.Empty;
@@ -140,6 +149,40 @@ namespace ContactManager.Forms
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
                 _context.SaveChanges();
             }
+        }
+
+        private bool ValidateTextboxes()
+        {
+            var controls = TblLayoutCostumer.Controls.Cast<Control>().OrderBy(control => control.TabIndex);
+            bool result = true;
+            foreach (var control in controls)
+            {
+                if (control is not MaskedTextBox)
+                {
+                    if (control is not ComboBox)
+                        continue;
+                }
+
+                var labelname = control.Name.Replace("Txt", "Lbl");
+                labelname = labelname.Replace("Cmb", "Lbl");
+                var field = GetType().GetField(labelname, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                var label = field?.GetValue(this) as Label;
+
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    if (label != null)
+                        label.ForeColor = Color.Red;
+
+                    result = false;
+                }
+                else
+                {
+                    if (label != null)
+                        label.ForeColor = Color.Black;
+                }
+            }
+
+            return result;
         }
 
         private void LblCostumerPhonenumber_Click(object sender, EventArgs e)
