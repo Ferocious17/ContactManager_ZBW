@@ -3,6 +3,8 @@ using ContactManager.Enums;
 using ContactManager.Models;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System.Diagnostics;
+using System.Net.Mime;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.Serialization;
 
@@ -17,7 +19,7 @@ namespace ContactManager.Forms
 
         private Label LblEmployeeAdress;
         private Label LblEmployeeZipCode;
-        private Employee? _employee = new() { Gender = true, DateOfBirth = DateTime.Today, StartDate = DateTime.Today, EndDate = DateTime.Today };
+        private Employee? _employee = new() { Gender = true, DateOfBirth = DateTime.Today, StartDate = DateTime.Today, EndDate = DateTime.Today, Department = new() };
         private readonly ContactManagerContext _context = new();
 
 
@@ -38,9 +40,10 @@ namespace ContactManager.Forms
 
         private void EmployeeRegistration_Load(object sender, EventArgs e)
         {
-            ContactManagerContext context = new();
             CmbEmployeeLevel.DataSource = Enum.GetValues(typeof(CadreLevel));
-            CmbEmployeeDepartement.DataSource = context.Departments;
+            CmbEmployeeDepartement.DataSource = _context.Departments.ToList();
+            CmbEmployeeDepartement.DisplayMember = nameof(Department.Name);
+            CmbEmployeeDepartement.ValueMember = nameof(Department.DepartmentId);
 
             //StartWindow Design
             BackColor = System.Drawing.ColorTranslator.FromHtml("#E0E0E0");
@@ -77,7 +80,7 @@ namespace ContactManager.Forms
             TxtEmployeeMobilenumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberMobile));
             TxtEmployeeBusinessnumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberBusiness));
             TxtEmployeeEmail.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.Email));
-            CmbEmployeeDepartement.DataBindings.Add("Text", _employee, nameof(Employee.Department));
+            CmbEmployeeDepartement.DataBindings.Add("Text", _employee.Department, nameof(Employee.Department.Name));
             DtpEmployeeStartdate.DataBindings.Add("Text", _employee, nameof(Employee.StartDate));
             DtpEmployeeEnddate.DataBindings.Add("Text", _employee, nameof(Employee.EndDate));
             TxtEmployeeRole.DataBindings.Add("Text", _employee, nameof(Employee.Role));
@@ -157,7 +160,6 @@ namespace ContactManager.Forms
             LblEmployeeSSN = new Label();
             TxtEmployeeTitle = new MaskedTextBox();
             TxtEmployeeRole = new MaskedTextBox();
-            LblEmployeeLastname = new Label();
             LblEmployeeFirstname = new Label();
             LblEmployeeZIPcode = new Label();
             LblEmployeeRole = new Label();
@@ -173,12 +175,10 @@ namespace ContactManager.Forms
             TxtEmployeeHousenumber = new MaskedTextBox();
             LblEmployeeMobilenumber = new Label();
             TxtEmployeeStreet = new MaskedTextBox();
-            TxtEmployeeLastname = new MaskedTextBox();
             TxtEmployeeFirstname = new MaskedTextBox();
             ChkEmployeeTrainee = new CheckBox();
             LblEmployeeLevel = new Label();
             LblEmployeeTitle = new Label();
-            LblEmployeeDateofBirth = new Label();
             LblEmployeeNationality = new Label();
             TxtEmployeeSSN = new MaskedTextBox();
             TxtEmployeeNationality = new MaskedTextBox();
@@ -193,7 +193,10 @@ namespace ContactManager.Forms
             TxtEmployeeBusinessnumber = new MaskedTextBox();
             CmbEmployeeDepartement = new ComboBox();
             CmbEmployeeLevel = new ComboBox();
+            LblEmployeeDateofBirth = new Label();
+            LblEmployeeLastname = new Label();
             DtpEmployeeDateofBirth = new DateTimePicker();
+            TxtEmployeeLastname = new MaskedTextBox();
             btnSaveEmpoloyeRegistration = new Button();
             TxtTitleEmployeeRegistration = new TextBox();
             CmdEmployeeSave = new Button();
@@ -366,18 +369,6 @@ namespace ContactManager.Forms
             TxtEmployeeRole.Size = new Size(400, 23);
             TxtEmployeeRole.TabIndex = 18;
             // 
-            // LblEmployeeLastname
-            // 
-            LblEmployeeLastname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            LblEmployeeLastname.AutoSize = true;
-            LblEmployeeLastname.Location = new Point(2, 75);
-            LblEmployeeLastname.Margin = new Padding(2, 0, 2, 0);
-            LblEmployeeLastname.Name = "LblEmployeeLastname";
-            LblEmployeeLastname.Size = new Size(136, 25);
-            LblEmployeeLastname.TabIndex = 66;
-            LblEmployeeLastname.Text = "Nachname";
-            LblEmployeeLastname.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // LblEmployeeFirstname
             // 
             LblEmployeeFirstname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -540,15 +531,6 @@ namespace ContactManager.Forms
             TxtEmployeeStreet.Size = new Size(400, 23);
             TxtEmployeeStreet.TabIndex = 5;
             // 
-            // TxtEmployeeLastname
-            // 
-            TxtEmployeeLastname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmployeeLastname.Location = new Point(140, 76);
-            TxtEmployeeLastname.Margin = new Padding(0);
-            TxtEmployeeLastname.Name = "TxtEmployeeLastname";
-            TxtEmployeeLastname.Size = new Size(400, 23);
-            TxtEmployeeLastname.TabIndex = 4;
-            // 
             // TxtEmployeeFirstname
             // 
             TxtEmployeeFirstname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
@@ -592,18 +574,6 @@ namespace ContactManager.Forms
             LblEmployeeTitle.TabIndex = 73;
             LblEmployeeTitle.Text = "Titel";
             LblEmployeeTitle.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // LblEmployeeDateofBirth
-            // 
-            LblEmployeeDateofBirth.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            LblEmployeeDateofBirth.AutoSize = true;
-            LblEmployeeDateofBirth.Location = new Point(2, 100);
-            LblEmployeeDateofBirth.Margin = new Padding(2, 0, 2, 0);
-            LblEmployeeDateofBirth.Name = "LblEmployeeDateofBirth";
-            LblEmployeeDateofBirth.Size = new Size(136, 25);
-            LblEmployeeDateofBirth.TabIndex = 75;
-            LblEmployeeDateofBirth.Text = "Geburtsdatum";
-            LblEmployeeDateofBirth.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // LblEmployeeNationality
             // 
@@ -733,6 +703,7 @@ namespace ContactManager.Forms
             // CmbEmployeeDepartement
             // 
             CmbEmployeeDepartement.FormattingEnabled = true;
+            CmbEmployeeDepartement.Items.AddRange(new object[] { "HR", "IT", "GL", "Produktion", "Verkauf", "Finanzen", "Jurisitsche Abteilung" });
             CmbEmployeeDepartement.Location = new Point(140, 400);
             CmbEmployeeDepartement.Margin = new Padding(0);
             CmbEmployeeDepartement.Name = "CmbEmployeeDepartement";
@@ -748,6 +719,30 @@ namespace ContactManager.Forms
             CmbEmployeeLevel.Size = new Size(398, 23);
             CmbEmployeeLevel.TabIndex = 19;
             // 
+            // LblEmployeeDateofBirth
+            // 
+            LblEmployeeDateofBirth.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LblEmployeeDateofBirth.AutoSize = true;
+            LblEmployeeDateofBirth.Location = new Point(2, 100);
+            LblEmployeeDateofBirth.Margin = new Padding(2, 0, 2, 0);
+            LblEmployeeDateofBirth.Name = "LblEmployeeDateofBirth";
+            LblEmployeeDateofBirth.Size = new Size(136, 25);
+            LblEmployeeDateofBirth.TabIndex = 75;
+            LblEmployeeDateofBirth.Text = "Geburtsdatum";
+            LblEmployeeDateofBirth.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // LblEmployeeLastname
+            // 
+            LblEmployeeLastname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LblEmployeeLastname.AutoSize = true;
+            LblEmployeeLastname.Location = new Point(2, 75);
+            LblEmployeeLastname.Margin = new Padding(2, 0, 2, 0);
+            LblEmployeeLastname.Name = "LblEmployeeLastname";
+            LblEmployeeLastname.Size = new Size(136, 25);
+            LblEmployeeLastname.TabIndex = 66;
+            LblEmployeeLastname.Text = "Nachname";
+            LblEmployeeLastname.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // DtpEmployeeDateofBirth
             // 
             DtpEmployeeDateofBirth.Location = new Point(140, 100);
@@ -755,6 +750,15 @@ namespace ContactManager.Forms
             DtpEmployeeDateofBirth.Name = "DtpEmployeeDateofBirth";
             DtpEmployeeDateofBirth.Size = new Size(400, 23);
             DtpEmployeeDateofBirth.TabIndex = 3;
+            // 
+            // TxtEmployeeLastname
+            // 
+            TxtEmployeeLastname.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TxtEmployeeLastname.Location = new Point(140, 76);
+            TxtEmployeeLastname.Margin = new Padding(0);
+            TxtEmployeeLastname.Name = "TxtEmployeeLastname";
+            TxtEmployeeLastname.Size = new Size(400, 23);
+            TxtEmployeeLastname.TabIndex = 4;
             // 
             // btnSaveEmpoloyeRegistration
             // 
@@ -897,8 +901,7 @@ namespace ContactManager.Forms
                 MessageBox.Show("Bitte alle Felder ausfüllen", "Fehler", MessageBoxButtons.OK , MessageBoxIcon.Error);
                 return;
             }
-
-            _employee.Department = new("test");
+            _employee.Department = _context.Departments.Where(d => d.Name == _employee.Department.Name).First();
             _employee.EmployeeNumber = Guid.NewGuid();
             _employee.Status = true;
             if (_employee.Id == 0)

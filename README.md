@@ -35,6 +35,11 @@ Das Projekt muss gebaut werden, sodass die Nuget-Pakages vom Entity-Framework he
     2. Öffnen der PackageManager Konsole im Visual Studio (normalerweise im linken unteren Bereich des Fensters)
     3. Folgenden Command ausführen: database-update
     4. Nun sollten sie auf ihrem DB-Server die Datenbank "contactmanager" zur Verfügung haben.
+    5. Folgendes SQL Statement ausführen:
+
+    use contactmanager;
+    Insert into department 
+    VALUES (1, 'HR'), (2, 'IT'), (3, 'GL'), (4, 'Produktion'), (5, 'Verkauf'), (6, 'Finanzen'), (7, 'Jurisitsche Abteilung');
 
 4. **Login**
 Die Logindaten sind "admin" "admin" #security

@@ -1,5 +1,6 @@
 ﻿using ContactManager.DB;
 using ContactManager.Models;
+using Microsoft.EntityFrameworkCore;
 using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
@@ -138,7 +139,7 @@ namespace ContactManager.Forms
 
             if (context.Employees.Any(e => e.Id == selectedPerson.Id))
             {
-                LblEmployeeRegistration employeeRegistration = new(context.Employees.First(e => e.Id == selectedPerson.Id));
+                LblEmployeeRegistration employeeRegistration = new(context.Employees.Include(e => e.Department).First(e => e.Id == selectedPerson.Id));
                 employeeRegistration.ShowDialog();
             }
             else

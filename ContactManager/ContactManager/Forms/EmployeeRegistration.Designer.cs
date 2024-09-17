@@ -89,13 +89,6 @@ class EmployeeRegistration : Form
         this.GrpEmployeeSex = new GroupBox();
         this.RedEmployeeFemale = new RadioButton();
 
-        // Event handlers
-        //this.ChkEmployeeTrainee.CheckedChanged += new EventHandler(this.ChkEmployeeTrainee_CheckedChanged);
-        //if (this.ChkEmployeeTrainee != null)
-        //{
-        //    this.ChkEmployeeTrainee.CheckedChanged += new System.EventHandler(this.ChkEmployeeTrainee_CheckedChanged);
-        //}
-
 
         this.LblEmployeeTrainigyear.Click += new EventHandler(this.label2_Click);
         this.Load += new EventHandler(this.EmployeeRegistration_Load);

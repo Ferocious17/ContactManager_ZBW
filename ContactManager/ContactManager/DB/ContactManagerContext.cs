@@ -12,6 +12,11 @@ public class ContactManagerContext : DbContext
     public DbSet<Trainee> Trainees { get; set; }
     public DbSet<Department> Departments { get; set; }
 
+    public ContactManagerContext() 
+    {
+        this.ChangeTracker.LazyLoadingEnabled = true;
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseMySQL("Server=localhost;Port=3306;Database=ContactManager;User=root;");

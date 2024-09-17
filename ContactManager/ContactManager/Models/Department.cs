@@ -25,7 +25,7 @@ namespace ContactManager.Models
         /// Initialisiert eine neue Instanz der <see cref="Department"/>-Klasse ohne Parameter.
         /// Dieser Konstruktor wird in der Regel von der Entity Framework-Bibliothek verwendet.
         /// </summary>
-        private Department() { }
+        public Department() { }
 
         /// <summary>
         /// Die eindeutige ID der Abteilung, die als Primärschlüssel verwendet wird.
