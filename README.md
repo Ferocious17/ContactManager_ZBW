@@ -27,3 +27,12 @@ Folgen Sie diesen Schritten, um die Anwendung lokal auf Ihrem Computer zu instal
    ```bash
    git clone https://github.com/Ferocious17/ContactManager_ZBW.git
 
+2. **Build des Projekts im Visual Studio**
+Das Projekt muss gebaut werden, sodass die Nuget-Pakages vom Entity-Framework heruntergeladen sind. Diese sind für das einrichten der Datenbank notwendig.
+
+3. **Datenbank einrichten**
+    1. Datenbank auf dem localhost:3306 laufen haben (SQL Server muss laufen)
+    2. Öffnen der PackageManager Konsole im Visual Studio (normalerweise im linken unteren Bereich des Fensters)
+    3. Folgenden Command ausführen: database-update
+    4. Nun sollten sie auf ihrem DB-Server die Datenbank "contactmanager" zur Verfügung haben.
+
