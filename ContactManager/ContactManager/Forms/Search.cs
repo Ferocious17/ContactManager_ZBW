@@ -17,6 +17,7 @@ namespace ContactManager.Forms
     public partial class Search : Form
     {
         private readonly BindingList<Person> _searchResults = [];
+        private readonly ContactManagerContext _context = new();
 
         public Search()
         {
@@ -44,9 +45,8 @@ namespace ContactManager.Forms
             CmdSearch.FlatStyle = FlatStyle.Flat;
             CmdSearch.FlatAppearance.BorderSize = 0; // Set button border size to 0
             CmdSearch.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CmdSearch.Width, CmdSearch.Height, 5, 5)); // Create rounded rectangle region
-
-            ContactManagerContext context = new();
-            foreach (var person in context.People)
+            
+            foreach (var person in _context.People)
                 _searchResults.Add(person);
 
             TxtOutgrid.DataSource = _searchResults;
@@ -95,6 +95,13 @@ namespace ContactManager.Forms
         private void btnSearch_Click(object sender, EventArgs e)
         {
             _searchResults.Clear();
+            TxtOutgrid.Refresh();
+
+            if (sender is null && e is null)
+            {
+                foreach (var person in _context.People)
+                    _searchResults.Add(person);
+            }
 
             if (!string.IsNullOrWhiteSpace(TxtSearchbar.Text))
             {
@@ -110,7 +117,6 @@ namespace ContactManager.Forms
                 }
                 else
                 {
-                    //searchResults.AddRange(context.People.Where(p => p.FirstName == searchText || p.LastName == searchText));
                     foreach (var person in context.People.Where(p => p.FirstName == searchText || p.LastName == searchText))
                         _searchResults.Add(person);
                 }
@@ -154,12 +160,11 @@ namespace ContactManager.Forms
             if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
                 return;
 
-            ContactManagerContext context = new();
-            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
+            Person selectedPerson = _context.People.Single(p => p.Id == person.Id);
             selectedPerson.Status = !selectedPerson.Status;
 
-            context.Update(selectedPerson);
-            context.SaveChanges();
+            _context.Update(selectedPerson);
+            _context.SaveChanges();
 
             btnSearch_Click(null, null);
         }
@@ -169,17 +174,16 @@ namespace ContactManager.Forms
             if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
                 return;
 
-            ContactManagerContext context = new();
-            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
+            Person selectedPerson = _context.People.Single(p => p.Id == person.Id);
             
-            context.People.Remove(selectedPerson);
-            context.SaveChanges();
+            _context.People.Remove(selectedPerson);
+            _context.SaveChanges();
 
             if (!string.IsNullOrWhiteSpace(TxtSearchbar.Text))
                 btnSearch_Click(null, null);
 
             _searchResults.Clear();
-            foreach (var p in context.People)
+            foreach (var p in _context.People)
                 _searchResults.Add(p);
         }
     }

@@ -73,11 +73,12 @@
             LblCostumerNationality = new Label();
             LblCostumerDateofBirth = new Label();
             DtpCostumerDateofBirth = new DateTimePicker();
-            TxtOutGridNotes = new TextBox();
             LblOutGridNotes = new Label();
+            dgNotesView = new DataGridView();
             groupBox.SuspendLayout();
             GrpCostumerSex.SuspendLayout();
             TblLayoutCostumer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgNotesView).BeginInit();
             SuspendLayout();
             // 
             // LblCostumerRegistration
@@ -519,7 +520,7 @@
             TblLayoutCostumer.Controls.Add(TxtCostumerMobilenumber, 1, 11);
             TblLayoutCostumer.Controls.Add(DtpCostumerDateofBirth, 1, 3);
             TblLayoutCostumer.Location = new Point(24, 93);
-            TblLayoutCostumer.Margin = new Padding(2, 2, 2, 2);
+            TblLayoutCostumer.Margin = new Padding(2);
             TblLayoutCostumer.Name = "TblLayoutCostumer";
             TblLayoutCostumer.RowCount = 18;
             TblLayoutCostumer.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
@@ -606,15 +607,6 @@
             DtpCostumerDateofBirth.Size = new Size(411, 23);
             DtpCostumerDateofBirth.TabIndex = 4;
             // 
-            // TxtOutGridNotes
-            // 
-            TxtOutGridNotes.Location = new Point(24, 710);
-            TxtOutGridNotes.Margin = new Padding(1);
-            TxtOutGridNotes.Multiline = true;
-            TxtOutGridNotes.Name = "TxtOutGridNotes";
-            TxtOutGridNotes.Size = new Size(551, 109);
-            TxtOutGridNotes.TabIndex = 49;
-            // 
             // LblOutGridNotes
             // 
             LblOutGridNotes.AutoSize = true;
@@ -627,13 +619,24 @@
             LblOutGridNotes.Text = "Bestehende Notizen:";
             LblOutGridNotes.Click += label1_Click_1;
             // 
+            // dgNotesView
+            // 
+            dgNotesView.AllowUserToAddRows = false;
+            dgNotesView.AllowUserToDeleteRows = false;
+            dgNotesView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgNotesView.Location = new Point(25, 712);
+            dgNotesView.Name = "dgNotesView";
+            dgNotesView.ReadOnly = true;
+            dgNotesView.Size = new Size(550, 68);
+            dgNotesView.TabIndex = 51;
+            // 
             // CustumerRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(931, 791);
+            Controls.Add(dgNotesView);
             Controls.Add(LblOutGridNotes);
-            Controls.Add(TxtOutGridNotes);
             Controls.Add(CmdSaveNote);
             Controls.Add(LblNotes);
             Controls.Add(TxtNotes);
@@ -649,6 +652,7 @@
             GrpCostumerSex.PerformLayout();
             TblLayoutCostumer.ResumeLayout(false);
             TblLayoutCostumer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgNotesView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -698,8 +702,8 @@
         private Label LblCostumerNationality;
         private Label LblCostumerBusinessnumber;
         private MaskedTextBox TxtCostumerBusinessnumber;
-        private TextBox TxtOutGridNotes;
         private Label LblOutGridNotes;
         private DateTimePicker DtpCostumerDateofBirth;
+        private DataGridView dgNotesView;
     }
 }

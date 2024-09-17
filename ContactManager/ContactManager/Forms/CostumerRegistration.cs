@@ -2,6 +2,7 @@
 using ContactManager.Enums;
 using ContactManager.Models;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace ContactManager.Forms
 {
@@ -9,6 +10,7 @@ namespace ContactManager.Forms
     {
         private Customer? _customer = new() { Gender = true, DateOfBirth = DateTime.Today };
         private readonly ContactManagerContext _context = new();
+        private BindingList<Note> _notes = [];
 
         public CustumerRegistration()
         {
@@ -72,6 +74,12 @@ namespace ContactManager.Forms
             TxtCostumerZIPcode.KeyPress += Numeric_KeyPress;
             if (TxtCostumerZIPcode.Text == "0")
                 TxtCostumerZIPcode.Text = "";
+
+            foreach(Note note in _customer.Notes)
+            {
+                _notes.Add(note);
+            }
+            dgNotesView.DataSource = _notes;
         }
 
         private void CustumerRegistration_Parse(object? sender, ConvertEventArgs e)
@@ -148,7 +156,15 @@ namespace ContactManager.Forms
                 _context.Update(_customer);
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
                 _context.SaveChanges();
+                _notes.Clear();
+                foreach (Note note in _customer.Notes)
+                {
+                    _notes.Add(note);
+                }
+                dgNotesView.Refresh();
             }
+
+            TxtNotes.Text = "";
         }
 
         private bool ValidateTextboxes()
