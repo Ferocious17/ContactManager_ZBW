@@ -36,3 +36,5 @@ Das Projekt muss gebaut werden, sodass die Nuget-Pakages vom Entity-Framework he
     3. Folgenden Command ausführen: database-update
     4. Nun sollten sie auf ihrem DB-Server die Datenbank "contactmanager" zur Verfügung haben.
 
+4. **Login**
+Die Logindaten sind "admin" "admin" #security
