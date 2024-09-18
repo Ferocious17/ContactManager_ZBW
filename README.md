@@ -33,9 +33,10 @@ Das Projekt muss gebaut werden, sodass die Nuget-Pakages vom Entity-Framework he
 3. **Datenbank einrichten**
     1. Datenbank auf dem localhost:3306 laufen haben (SQL Server muss laufen)
     2. Öffnen der PackageManager Konsole im Visual Studio (normalerweise im linken unteren Bereich des Fensters)
-    3. Folgenden Command ausführen: database-update
-    4. Nun sollten sie auf ihrem DB-Server die Datenbank "contactmanager" zur Verfügung haben.
-    5. Folgendes SQL Statement ausführen:
+    3. In das Verzeichnis mit der .csproj-Datei navigieren
+    4. Folgenden Command ausführen: dotnet ef database update
+    5. Nun sollten sie auf ihrem DB-Server die Datenbank "contactmanager" zur Verfügung haben.
+    6. Folgendes SQL Statement ausführen:
 
     use contactmanager;
     Insert into department 
