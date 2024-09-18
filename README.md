@@ -40,7 +40,7 @@ Das Projekt muss gebaut werden, sodass die Nuget-Pakages vom Entity-Framework he
 
     use contactmanager;
     Insert into department 
-    VALUES (1, 'HR'), (2, 'IT'), (3, 'GL'), (4, 'Produktion'), (5, 'Verkauf'), (6, 'Finanzen'), (7, 'Jurisitsche Abteilung');
+    VALUES (1, 'HR'), (2, 'IT'), (3, 'GL'), (4, 'Produktion'), (5, 'Verkauf'), (6, 'Finanzen'), (7, 'Juristische Abteilung');
 
 4. **Login**
 Die Logindaten sind "admin" "admin" #security
