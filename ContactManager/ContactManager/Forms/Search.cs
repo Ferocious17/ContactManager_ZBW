@@ -137,6 +137,9 @@ namespace ContactManager.Forms
 
         private void EditElement(DataGridViewRow currentRow)
         {
+            if (currentRow == null)
+                return;
+
             if (currentRow.DataBoundItem is not Person person)
                 return;
 
@@ -157,6 +160,9 @@ namespace ContactManager.Forms
 
         private void BtnAcivateDeactive_Click(object sender, EventArgs e)
         {
+            if (TxtOutgrid.CurrentRow == null)
+                return;
+
             if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
                 return;
 
@@ -171,6 +177,9 @@ namespace ContactManager.Forms
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            if (TxtOutgrid.CurrentRow == null)
+                return;
+
             if (TxtOutgrid.CurrentRow.DataBoundItem is not Person person)
                 return;
 
