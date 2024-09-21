@@ -71,10 +71,10 @@ namespace ContactManager.Forms
             TxtEmployeeSSN.DataBindings.Add("Text", _employee, nameof(Employee.SocialSecurityNumber));
             TxtEmployeeNationality.DataBindings.Add("Text", _employee, nameof(Employee.Nationality));
 
-            RadEmployeeFemale.DataBindings.Add("Checked", _employee, nameof(Employee.Gender));
-            RadEmployeeFemale.DataBindings[0].Format += (s, e) => e.Value = !(bool)e.Value;
-            RadEmployeeFemale.DataBindings[0].Parse += (s, e) => e.Value = !(bool)e.Value;
-            RadEmployeeMale.DataBindings.Add("Checked", _employee, nameof(Employee.Gender));
+            _bindGender();
+            RadEmployeeMale.CheckedChanged += _gender_CheckedChanged;
+            RadEmployeeFemale.CheckedChanged += _gender_CheckedChanged;
+            
 
             TxtEmployeePhonenumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberPrivate));
             TxtEmployeeMobilenumber.DataBindings.Add("Text", _employee.CommunicationInfo, nameof(Employee.CommunicationInfo.PhoneNumberMobile));
@@ -104,6 +104,19 @@ namespace ContactManager.Forms
                 LblEmployeeTrainigyear.Enabled = false;
                 TxtEmployeeTrainigyear.Enabled = false;
             }
+        }
+
+        private void _bindGender()
+        {
+            if (_employee.Gender)
+                RadEmployeeMale.Checked = true;
+            else
+                RadEmployeeFemale.Checked = true;
+        }
+
+        private void _gender_CheckedChanged(object? sender, EventArgs e)
+        {
+            _employee.Gender = RadEmployeeMale.Checked;
         }
 
         private void checkBoxTrainee_CheckedChanged(object sender, EventArgs e)
