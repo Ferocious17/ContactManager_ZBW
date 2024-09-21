@@ -920,6 +920,7 @@ namespace ContactManager.Forms
             }
 
             _context.SaveChanges();
+            DialogResult = DialogResult.OK;
             Close();
         }
 

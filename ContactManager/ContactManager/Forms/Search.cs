@@ -143,18 +143,29 @@ namespace ContactManager.Forms
             if (currentRow.DataBoundItem is not Person person)
                 return;
 
-            ContactManagerContext context = new();
-            Person selectedPerson = context.People.Single(p => p.Id == person.Id);
+            Person selectedPerson = _context.People.Single(p => p.Id == person.Id);
+            Person trackedPerson;
+            Form form;
 
-            if (context.Employees.Any(e => e.Id == selectedPerson.Id))
+            if (_context.Employees.Any(e => e.Id == selectedPerson.Id))
             {
-                LblEmployeeRegistration employeeRegistration = new(context.Employees.Include(e => e.Department).First(e => e.Id == selectedPerson.Id));
-                employeeRegistration.ShowDialog();
+                trackedPerson = _context.Employees.Include(e => e.Department).First(e => e.Id == selectedPerson.Id);
+                form = new LblEmployeeRegistration(trackedPerson as Employee);
             }
             else
             {
-                CustumerRegistration custumerRegistration = new(context.Customers.First(e => e.Id == selectedPerson.Id));
-                custumerRegistration.ShowDialog();
+                trackedPerson = _context.Customers.First(e => e.Id == selectedPerson.Id);
+                form = new CustumerRegistration(trackedPerson as Customer);
+            }
+
+            //this means that the user clicked on "save" instead of closing the dialog
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                //the person object may have been modified in their according view
+                //but the context in this class still contains the old data
+                //so that person instance needs to be reloaded to get the newest data
+                _context.Entry(trackedPerson).Reload();
+                btnSearch_Click(null, null);
             }
         }
 

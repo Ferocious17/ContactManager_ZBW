@@ -21,7 +21,7 @@ namespace ContactManager.Forms
         {
             InitializeComponent();
             _customer = customer;
-            _context.Update(_customer);
+            //_context.Update(_customer);
         }
 
         private void CostumerRegistration_Load(object sender, EventArgs e)
@@ -149,6 +149,7 @@ namespace ContactManager.Forms
             }
 
             _context.SaveChanges();
+            DialogResult = DialogResult.OK;
             Close();
         }
 
