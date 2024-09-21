@@ -749,7 +749,7 @@ namespace ContactManager.Forms
             DtpEmployeeDateofBirth.Margin = new Padding(0);
             DtpEmployeeDateofBirth.Name = "DtpEmployeeDateofBirth";
             DtpEmployeeDateofBirth.Size = new Size(400, 23);
-            DtpEmployeeDateofBirth.TabIndex = 3;
+            DtpEmployeeDateofBirth.TabIndex = 4;
             // 
             // TxtEmployeeLastname
             // 
@@ -758,7 +758,7 @@ namespace ContactManager.Forms
             TxtEmployeeLastname.Margin = new Padding(0);
             TxtEmployeeLastname.Name = "TxtEmployeeLastname";
             TxtEmployeeLastname.Size = new Size(400, 23);
-            TxtEmployeeLastname.TabIndex = 4;
+            TxtEmployeeLastname.TabIndex = 3;
             // 
             // btnSaveEmpoloyeRegistration
             // 
