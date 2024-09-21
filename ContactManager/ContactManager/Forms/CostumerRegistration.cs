@@ -75,9 +75,12 @@ namespace ContactManager.Forms
             if (TxtCostumerZIPcode.Text == "0")
                 TxtCostumerZIPcode.Text = "";
 
-            foreach(Note note in _customer.Notes)
+            if (_customer.Notes != null)
             {
-                _notes.Add(note);
+                foreach (Note note in _customer.Notes)
+                {
+                    _notes.Add(note);
+                }
             }
             dgNotesView.DataSource = _notes;
         }
