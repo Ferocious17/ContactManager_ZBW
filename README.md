@@ -12,6 +12,8 @@ ContactManager_ZBW ist eine Anwendung zur Verwaltung von Kontaktdaten. Die Anwen
 
 ## Features
 
+Alle funktionalen sowie nicht funktionalen Anforderungen im Auftrag wurden erfüllt und können nachgehend eingesehen werden:
+
 - **Mitarbeiter hinzuügen**: Fügen Sie neue Mitarbeiter mit verschiedenen Detail wie Name, Telefonnummer, E-Mail-Adresse oder Abteilung hinzu.
 - **Mitarbeiter bearbeiten**: Ändern Sie bestehende Mitarbeiter, um aktuelle Informationen zu behalten.
 - **Mitarbeiter löschen**: Löschen Sie Mitarbeiter, welche nicht mehr in der Firma arbeiten.
