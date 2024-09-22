@@ -63,7 +63,7 @@ namespace ContactManager.Models
         /// <summary>
         /// Eine Sammlung von Notizen, die dem Kunden zugeordnet sind.
         /// </summary>
-        public ICollection<Note> Notes { get; set; }
+        public ICollection<Note> Notes { get; set; } = [];
 
         /// <summary>
         /// Gibt eine CSV-Repräsentation der kundenbezogenen Informationen zurück.

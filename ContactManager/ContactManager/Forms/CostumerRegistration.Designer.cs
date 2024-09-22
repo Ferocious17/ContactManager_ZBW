@@ -623,6 +623,7 @@
             // 
             dgNotesView.AllowUserToAddRows = false;
             dgNotesView.AllowUserToDeleteRows = false;
+            dgNotesView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dgNotesView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgNotesView.Location = new Point(25, 712);
             dgNotesView.Name = "dgNotesView";

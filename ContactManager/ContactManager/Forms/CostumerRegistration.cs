@@ -21,7 +21,7 @@ namespace ContactManager.Forms
         {
             InitializeComponent();
             _customer = customer;
-            _context.Update(_customer);
+            //_context.Update(_customer);
         }
 
         private void CostumerRegistration_Load(object sender, EventArgs e)
@@ -58,10 +58,9 @@ namespace ContactManager.Forms
             TxtCostumerZIPcode.DataBindings.Add("Text", _customer.Address, nameof(Customer.Address.ZipCode));
             TxtCostumerPlace.DataBindings.Add("Text", _customer.Address, nameof(Customer.Address.City));
 
-            RadCostumerFemale.DataBindings.Add("Checked", _customer, nameof(Customer.Gender));
-            RadCostumerFemale.DataBindings[0].Format += (s, e) => e.Value = !(bool)e.Value;
-            RadCostumerFemale.DataBindings[0].Parse += (s, e) => e.Value = !(bool)e.Value;
-            RadCostumerMale.DataBindings.Add("Checked", _customer, nameof(Customer.Gender));
+            _bindGender();
+            RadCostumerMale.CheckedChanged += _gender_CheckedChanged;
+            RadCostumerFemale.CheckedChanged += _gender_CheckedChanged;
 
             TxtCostumerPhonenumber.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.PhoneNumberPrivate));
             TxtCostumerMobilenumber.DataBindings.Add("Text", _customer.CommunicationInfo, nameof(Customer.CommunicationInfo.PhoneNumberMobile));
@@ -75,11 +74,27 @@ namespace ContactManager.Forms
             if (TxtCostumerZIPcode.Text == "0")
                 TxtCostumerZIPcode.Text = "";
 
-            foreach(Note note in _customer.Notes)
+            if (_customer.Notes != null)
             {
-                _notes.Add(note);
+                foreach (Note note in _customer.Notes)
+                {
+                    _notes.Add(note);
+                }
             }
             dgNotesView.DataSource = _notes;
+        }
+
+        private void _bindGender()
+        {
+            if (_customer.Gender)
+                RadCostumerMale.Checked = true;
+            else
+                RadCostumerFemale.Checked = true;
+        }
+
+        private void _gender_CheckedChanged(object? sender, EventArgs e)
+        {
+            _customer.Gender = RadCostumerMale.Checked;
         }
 
         private void CustumerRegistration_Parse(object? sender, ConvertEventArgs e)
@@ -146,6 +161,7 @@ namespace ContactManager.Forms
             }
 
             _context.SaveChanges();
+            DialogResult = DialogResult.OK;
             Close();
         }
 
@@ -153,6 +169,15 @@ namespace ContactManager.Forms
         {
             if (_customer != null && !string.IsNullOrEmpty(TxtNotes.Text))
             {
+                if (_customer.Id == 0)
+                {
+                    CmdCostumerSave_Click(null, null);
+                    if (_customer.Id != 0)
+                        BtnSaveNote_Click(null, null);
+
+                    return;
+                }
+
                 _context.Update(_customer);
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
                 _context.SaveChanges();
