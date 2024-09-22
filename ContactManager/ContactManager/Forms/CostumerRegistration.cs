@@ -169,6 +169,15 @@ namespace ContactManager.Forms
         {
             if (_customer != null && !string.IsNullOrEmpty(TxtNotes.Text))
             {
+                if (_customer.Id == 0)
+                {
+                    CmdCostumerSave_Click(null, null);
+                    if (_customer.Id != 0)
+                        BtnSaveNote_Click(null, null);
+
+                    return;
+                }
+
                 _context.Update(_customer);
                 _customer.Notes.Add(new Note(TxtNotes.Text, DateTime.Now));
                 _context.SaveChanges();
